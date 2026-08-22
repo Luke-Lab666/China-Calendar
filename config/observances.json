@@ -1,0 +1,32 @@
+{
+  "fixed": [
+    {"month": 1, "day": 10, "name": "中国人民警察节", "group": "国家纪念日"},
+    {"month": 2, "day": 14, "name": "情人节", "group": "社会节日"},
+    {"month": 3, "day": 5, "name": "学雷锋纪念日", "group": "国家纪念日"},
+    {"month": 3, "day": 8, "name": "国际妇女节", "group": "法定纪念日"},
+    {"month": 3, "day": 12, "name": "植树节", "group": "法定纪念日"},
+    {"month": 3, "day": 15, "name": "国际消费者权益日", "group": "国际纪念日"},
+    {"month": 4, "day": 1, "name": "愚人节", "group": "社会节日"},
+    {"month": 4, "day": 22, "name": "世界地球日", "group": "国际纪念日"},
+    {"month": 5, "day": 4, "name": "五四青年节", "group": "法定纪念日"},
+    {"month": 5, "day": 12, "name": "国际护士节", "group": "国际纪念日"},
+    {"month": 5, "day": 20, "name": "520", "group": "社会节日"},
+    {"month": 6, "day": 1, "name": "国际儿童节", "group": "法定纪念日"},
+    {"month": 7, "day": 1, "name": "中国共产党成立纪念日", "group": "国家纪念日"},
+    {"month": 8, "day": 1, "name": "中国人民解放军建军节", "group": "法定纪念日"},
+    {"month": 9, "day": 3, "name": "中国人民抗日战争胜利纪念日", "group": "国家纪念日"},
+    {"month": 9, "day": 10, "name": "教师节", "group": "法定纪念日"},
+    {"month": 9, "day": 18, "name": "九一八事变纪念日", "group": "国家纪念日"},
+    {"month": 9, "day": 30, "name": "烈士纪念日", "group": "国家纪念日"},
+    {"month": 12, "day": 4, "name": "国家宪法日", "group": "国家纪念日"},
+    {"month": 12, "day": 13, "name": "南京大屠杀死难者国家公祭日", "group": "国家纪念日"},
+    {"month": 12, "day": 24, "name": "平安夜", "group": "社会节日"},
+    {"month": 12, "day": 25, "name": "圣诞节", "group": "社会节日"}
+  ],
+  "relative": [
+    {"month": 5, "weekday": 6, "ordinal": 2, "name": "母亲节", "group": "社会节日"},
+    {"month": 6, "weekday": 6, "ordinal": 3, "name": "父亲节", "group": "社会节日"},
+    {"month": 11, "weekday": 3, "ordinal": 4, "name": "感恩节", "group": "社会节日"}
+  ]
+}
+
