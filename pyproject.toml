@@ -1,0 +1,18 @@
+[project]
+name = "china-calendar"
+version = "1.0.0"
+description = "中国大陆节假日、纪念日与二十四节气 iCalendar 订阅"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[project.scripts]
+china-calendar = "china_calendar.cli:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pyright]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+
