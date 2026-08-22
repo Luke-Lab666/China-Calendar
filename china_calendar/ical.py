@@ -64,11 +64,15 @@ def _event_lines(event: Event, dtstamp: str) -> list[str]:
         )
     lines.extend(
         [
-            f"SUMMARY:{_escape(event.summary)}",
-            f"TRANSP:{'OPAQUE' if event.kind == 'workday' else 'TRANSPARENT'}",
+            f"SUMMARY;LANGUAGE=zh_CN:{_escape(event.summary)}",
+            "TRANSP:TRANSPARENT",
             f"CATEGORIES:{','.join(_escape(category) for category in event.categories)}",
         ]
     )
+    if event.apple_special_day:
+        lines.append(f"X-APPLE-SPECIAL-DAY:{event.apple_special_day}")
+    if event.apple_universal_id:
+        lines.append(f"X-APPLE-UNIVERSAL-ID:{event.apple_universal_id}")
     if event.description:
         lines.append(f"DESCRIPTION:{_escape(event.description)}")
     if event.url:
@@ -88,6 +92,10 @@ def render_calendar(name: str, events: list[Event], generated_at: str) -> bytes:
         "METHOD:PUBLISH",
         f"X-WR-CALNAME:{CALENDAR_NAMES[name]}",
         "X-WR-TIMEZONE:Asia/Shanghai",
+        "X-APPLE-LANGUAGE:zh",
+        "X-APPLE-REGION:CN",
+        "X-APPLE-CALENDAR-COLOR:#FF9500",
+        "COLOR:orange",
         "REFRESH-INTERVAL;VALUE=DURATION:PT12H",
         "X-PUBLISHED-TTL:PT12H",
         "BEGIN:VTIMEZONE",

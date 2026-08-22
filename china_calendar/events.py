@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import calendar
 import json
+import uuid
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -35,6 +36,19 @@ def _uid(kind: str, day_or_stamp: str, name: str) -> str:
     return f"{kind}-{day_or_stamp}-{safe_name}@china-calendar.luke-lab666"
 
 
+def _apple_id(kind: str, name: str) -> str:
+    """Stable identifier used by Apple Calendar to relate recurring concepts."""
+    return str(uuid.uuid5(uuid.NAMESPACE_URL, f"china-calendar:{kind}:{name}"))
+
+
+def _holiday_name(name: str) -> str:
+    # Official source combines overlapping arrangements (for example
+    # "国庆节、中秋节").  The traditional festival remains a separate event.
+    if "国庆节" in name:
+        return "国庆节"
+    return name.split("、", 1)[0]
+
+
 def holiday_events(root: Path, today: date, future_only: bool) -> list[Event]:
     result: list[Event] = []
     for path in sorted((root / "data" / "holidays").glob("*.json")):
@@ -42,25 +56,51 @@ def holiday_events(root: Path, today: date, future_only: bool) -> list[Event]:
         if not payload["papers"]:
             continue
         source_url = payload["papers"][0]
+        days = []
         for item in payload["days"]:
             event_date = date.fromisoformat(item["date"])
-            if event_date.year < 2025 or (future_only and event_date < today):
-                continue
-            is_off = bool(item["is_off_day"])
-            prefix = "休" if is_off else "班"
-            summary = f"{prefix} · {item['name']}" if is_off else f"{prefix} · {item['name']}调休"
+            if event_date.year >= 2025 and not (future_only and event_date < today):
+                days.append((event_date, bool(item["is_off_day"]), _holiday_name(item["name"])))
+
+        off_days = sorted((day, name) for day, is_off, name in days if is_off)
+        index = 0
+        while index < len(off_days):
+            start, name = off_days[index]
+            end = start + timedelta(days=1)
+            index += 1
+            while index < len(off_days) and off_days[index] == (end, name):
+                end += timedelta(days=1)
+                index += 1
             result.append(
                 Event(
-                    uid=_uid("holiday" if is_off else "workday", item["date"], item["name"]),
-                    summary=summary,
-                    kind="holiday" if is_off else "workday",
+                    uid=_uid("holiday", f"{start.isoformat()}-{end.isoformat()}", name),
+                    summary=f"{name}（休）",
+                    kind="holiday",
+                    start=start,
+                    end=end,
+                    description="国务院办公厅正式放假安排。",
+                    url=source_url,
+                    categories=("中国大陆", "法定节假日"),
+                    apple_special_day="WORK-HOLIDAY",
+                    apple_universal_id=_apple_id("holiday", name),
+                )
+            )
+
+        for event_date, is_off, name in days:
+            if is_off:
+                continue
+            result.append(
+                Event(
+                    uid=_uid("workday", event_date.isoformat(), name),
+                    summary=f"{name}（班）",
+                    kind="workday",
                     start=event_date,
                     end=event_date + timedelta(days=1),
-                    description=(
-                        "国务院办公厅正式放假安排。" if is_off else "国务院办公厅正式调休补班安排。"
-                    ),
+                    description="国务院办公厅正式调休补班安排。",
                     url=source_url,
-                    categories=("中国大陆", "法定节假日" if is_off else "调休补班"),
+                    categories=("中国大陆", "调休补班"),
+                    apple_special_day="ALTERNATE-WORKDAY",
+                    apple_universal_id=_apple_id("holiday", name),
                 )
             )
     return result
@@ -77,7 +117,7 @@ def solar_term_events(root: Path) -> list[Event]:
             result.append(
                 Event(
                     uid=_uid("solar-term", start.strftime("%Y%m%dT%H%M"), item["name"]),
-                    summary=f"节气 · {item['name']} {start:%H:%M}",
+                    summary=item["name"],
                     kind="solar_term",
                     start=start,
                     end=start + timedelta(minutes=1),
@@ -88,6 +128,7 @@ def solar_term_events(root: Path) -> list[Event]:
                     ),
                     url=payload["source"],
                     categories=("二十四节气",),
+                    apple_universal_id=_apple_id("solar-term", item["name"]),
                 )
             )
     return result
