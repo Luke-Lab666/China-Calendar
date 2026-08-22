@@ -75,6 +75,23 @@ class GeneratedCalendarTests(unittest.TestCase):
         self.assertEqual(events[0].end, date(2026, 10, 8))
         self.assertEqual(events[0].apple_special_day, "WORK-HOLIDAY")
 
+    def test_supplement_avoids_official_apple_holiday_duplicates(self) -> None:
+        supplement = self.groups["supplement"]
+        self.assertTrue(all(event.kind not in {"holiday", "workday"} for event in supplement))
+        summaries = {event.summary for event in supplement}
+        self.assertNotIn("国际妇女节", summaries)
+        self.assertNotIn("春节", summaries)
+        self.assertIn("南京大屠杀死难者国家公祭日", summaries)
+        self.assertIn("腊八节", summaries)
+
+    def test_supplement_keeps_minute_accurate_solar_term(self) -> None:
+        event = next(
+            event
+            for event in self.groups["supplement"]
+            if event.summary == "寒露 · 14:29交节" and event.start.year == 2026
+        )
+        self.assertEqual(event.start.isoformat(), "2026-10-08T14:29:00+08:00")
+
     def test_unannounced_year_does_not_invent_holidays(self) -> None:
         holidays = [event for event in self.groups["holidays"] if event.start.year == 2027]
         self.assertEqual(holidays, [])
@@ -96,6 +113,13 @@ class GeneratedCalendarTests(unittest.TestCase):
         self.assertIn("X-APPLE-CALENDAR-COLOR:#FF9500", text)
         self.assertIn("X-APPLE-SPECIAL-DAY:WORK-HOLIDAY", text)
         self.assertIn("X-APPLE-SPECIAL-DAY:ALTERNATE-WORKDAY", text)
+
+    def test_supplement_calendar_renders_without_special_day_markers(self) -> None:
+        content = render_calendar(
+            "supplement", self.groups["supplement"], self.generated_at
+        ).decode("utf-8")
+        self.assertIn("X-WR-CALNAME:中国日历补充・精确交节与纪念日", content)
+        self.assertNotIn("X-APPLE-SPECIAL-DAY:", content)
 
     def test_future_only_filters_only_official_arrangements(self) -> None:
         groups = collect_events(ROOT, date(2026, 8, 22), future_holidays_only=True)

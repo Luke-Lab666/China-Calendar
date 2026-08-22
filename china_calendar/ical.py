@@ -12,6 +12,7 @@ CALENDAR_NAMES = {
     "holidays": "中国大陆节假日与调休",
     "solar-terms": "二十四节气（北京时间）",
     "observances": "中国传统节日与纪念日",
+    "supplement": "中国日历补充・精确交节与纪念日",
 }
 
 SHANGHAI = ZoneInfo("Asia/Shanghai")

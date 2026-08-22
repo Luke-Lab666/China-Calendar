@@ -3,6 +3,7 @@ from __future__ import annotations
 import calendar
 import json
 import uuid
+from dataclasses import replace
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -24,6 +25,18 @@ TRADITIONAL_FESTIVALS = {
     (9, 9): "重阳节",
     (12, 8): "腊八节",
     (12, 23): "北方小年",
+}
+
+# These are already included in Apple's official "中国大陆节假日" calendar.
+# The supplement feed keeps only material Apple does not provide, apart from
+# minute-accurate solar-term transition events which intentionally add detail.
+APPLE_TRADITIONAL_NAMES = {"春节", "元宵节", "端午节", "七夕", "中秋节", "重阳节", "除夕"}
+APPLE_OBSERVANCE_NAMES = {
+    "国际妇女节",
+    "五四青年节",
+    "国际儿童节",
+    "中国共产党成立纪念日",
+    "中国人民解放军建军节",
 }
 
 
@@ -218,14 +231,47 @@ def _observance_event(event_date: date, item: dict) -> Event:
     )
 
 
+def supplement_events(
+    solar_terms: list[Event], traditional: list[Event], observances: list[Event]
+) -> list[Event]:
+    """Events intended to accompany Apple's official mainland holiday calendar."""
+    result: list[Event] = []
+    for event in solar_terms:
+        assert isinstance(event.start, datetime)
+        result.append(
+            replace(
+                event,
+                uid=f"supplement-{event.uid}",
+                summary=f"{event.summary} · {event.start:%H:%M}交节",
+            )
+        )
+    for event in traditional:
+        name = event.summary.removeprefix("传统 · ")
+        if name not in APPLE_TRADITIONAL_NAMES:
+            result.append(
+                replace(event, uid=f"supplement-{event.uid}", summary=name)
+            )
+    for event in observances:
+        name = event.summary.removeprefix("纪念 · ")
+        if name not in APPLE_OBSERVANCE_NAMES:
+            result.append(
+                replace(event, uid=f"supplement-{event.uid}", summary=name)
+            )
+    return sorted(result, key=lambda event: (event.start.isoformat(), event.summary))
+
+
 def collect_events(root: Path, today: date, future_holidays_only: bool) -> dict[str, list[Event]]:
+    solar_terms = solar_term_events(root)
+    traditional = traditional_events(root)
+    observances = observance_events(root)
     groups = {
         "holidays": holiday_events(root, today, future_holidays_only),
-        "solar-terms": solar_term_events(root),
-        "observances": traditional_events(root) + observance_events(root),
+        "solar-terms": solar_terms,
+        "observances": traditional + observances,
     }
     groups["calendar"] = sorted(
         (event for events in groups.values() for event in events),
         key=lambda event: (event.start.isoformat(), event.summary),
     )
+    groups["supplement"] = supplement_events(solar_terms, traditional, observances)
     return groups
