@@ -6,6 +6,7 @@ from typing import Literal
 
 
 EventKind = Literal["holiday", "workday", "solar_term", "observance", "traditional"]
+AppleSpecialDay = Literal["WORK-HOLIDAY", "ALTERNATE-WORKDAY"]
 
 
 @dataclass(frozen=True, slots=True)
@@ -18,4 +19,5 @@ class Event:
     description: str = ""
     url: str = ""
     categories: tuple[str, ...] = field(default_factory=tuple)
-
+    apple_special_day: AppleSpecialDay | None = None
+    apple_universal_id: str = ""

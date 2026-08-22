@@ -49,7 +49,7 @@ class GeneratedCalendarTests(unittest.TestCase):
         event = next(
             event
             for event in self.groups["solar-terms"]
-            if event.summary.startswith("节气 · 立春") and event.start.year == 2026
+            if event.summary == "立春" and event.start.year == 2026
         )
         self.assertIsInstance(event.start, datetime)
         self.assertEqual(event.start.isoformat(), "2026-02-04T04:02:00+08:00")
@@ -61,7 +61,19 @@ class GeneratedCalendarTests(unittest.TestCase):
             if event.start == date(2026, 2, 14)
         )
         self.assertEqual(event.kind, "workday")
-        self.assertEqual(event.summary, "班 · 春节调休")
+        self.assertEqual(event.summary, "春节（班）")
+        self.assertEqual(event.apple_special_day, "ALTERNATE-WORKDAY")
+
+    def test_2026_national_day_is_one_multiday_holiday(self) -> None:
+        events = [
+            event
+            for event in self.groups["holidays"]
+            if event.summary == "国庆节（休）" and event.start.year == 2026
+        ]
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0].start, date(2026, 10, 1))
+        self.assertEqual(events[0].end, date(2026, 10, 8))
+        self.assertEqual(events[0].apple_special_day, "WORK-HOLIDAY")
 
     def test_unannounced_year_does_not_invent_holidays(self) -> None:
         holidays = [event for event in self.groups["holidays"] if event.start.year == 2027]
@@ -79,6 +91,11 @@ class GeneratedCalendarTests(unittest.TestCase):
         uids = re.findall(r"^UID:(.+)$", text, flags=re.MULTILINE)
         self.assertEqual(len(uids), len(set(uids)))
         self.assertNotIn("BEGIN:VALARM", text)
+        self.assertIn("X-APPLE-LANGUAGE:zh", text)
+        self.assertIn("X-APPLE-REGION:CN", text)
+        self.assertIn("X-APPLE-CALENDAR-COLOR:#FF9500", text)
+        self.assertIn("X-APPLE-SPECIAL-DAY:WORK-HOLIDAY", text)
+        self.assertIn("X-APPLE-SPECIAL-DAY:ALTERNATE-WORKDAY", text)
 
     def test_future_only_filters_only_official_arrangements(self) -> None:
         groups = collect_events(ROOT, date(2026, 8, 22), future_holidays_only=True)
