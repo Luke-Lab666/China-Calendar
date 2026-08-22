@@ -21,6 +21,7 @@ https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/cale
 | 法定节假日与调休 | `https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/holidays.ics` |
 | 二十四节气 | `https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/solar-terms.ics` |
 | 传统节日与纪念日 | `https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/observances.ics` |
+| 苹果官方日历补充包 | `https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/supplement.ics` |
 
 iOS 添加方式：复制订阅地址，打开“设置” → “App” → “日历” → “日历账户” →
 “添加账户” → “其他” → “添加已订阅的日历”，粘贴地址并保存。
@@ -29,6 +30,26 @@ iOS 添加方式：复制订阅地址，打开“设置” → “App” → “
 再点该订阅右侧的 `ⓘ`，手动选择橙色。
 
 > 这是“订阅日历”，不要下载后再导入。订阅后，仓库更新会由系统定期同步；具体拉取频率由 iOS 控制。
+
+## 原生“休 / 班”角标方案
+
+iOS 只在苹果官方“节假日日历”上显示日期右上角的原生“休 / 班”角标；普通 ICS
+订阅即使包含相同的 Apple 私有字段，系统也不会显示角标。要获得原生角标并保留本项目的
+精确交节时间，请组合使用两个日历：
+
+1. 打开“日历”App → 底部“日历” → “添加日历” → “添加节假日日历”；
+2. 搜索并添加“中国大陆节假日”，颜色选择橙色；
+3. 再选择“添加订阅日历”，订阅以下补充包并同样选择橙色：
+
+```text
+https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/supplement.ics
+```
+
+补充包不包含法定放假和调休，也过滤了苹果已经提供的主要纪念日及传统节日；二十四节气
+以“寒露 · 14:29交节”的形式保留准确的北京时间。苹果官方日历仍会显示一个全天节气名称，
+这是系统日历不可关闭的部分。
+
+完成后请取消勾选或删除原来的完整 `calendar.ics` 订阅，否则法定节假日会重复显示。
 
 ## 更新策略
 
