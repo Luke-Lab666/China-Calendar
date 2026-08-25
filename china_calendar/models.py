@@ -5,7 +5,15 @@ from datetime import date, datetime
 from typing import Literal
 
 
-EventKind = Literal["holiday", "workday", "solar_term", "observance", "traditional"]
+EventKind = Literal[
+    "holiday",
+    "workday",
+    "solar_term",
+    "observance",
+    "traditional",
+    "seasonal",
+    "health",
+]
 AppleSpecialDay = Literal["WORK-HOLIDAY", "ALTERNATE-WORKDAY"]
 
 

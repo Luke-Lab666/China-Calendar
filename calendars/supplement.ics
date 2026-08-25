@@ -3,7 +3,7 @@ PRODID:-//Luke-Lab666//China Calendar 1.0//ZH-CN
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:中国日历补充・精确交节与纪念日
+X-WR-CALNAME:中国日历补充・精确交节、时令与健康提醒
 X-WR-TIMEZONE:Asia/Shanghai
 X-APPLE-LANGUAGE:zh
 X-APPLE-REGION:CN
@@ -22,9 +22,24 @@ DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:supplement-health-2025-01-05-e5b08fe5af92c2b7e998b2e5af92e998b2e6bb91@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250105
+DTEND;VALUE=DATE:20250106
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小寒·防寒防滑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:关注降温和道路结冰信息，外出注意头颈、手脚
+ 保暖并选择防滑鞋。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250105T1033-e5b08fe5af92@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250105T103300
 DTEND;TZID=Asia/Shanghai:20250105T103400
 SUMMARY;LANGUAGE=zh_CN:小寒 · 10:33交节
@@ -40,7 +55,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2025-01-07-e8858ae585abe88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250107
 DTEND;VALUE=DATE:20250108
 SUMMARY;LANGUAGE=zh_CN:腊八节
@@ -50,9 +65,21 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2025c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-01-08-e4b889e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250108
+DTEND;VALUE=DATE:20250109
+SUMMARY;LANGUAGE=zh_CN:时令 · 三九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:三九从2025年01月08日至2025年01月16日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2025-01-10-e4b8ade59bbde4babae6b091e8ada6e5af9fe8
  8a82@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250110
 DTEND;VALUE=DATE:20250111
 SUMMARY;LANGUAGE=zh_CN:中国人民警察节
@@ -60,9 +87,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-01-17-e59b9be4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250117
+DTEND;VALUE=DATE:20250118
+SUMMARY;LANGUAGE=zh_CN:时令 · 四九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:四九从2025年01月17日至2025年01月25日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2025-01-20-e5a4a7e5af92c2b7e4bd8ee6b8a9e4b88ee58f96e6
+ 9a96e5ae89e585a8@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250120
+DTEND;VALUE=DATE:20250121
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大寒·低温与取暖安全
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:根据气温及时增添衣物；使用燃气或燃煤设备时
+ 保持通风，防范一氧化碳中毒。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250120T0400-e5a4a7e5af92@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250120T040000
 DTEND;TZID=Asia/Shanghai:20250120T040100
 SUMMARY;LANGUAGE=zh_CN:大寒 · 04:00交节
@@ -78,7 +132,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2025-01-22-e58c97e696b9e5b08fe5b9b4@china-calend
  ar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250122
 DTEND;VALUE=DATE:20250123
 SUMMARY;LANGUAGE=zh_CN:北方小年
@@ -88,9 +142,36 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2025c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-01-26-e4ba94e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250126
+DTEND;VALUE=DATE:20250127
+SUMMARY;LANGUAGE=zh_CN:时令 · 五九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:五九从2025年01月26日至2025年02月03日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2025-02-03-e7ab8be698a5c2b7e998b2e6b094e6b8a9e9aaa4e5
+ 8f98@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250203
+DTEND;VALUE=DATE:20250204
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立春·防气温骤变
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:早春冷暖波动较大，出门前查看逐小时预报，按
+ 温度变化分层穿衣。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250203T2210-e7ab8be698a5@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250203T221000
 DTEND;TZID=Asia/Shanghai:20250203T221100
 SUMMARY;LANGUAGE=zh_CN:立春 · 22:10交节
@@ -104,9 +185,33 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-02-04-e585ade4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250204
+DTEND;VALUE=DATE:20250205
+SUMMARY;LANGUAGE=zh_CN:时令 · 六九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:六九从2025年02月04日至2025年02月12日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2025-02-13-e4b883e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250213
+DTEND;VALUE=DATE:20250214
+SUMMARY;LANGUAGE=zh_CN:时令 · 七九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:七九从2025年02月13日至2025年02月21日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2025-02-14-e68385e4babae88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
 SUMMARY;LANGUAGE=zh_CN:情人节
@@ -114,9 +219,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-02-18-e99ba8e6b0b4c2b7e99ba8e5a4a9e998b2e6bb91e9
+ 98b2e6bdae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250218
+DTEND;VALUE=DATE:20250219
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 雨水·雨天防滑防潮
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:雨天放慢步速并避开积水路面，居室潮湿时适度
+ 通风或除湿。 节气和时令仅作季节参考，请以当地天气
+ 预报、气象预警及自身情况调整安排；出现明显不适请
+ 及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250218T1807-e99ba8e6b0b4@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250218T180700
 DTEND;TZID=Asia/Shanghai:20250218T180800
 SUMMARY;LANGUAGE=zh_CN:雨水 · 18:07交节
@@ -130,9 +250,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-02-22-e585abe4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250222
+DTEND;VALUE=DATE:20250223
+SUMMARY;LANGUAGE=zh_CN:时令 · 八九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:八九从2025年02月22日至2025年03月02日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2025-03-01-e9be99e68aace5a4b4@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250301
 DTEND;VALUE=DATE:20250302
 SUMMARY;LANGUAGE=zh_CN:龙抬头
@@ -142,9 +274,36 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2025c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-03-03-e4b99de4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250303
+DTEND;VALUE=DATE:20250304
+SUMMARY;LANGUAGE=zh_CN:时令 · 九九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九从2025年03月03日至2025年03月11日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2025-03-05-e6838ae89bb0c2b7e79599e6848fe99bb7e99ba8e9
+ a284e8ada6@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250305
+DTEND;VALUE=DATE:20250306
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 惊蛰·留意雷雨预警
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:出现雷电预警时减少户外停留，远离孤立高物、
+ 大树、水边和空旷地带。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2025-03-05-e5ada6e99bb7e9948be7baaae5bfb5e697a5@c
  hina-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250305
 DTEND;VALUE=DATE:20250306
 SUMMARY;LANGUAGE=zh_CN:学雷锋纪念日
@@ -154,7 +313,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-solar-term-20250305T1607-e6838ae89bb0@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250305T160700
 DTEND;TZID=Asia/Shanghai:20250305T160800
 SUMMARY;LANGUAGE=zh_CN:惊蛰 · 16:07交节
@@ -168,9 +327,20 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-03-12-e587bae4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250312
+DTEND;VALUE=DATE:20250313
+SUMMARY;LANGUAGE=zh_CN:时令 · 出九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九八十一天结束，今日出九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2025-03-12-e6a48de6a091e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250312
 DTEND;VALUE=DATE:20250313
 SUMMARY;LANGUAGE=zh_CN:植树节
@@ -180,7 +350,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-03-15-e59bbde99985e6b688e8b4b9e88085e69d83e7
  9b8ae697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250315
 DTEND;VALUE=DATE:20250316
 SUMMARY;LANGUAGE=zh_CN:国际消费者权益日
@@ -188,9 +358,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-03-20-e698a5e58886c2b7e585b3e6b3a8e88ab1e7b289e4
+ b88ee6b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250320
+DTEND;VALUE=DATE:20250321
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 春分·关注花粉与温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:过敏人群外出前留意花粉和风力信息，回家后及
+ 时清洁暴露部位；早晚注意温差。 节气和时令仅作季节
+ 参考，请以当地天气预报、气象预警及自身情况调整安
+ 排；出现明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250320T1701-e698a5e58886@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250320T170100
 DTEND;TZID=Asia/Shanghai:20250320T170200
 SUMMARY;LANGUAGE=zh_CN:春分 · 17:01交节
@@ -206,7 +391,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2025-03-31-e4b88ae5b7b3e88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250331
 DTEND;VALUE=DATE:20250401
 SUMMARY;LANGUAGE=zh_CN:上巳节
@@ -218,7 +403,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-04-01-e6849ae4babae88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250401
 DTEND;VALUE=DATE:20250402
 SUMMARY;LANGUAGE=zh_CN:愚人节
@@ -226,9 +411,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-04-04-e6b885e6988ec2b7e688b7e5a496e998b2e69992e8
+ a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250404
+DTEND;VALUE=DATE:20250405
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 清明·户外防晒补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:户外活动前查看紫外线指数，合理使用遮阳用品
+ 并随身带水。 节气和时令仅作季节参考，请以当地天气
+ 预报、气象预警及自身情况调整安排；出现明显不适请
+ 及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250404T2049-e6b885e6988e@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250404T204900
 DTEND;TZID=Asia/Shanghai:20250404T205000
 SUMMARY;LANGUAGE=zh_CN:清明 · 20:49交节
@@ -242,9 +442,25 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-04-20-e8b0b7e99ba8c2b7e6bdaee6b9bfe5a4a9e6b094e9
+ 98b2e99c89@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250420
+DTEND;VALUE=DATE:20250421
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 谷雨·潮湿天气防霉
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:连续阴雨时加强通风或除湿，衣物充分晾干，霉
+ 变食品不要继续食用。 节气和时令仅作季节参考，请以
+ 当地天气预报、气象预警及自身情况调整安排；出现明
+ 显不适请及时就医。
+URL:https://www.shanghai.gov.cn/nw17239/20260626/43894ac4f7534261ad7028fe99
+ 5bc62d.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250420T0356-e8b0b7e99ba8@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250420T035600
 DTEND;TZID=Asia/Shanghai:20250420T035700
 SUMMARY;LANGUAGE=zh_CN:谷雨 · 03:56交节
@@ -260,7 +476,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-04-22-e4b896e7958ce59cb0e79083e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250422
 DTEND;VALUE=DATE:20250423
 SUMMARY;LANGUAGE=zh_CN:世界地球日
@@ -268,9 +484,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-05-05-e7ab8be5a48fc2b7e68f90e5898de58786e5a487e9
+ 98b2e69a91@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250505
+DTEND;VALUE=DATE:20250506
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立夏·提前准备防暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:气温上升后逐步调整户外活动时段，外出备好饮
+ 水和遮阳用品。 节气和时令仅作季节参考，请以当地天
+ 气预报、气象预警及自身情况调整安排；出现明显不适
+ 请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250505T1357-e7ab8be5a48f@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250505T135700
 DTEND;TZID=Asia/Shanghai:20250505T135800
 SUMMARY;LANGUAGE=zh_CN:立夏 · 13:57交节
@@ -286,7 +517,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-05-11-e6af8de4bab2e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250511
 DTEND;VALUE=DATE:20250512
 SUMMARY;LANGUAGE=zh_CN:母亲节
@@ -296,7 +527,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-05-12-e59bbde99985e68aa4e5a3abe88a82@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250512
 DTEND;VALUE=DATE:20250513
 SUMMARY;LANGUAGE=zh_CN:国际护士节
@@ -305,7 +536,7 @@ CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-05-20-520@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250520
 DTEND;VALUE=DATE:20250521
 SUMMARY;LANGUAGE=zh_CN:520
@@ -313,9 +544,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-05-21-e5b08fe6bba1c2b7e997b7e783ade5a4a9e6b094e4
+ b8bbe58aa8e8a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250521
+DTEND;VALUE=DATE:20250522
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小满·闷热天气主动补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:闷热环境中不要等口渴才喝水，少量多次补充；
+ 大量出汗后注意休息。 节气和时令仅作季节参考，请以
+ 当地天气预报、气象预警及自身情况调整安排；出现明
+ 显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250521T0255-e5b08fe6bba1@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250521T025500
 DTEND;TZID=Asia/Shanghai:20250521T025600
 SUMMARY;LANGUAGE=zh_CN:小满 · 02:55交节
@@ -329,9 +575,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-06-05-e88a92e7a78dc2b7e998b2e99bb7e99ba8e4b88ee9
+ ab98e6b8a9@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250605
+DTEND;VALUE=DATE:20250606
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 芒种·防雷雨与高温
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:安排户外活动前同时查看高温、暴雨和雷电预警
+ ，遇强对流及时进入安全建筑。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250605T1757-e88a92e7a78d@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250605T175700
 DTEND;TZID=Asia/Shanghai:20250605T175800
 SUMMARY;LANGUAGE=zh_CN:芒种 · 17:57交节
@@ -345,9 +606,40 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-06-07-e4b88ae6b5b7e6a285e99ba8e998b2e6bdaee998b2
+ e99c89@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250607
+DTEND;VALUE=DATE:20250608
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 上海梅雨防潮防霉
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:及时通风或除湿，湿衣尽快洗净晾干；食品密封
+ 、按需冷藏，发现霉变食品直接丢弃。 节气和时令仅作
+ 季节参考，请以当地天气预报、气象预警及自身情况调
+ 整安排；出现明显不适请及时就医。
+URL:https://www.shanghai.gov.cn/nw17239/20260626/43894ac4f7534261ad7028fe99
+ 5bc62d.html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2025-06-07-e4b88ae6b5b7e585a5e6a285@china-calendar.
+ luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250607
+DTEND;VALUE=DATE:20250608
+SUMMARY;LANGUAGE=zh_CN:时令 · 上海入梅
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,上海梅雨
+DESCRIPTION:上海气象部门正式公布今日入梅；本年梅雨期至
+ 06月29日。日期仅在官方公布后收录，不按常年平均日期
+ 预测。
+URL:https://www.shanghai.gov.cn/nw4411/20250616/3219037fa2f94b09bfe0b1606df
+ 95bb3.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2025-06-15-e788b6e4bab2e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
 SUMMARY;LANGUAGE=zh_CN:父亲节
@@ -355,9 +647,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-06-21-e5a48fe887b3c2b7e981bfe5bc80e58d88e5908ee6
+ 9ab4e69992@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250621
+DTEND;VALUE=DATE:20250622
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 夏至·避开午后暴晒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温日尽量避开正午至午后长时间户外活动，使
+ 用遮阳用品并及时补水。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250621T1042-e5a48fe887b3@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250621T104200
 DTEND;TZID=Asia/Shanghai:20250621T104300
 SUMMARY;LANGUAGE=zh_CN:夏至 · 10:42交节
@@ -371,9 +678,54 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-06-29-e4b88ae6b5b7e587bae6a285e998b2e9ab98e6b8a9
+ @china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250629
+DTEND;VALUE=DATE:20250630
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 上海出梅防高温
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:出梅后常转入晴热天气，提前关注高温预警，安
+ 排好遮阳、补水和室内降温。 节气和时令仅作季节参考
+ ，请以当地天气预报、气象预警及自身情况调整安排；
+ 出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2025-06-29-e4b88ae6b5b7e587bae6a285@china-calendar.
+ luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250629
+DTEND;VALUE=DATE:20250630
+SUMMARY;LANGUAGE=zh_CN:时令 · 上海出梅
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,上海梅雨
+DESCRIPTION:上海气象部门正式公布今日出梅；本年梅雨期始
+ 于06月07日。日期仅在官方公布后收录，不按常年平均日
+ 期预测。
+URL:https://www.shanghai.gov.cn/nw4411/20250628/7082f6d0ee8d4a018c32dc3559b
+ 31b06.html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2025-07-07-e5b08fe69a91c2b7e998b2e88c83e4b8ade69a91@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250707
+DTEND;VALUE=DATE:20250708
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小暑·防范中暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温高湿时缩短连续户外活动时间，主动补水并
+ 安排阴凉处休息。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250707T0405-e5b08fe69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250707T040500
 DTEND;TZID=Asia/Shanghai:20250707T040600
 SUMMARY;LANGUAGE=zh_CN:小暑 · 04:05交节
@@ -387,9 +739,53 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-07-20-e585a5e4bc8fe998b2e69a91@china-calendar.lu
+ ke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250720
+DTEND;VALUE=DATE:20250721
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 入伏防暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温高湿时减少午后长时间户外活动，主动少量
+ 多次补水，关注头晕、恶心、乏力等中暑信号。 节气和
+ 时令仅作季节参考，请以当地天气预报、气象预警及自
+ 身情况调整安排；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2025-07-20-e5889de4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250720
+DTEND;VALUE=DATE:20250721
+SUMMARY;LANGUAGE=zh_CN:时令 · 初伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:初伏从2025年07月20日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2025-07-22-e5a4a7e69a91c2b7e8af86e588abe4b8ade69a91e4
+ bfa1e58fb7@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250722
+DTEND;VALUE=DATE:20250723
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大暑·识别中暑信号
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温环境中出现头晕、恶心、乏力或大量出汗时
+ 立即离开热环境、降温并补水。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250722T2129-e5a4a7e69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250722T212900
 DTEND;TZID=Asia/Shanghai:20250722T213000
 SUMMARY;LANGUAGE=zh_CN:大暑 · 21:29交节
@@ -403,9 +799,38 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-07-30-e4b8ade4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250730
+DTEND;VALUE=DATE:20250731
+SUMMARY;LANGUAGE=zh_CN:时令 · 中伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:中伏从2025年07月30日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2025-08-07-e7ab8be7a78bc2b7e9ab98e6b8a9e998b2e68aa4e5
+ 88abe694bee69dbe@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250807
+DTEND;VALUE=DATE:20250808
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立秋·高温防护别放松
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:节气转换不代表高温结束，继续根据高温预警调
+ 整出行时段并做好补水遮阳。 节气和时令仅作季节参考
+ ，请以当地天气预报、气象预警及自身情况调整安排；
+ 出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250807T1352-e7ab8be7a78b@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250807T135200
 DTEND;TZID=Asia/Shanghai:20250807T135300
 SUMMARY;LANGUAGE=zh_CN:立秋 · 13:52交节
@@ -419,9 +844,50 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-08-09-e69cabe4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250809
+DTEND;VALUE=DATE:20250810
+SUMMARY;LANGUAGE=zh_CN:时令 · 末伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:末伏从2025年08月09日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2025-08-19-e587bae4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250819
+DTEND;VALUE=DATE:20250820
+SUMMARY;LANGUAGE=zh_CN:时令 · 出伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:末伏于2025年08月18日结束，今日出伏。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2025-08-23-e5a484e69a91c2b7e585bce9a1bee69a91e783ade4
+ b88ee6b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250823
+DTEND;VALUE=DATE:20250824
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 处暑·兼顾暑热与温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:白天仍热时继续防暑，早晚转凉则按实际气温增
+ 减衣物。 节气和时令仅作季节参考，请以当地天气预报
+ 、气象预警及自身情况调整安排；出现明显不适请及时
+ 就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250823T0434-e5a484e69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250823T043400
 DTEND;TZID=Asia/Shanghai:20250823T043500
 SUMMARY;LANGUAGE=zh_CN:处暑 · 04:34交节
@@ -437,7 +903,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-09-03-e4b8ade59bbde4babae6b091e68a97e697a5e6
  8898e4ba89e8839ce588a9e7baaae5bfb5e697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250903
 DTEND;VALUE=DATE:20250904
 SUMMARY;LANGUAGE=zh_CN:中国人民抗日战争胜利纪念日
@@ -447,7 +913,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2025-09-06-e4b8ade58583e88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250906
 DTEND;VALUE=DATE:20250907
 SUMMARY;LANGUAGE=zh_CN:中元节
@@ -457,9 +923,24 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2025c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-09-07-e799bde99cb2c2b7e79599e6848fe698bce5a49ce6
+ b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250907
+DTEND;VALUE=DATE:20250908
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 白露·留意昼夜温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:早晚出行前查看体感温度，使用便于增减的衣物
+ 应对昼夜温差。 节气和时令仅作季节参考，请以当地天
+ 气预报、气象预警及自身情况调整安排；出现明显不适
+ 请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250907T1652-e799bde99cb2@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250907T165200
 DTEND;TZID=Asia/Shanghai:20250907T165300
 SUMMARY;LANGUAGE=zh_CN:白露 · 16:52交节
@@ -475,7 +956,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-09-10-e69599e5b888e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250910
 DTEND;VALUE=DATE:20250911
 SUMMARY;LANGUAGE=zh_CN:教师节
@@ -485,7 +966,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-09-18-e4b99de4b880e585abe4ba8be58f98e7baaae5
  bfb5e697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250918
 DTEND;VALUE=DATE:20250919
 SUMMARY;LANGUAGE=zh_CN:九一八事变纪念日
@@ -493,9 +974,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-09-23-e7a78be58886c2b7e5b9b2e787a5e5a4a9e6b094e8
+ a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20250923
+DTEND;VALUE=DATE:20250924
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 秋分·干燥天气补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:空气干燥时规律饮水，室内避免过度干燥；户外
+ 同时留意紫外线。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20250923T0219-e7a78be58886@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20250923T021900
 DTEND;TZID=Asia/Shanghai:20250923T022000
 SUMMARY;LANGUAGE=zh_CN:秋分 · 02:19交节
@@ -511,7 +1007,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-09-30-e78388e5a3abe7baaae5bfb5e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20250930
 DTEND;VALUE=DATE:20251001
 SUMMARY;LANGUAGE=zh_CN:烈士纪念日
@@ -519,9 +1015,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-10-08-e5af92e99cb2c2b7e9998de6b8a9e58f8ae697b6e6
+ b7bbe8a1a3@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20251008
+DTEND;VALUE=DATE:20251009
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 寒露·降温及时添衣
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:冷空气活动增多时关注最低气温和大风预警，重
+ 点做好头颈与四肢保暖。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20251008T0841-e5af92e99cb2@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20251008T084100
 DTEND;TZID=Asia/Shanghai:20251008T084200
 SUMMARY;LANGUAGE=zh_CN:寒露 · 08:41交节
@@ -535,9 +1046,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-10-23-e99c9ce9998dc2b7e998b2e5af92e4b88ee998b2e8
+ b78ce58092@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20251023
+DTEND;VALUE=DATE:20251024
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 霜降·防寒与防跌倒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:低温和湿滑天气出行放慢速度，老年人及慢性病
+ 患者更要留意气温骤降。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20251023T1151-e99c9ce9998d@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20251023T115100
 DTEND;TZID=Asia/Shanghai:20251023T115200
 SUMMARY;LANGUAGE=zh_CN:霜降 · 11:51交节
@@ -551,9 +1077,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-11-07-e7ab8be586acc2b7e5819ae5a5bde5af92e6bdaee5
+ 8786e5a487@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20251107
+DTEND;VALUE=DATE:20251108
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立冬·做好寒潮准备
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:提前检查保暖衣物和取暖设备，寒潮来临时减少
+ 长时间户外暴露。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20251107T1204-e7ab8be586ac@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20251107T120400
 DTEND;TZID=Asia/Shanghai:20251107T120500
 SUMMARY;LANGUAGE=zh_CN:立冬 · 12:04交节
@@ -567,9 +1108,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2025.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-11-22-e5b08fe99baac2b7e99ba8e99baae5a4a9e998b2e6
+ bb91@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20251122
+DTEND;VALUE=DATE:20251123
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小雪·雨雪天防滑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:雨雪天气选择防滑鞋，避开结冰路面；驾车和骑
+ 行时预留更长制动距离。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20251122T0936-e5b08fe99baa@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20251122T093600
 DTEND;TZID=Asia/Shanghai:20251122T093700
 SUMMARY;LANGUAGE=zh_CN:小雪 · 09:36交节
@@ -585,7 +1141,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-11-27-e6849fe681a9e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20251127
 DTEND;VALUE=DATE:20251128
 SUMMARY;LANGUAGE=zh_CN:感恩节
@@ -595,7 +1151,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-12-04-e59bbde5aeb6e5aeaae6b395e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20251204
 DTEND;VALUE=DATE:20251205
 SUMMARY;LANGUAGE=zh_CN:国家宪法日
@@ -603,9 +1159,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-12-07-e5a4a7e99baac2b7e4bd8ee6b8a9e998b2e586bbe4
+ bca4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20251207
+DTEND;VALUE=DATE:20251208
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大雪·低温防冻伤
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:长时间户外活动注意手、脚、耳等暴露部位保暖
+ ，衣物潮湿后及时更换。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20251207T0505-e5a4a7e99baa@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20251207T050500
 DTEND;TZID=Asia/Shanghai:20251207T050600
 SUMMARY;LANGUAGE=zh_CN:大雪 · 05:05交节
@@ -621,7 +1192,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-12-13-e58d97e4baace5a4a7e5b1a0e69d80e6adbbe9
  9abee88085e59bbde5aeb6e585ace7a5ade697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20251213
 DTEND;VALUE=DATE:20251214
 SUMMARY;LANGUAGE=zh_CN:南京大屠杀死难者国家公祭日
@@ -629,9 +1200,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2025-12-21-e586ace887b3c2b7e695b0e4b99de998b2e5af92@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20251221
+DTEND;VALUE=DATE:20251222
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 冬至·数九防寒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:进入数九后持续关注寒潮预警，分层保暖并避免
+ 在低温环境中久留。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2025-12-21-e4b880e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20251221
+DTEND;VALUE=DATE:20251222
+SUMMARY;LANGUAGE=zh_CN:时令 · 一九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:一九从2025年12月21日至2025年12月29日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20251221T2303-e586ace887b3@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20251221T230300
 DTEND;TZID=Asia/Shanghai:20251221T230400
 SUMMARY;LANGUAGE=zh_CN:冬至 · 23:03交节
@@ -647,7 +1245,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-12-24-e5b9b3e5ae89e5a49c@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
 SUMMARY;LANGUAGE=zh_CN:平安夜
@@ -657,7 +1255,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2025-12-25-e59ca3e8af9ee88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
 SUMMARY;LANGUAGE=zh_CN:圣诞节
@@ -665,9 +1263,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2025-12-30-e4ba8ce4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20251230
+DTEND;VALUE=DATE:20251231
+SUMMARY;LANGUAGE=zh_CN:时令 · 二九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:二九从2025年12月30日至2026年01月07日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2026-01-05-e5b08fe5af92c2b7e998b2e5af92e998b2e6bb91@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260105
+DTEND;VALUE=DATE:20260106
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小寒·防寒防滑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:关注降温和道路结冰信息，外出注意头颈、手脚
+ 保暖并选择防滑鞋。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260105T1623-e5b08fe5af92@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260105T162300
 DTEND;TZID=Asia/Shanghai:20260105T162400
 SUMMARY;LANGUAGE=zh_CN:小寒 · 16:23交节
@@ -681,9 +1306,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-01-08-e4b889e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260108
+DTEND;VALUE=DATE:20260109
+SUMMARY;LANGUAGE=zh_CN:时令 · 三九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:三九从2026年01月08日至2026年01月16日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2026-01-10-e4b8ade59bbde4babae6b091e8ada6e5af9fe8
  8a82@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260110
 DTEND;VALUE=DATE:20260111
 SUMMARY;LANGUAGE=zh_CN:中国人民警察节
@@ -691,9 +1328,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-01-17-e59b9be4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260117
+DTEND;VALUE=DATE:20260118
+SUMMARY;LANGUAGE=zh_CN:时令 · 四九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:四九从2026年01月17日至2026年01月25日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2026-01-20-e5a4a7e5af92c2b7e4bd8ee6b8a9e4b88ee58f96e6
+ 9a96e5ae89e585a8@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260120
+DTEND;VALUE=DATE:20260121
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大寒·低温与取暖安全
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:根据气温及时增添衣物；使用燃气或燃煤设备时
+ 保持通风，防范一氧化碳中毒。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260120T0945-e5a4a7e5af92@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260120T094500
 DTEND;TZID=Asia/Shanghai:20260120T094600
 SUMMARY;LANGUAGE=zh_CN:大寒 · 09:45交节
@@ -707,9 +1371,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-01-26-e4ba94e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260126
+DTEND;VALUE=DATE:20260127
+SUMMARY;LANGUAGE=zh_CN:时令 · 五九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:五九从2026年01月26日至2026年02月03日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2026-01-26-e8858ae585abe88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260126
 DTEND;VALUE=DATE:20260127
 SUMMARY;LANGUAGE=zh_CN:腊八节
@@ -719,9 +1395,36 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2026c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-02-04-e7ab8be698a5c2b7e998b2e6b094e6b8a9e9aaa4e5
+ 8f98@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260204
+DTEND;VALUE=DATE:20260205
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立春·防气温骤变
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:早春冷暖波动较大，出门前查看逐小时预报，按
+ 温度变化分层穿衣。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2026-02-04-e585ade4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260204
+DTEND;VALUE=DATE:20260205
+SUMMARY;LANGUAGE=zh_CN:时令 · 六九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:六九从2026年02月04日至2026年02月12日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260204T0402-e7ab8be698a5@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260204T040200
 DTEND;TZID=Asia/Shanghai:20260204T040300
 SUMMARY;LANGUAGE=zh_CN:立春 · 04:02交节
@@ -737,7 +1440,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2026-02-10-e58c97e696b9e5b08fe5b9b4@china-calend
  ar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260210
 DTEND;VALUE=DATE:20260211
 SUMMARY;LANGUAGE=zh_CN:北方小年
@@ -747,9 +1450,21 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2026c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-02-13-e4b883e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260213
+DTEND;VALUE=DATE:20260214
+SUMMARY;LANGUAGE=zh_CN:时令 · 七九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:七九从2026年02月13日至2026年02月21日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2026-02-14-e68385e4babae88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260214
 DTEND;VALUE=DATE:20260215
 SUMMARY;LANGUAGE=zh_CN:情人节
@@ -757,9 +1472,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-02-18-e99ba8e6b0b4c2b7e99ba8e5a4a9e998b2e6bb91e9
+ 98b2e6bdae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260219
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 雨水·雨天防滑防潮
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:雨天放慢步速并避开积水路面，居室潮湿时适度
+ 通风或除湿。 节气和时令仅作季节参考，请以当地天气
+ 预报、气象预警及自身情况调整安排；出现明显不适请
+ 及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260218T2352-e99ba8e6b0b4@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260218T235200
 DTEND;TZID=Asia/Shanghai:20260218T235300
 SUMMARY;LANGUAGE=zh_CN:雨水 · 23:52交节
@@ -773,9 +1503,48 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-02-22-e585abe4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260222
+DTEND;VALUE=DATE:20260223
+SUMMARY;LANGUAGE=zh_CN:时令 · 八九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:八九从2026年02月22日至2026年03月02日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2026-03-03-e4b99de4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260303
+DTEND;VALUE=DATE:20260304
+SUMMARY;LANGUAGE=zh_CN:时令 · 九九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九从2026年03月03日至2026年03月11日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2026-03-05-e6838ae89bb0c2b7e79599e6848fe99bb7e99ba8e9
+ a284e8ada6@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260305
+DTEND;VALUE=DATE:20260306
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 惊蛰·留意雷雨预警
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:出现雷电预警时减少户外停留，远离孤立高物、
+ 大树、水边和空旷地带。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2026-03-05-e5ada6e99bb7e9948be7baaae5bfb5e697a5@c
  hina-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260305
 DTEND;VALUE=DATE:20260306
 SUMMARY;LANGUAGE=zh_CN:学雷锋纪念日
@@ -785,7 +1554,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-solar-term-20260305T2159-e6838ae89bb0@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260305T215900
 DTEND;TZID=Asia/Shanghai:20260305T220000
 SUMMARY;LANGUAGE=zh_CN:惊蛰 · 21:59交节
@@ -799,9 +1568,20 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-03-12-e587bae4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260312
+DTEND;VALUE=DATE:20260313
+SUMMARY;LANGUAGE=zh_CN:时令 · 出九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九八十一天结束，今日出九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2026-03-12-e6a48de6a091e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260312
 DTEND;VALUE=DATE:20260313
 SUMMARY;LANGUAGE=zh_CN:植树节
@@ -811,7 +1591,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-03-15-e59bbde99985e6b688e8b4b9e88085e69d83e7
  9b8ae697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260315
 DTEND;VALUE=DATE:20260316
 SUMMARY;LANGUAGE=zh_CN:国际消费者权益日
@@ -819,9 +1599,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-03-20-e698a5e58886c2b7e585b3e6b3a8e88ab1e7b289e4
+ b88ee6b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 春分·关注花粉与温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:过敏人群外出前留意花粉和风力信息，回家后及
+ 时清洁暴露部位；早晚注意温差。 节气和时令仅作季节
+ 参考，请以当地天气预报、气象预警及自身情况调整安
+ 排；出现明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2026-03-20-e9be99e68aace5a4b4@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260320
 DTEND;VALUE=DATE:20260321
 SUMMARY;LANGUAGE=zh_CN:龙抬头
@@ -833,7 +1628,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-solar-term-20260320T2246-e698a5e58886@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260320T224600
 DTEND;TZID=Asia/Shanghai:20260320T224700
 SUMMARY;LANGUAGE=zh_CN:春分 · 22:46交节
@@ -849,7 +1644,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-04-01-e6849ae4babae88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY;LANGUAGE=zh_CN:愚人节
@@ -857,9 +1652,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-04-05-e6b885e6988ec2b7e688b7e5a496e998b2e69992e8
+ a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 清明·户外防晒补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:户外活动前查看紫外线指数，合理使用遮阳用品
+ 并随身带水。 节气和时令仅作季节参考，请以当地天气
+ 预报、气象预警及自身情况调整安排；出现明显不适请
+ 及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260405T0240-e6b885e6988e@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260405T024000
 DTEND;TZID=Asia/Shanghai:20260405T024100
 SUMMARY;LANGUAGE=zh_CN:清明 · 02:40交节
@@ -875,7 +1685,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2026-04-19-e4b88ae5b7b3e88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260419
 DTEND;VALUE=DATE:20260420
 SUMMARY;LANGUAGE=zh_CN:上巳节
@@ -885,9 +1695,25 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2026c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-04-20-e8b0b7e99ba8c2b7e6bdaee6b9bfe5a4a9e6b094e9
+ 98b2e99c89@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260420
+DTEND;VALUE=DATE:20260421
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 谷雨·潮湿天气防霉
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:连续阴雨时加强通风或除湿，衣物充分晾干，霉
+ 变食品不要继续食用。 节气和时令仅作季节参考，请以
+ 当地天气预报、气象预警及自身情况调整安排；出现明
+ 显不适请及时就医。
+URL:https://www.shanghai.gov.cn/nw17239/20260626/43894ac4f7534261ad7028fe99
+ 5bc62d.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260420T0939-e8b0b7e99ba8@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260420T093900
 DTEND;TZID=Asia/Shanghai:20260420T094000
 SUMMARY;LANGUAGE=zh_CN:谷雨 · 09:39交节
@@ -903,7 +1729,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-04-22-e4b896e7958ce59cb0e79083e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260422
 DTEND;VALUE=DATE:20260423
 SUMMARY;LANGUAGE=zh_CN:世界地球日
@@ -911,9 +1737,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-05-05-e7ab8be5a48fc2b7e68f90e5898de58786e5a487e9
+ 98b2e69a91@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260505
+DTEND;VALUE=DATE:20260506
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立夏·提前准备防暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:气温上升后逐步调整户外活动时段，外出备好饮
+ 水和遮阳用品。 节气和时令仅作季节参考，请以当地天
+ 气预报、气象预警及自身情况调整安排；出现明显不适
+ 请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260505T1949-e7ab8be5a48f@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260505T194900
 DTEND;TZID=Asia/Shanghai:20260505T195000
 SUMMARY;LANGUAGE=zh_CN:立夏 · 19:49交节
@@ -929,7 +1770,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-05-10-e6af8de4bab2e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260510
 DTEND;VALUE=DATE:20260511
 SUMMARY;LANGUAGE=zh_CN:母亲节
@@ -939,7 +1780,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-05-12-e59bbde99985e68aa4e5a3abe88a82@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260512
 DTEND;VALUE=DATE:20260513
 SUMMARY;LANGUAGE=zh_CN:国际护士节
@@ -948,7 +1789,7 @@ CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-05-20-520@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260521
 SUMMARY;LANGUAGE=zh_CN:520
@@ -956,9 +1797,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-05-21-e5b08fe6bba1c2b7e997b7e783ade5a4a9e6b094e4
+ b8bbe58aa8e8a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260521
+DTEND;VALUE=DATE:20260522
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小满·闷热天气主动补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:闷热环境中不要等口渴才喝水，少量多次补充；
+ 大量出汗后注意休息。 节气和时令仅作季节参考，请以
+ 当地天气预报、气象预警及自身情况调整安排；出现明
+ 显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260521T0837-e5b08fe6bba1@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260521T083700
 DTEND;TZID=Asia/Shanghai:20260521T083800
 SUMMARY;LANGUAGE=zh_CN:小满 · 08:37交节
@@ -972,9 +1828,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-06-05-e88a92e7a78dc2b7e998b2e99bb7e99ba8e4b88ee9
+ ab98e6b8a9@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260605
+DTEND;VALUE=DATE:20260606
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 芒种·防雷雨与高温
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:安排户外活动前同时查看高温、暴雨和雷电预警
+ ，遇强对流及时进入安全建筑。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260605T2348-e88a92e7a78d@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260605T234800
 DTEND;TZID=Asia/Shanghai:20260605T234900
 SUMMARY;LANGUAGE=zh_CN:芒种 · 23:48交节
@@ -988,9 +1859,55 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-06-18-e4b88ae6b5b7e6a285e99ba8e998b2e6bdaee998b2
+ e99c89@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 上海梅雨防潮防霉
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:及时通风或除湿，湿衣尽快洗净晾干；食品密封
+ 、按需冷藏，发现霉变食品直接丢弃。 节气和时令仅作
+ 季节参考，请以当地天气预报、气象预警及自身情况调
+ 整安排；出现明显不适请及时就医。
+URL:https://www.shanghai.gov.cn/nw17239/20260626/43894ac4f7534261ad7028fe99
+ 5bc62d.html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2026-06-18-e4b88ae6b5b7e585a5e6a285@china-calendar.
+ luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+SUMMARY;LANGUAGE=zh_CN:时令 · 上海入梅
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,上海梅雨
+DESCRIPTION:上海气象部门正式公布今日入梅；本年梅雨期至
+ 07月08日。日期仅在官方公布后收录，不按常年平均日期
+ 预测。
+URL:https://www.shanghai.gov.cn/nw17239/20260618/a1a27757b48d4337865deb8803
+ 97f67d.html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2026-06-21-e5a48fe887b3c2b7e981bfe5bc80e58d88e5908ee6
+ 9ab4e69992@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 夏至·避开午后暴晒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温日尽量避开正午至午后长时间户外活动，使
+ 用遮阳用品并及时补水。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2026-06-21-e788b6e4bab2e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
 SUMMARY;LANGUAGE=zh_CN:父亲节
@@ -1000,7 +1917,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-solar-term-20260621T1625-e5a48fe887b3@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260621T162500
 DTEND;TZID=Asia/Shanghai:20260621T162600
 SUMMARY;LANGUAGE=zh_CN:夏至 · 16:25交节
@@ -1014,9 +1931,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-07-07-e5b08fe69a91c2b7e998b2e88c83e4b8ade69a91@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260707
+DTEND;VALUE=DATE:20260708
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小暑·防范中暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温高湿时缩短连续户外活动时间，主动补水并
+ 安排阴凉处休息。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260707T0957-e5b08fe69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260707T095700
 DTEND;TZID=Asia/Shanghai:20260707T095800
 SUMMARY;LANGUAGE=zh_CN:小暑 · 09:57交节
@@ -1030,9 +1962,83 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-07-08-e4b88ae6b5b7e587bae6a285e998b2e9ab98e6b8a9
+ @china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260708
+DTEND;VALUE=DATE:20260709
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 上海出梅防高温
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:出梅后常转入晴热天气，提前关注高温预警，安
+ 排好遮阳、补水和室内降温。 节气和时令仅作季节参考
+ ，请以当地天气预报、气象预警及自身情况调整安排；
+ 出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2026-07-08-e4b88ae6b5b7e587bae6a285@china-calendar.
+ luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260708
+DTEND;VALUE=DATE:20260709
+SUMMARY;LANGUAGE=zh_CN:时令 · 上海出梅
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,上海梅雨
+DESCRIPTION:上海气象部门正式公布今日出梅；本年梅雨期始
+ 于06月18日。日期仅在官方公布后收录，不按常年平均日
+ 期预测。
+URL:https://www.shanghai.gov.cn/nw17239/20260708/27b2b409d0e445849ea0d79c53
+ b51ac2.html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2026-07-15-e585a5e4bc8fe998b2e69a91@china-calendar.lu
+ ke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 入伏防暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温高湿时减少午后长时间户外活动，主动少量
+ 多次补水，关注头晕、恶心、乏力等中暑信号。 节气和
+ 时令仅作季节参考，请以当地天气预报、气象预警及自
+ 身情况调整安排；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2026-07-15-e5889de4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
+SUMMARY;LANGUAGE=zh_CN:时令 · 初伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:初伏从2026年07月15日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2026-07-23-e5a4a7e69a91c2b7e8af86e588abe4b8ade69a91e4
+ bfa1e58fb7@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大暑·识别中暑信号
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温环境中出现头晕、恶心、乏力或大量出汗时
+ 立即离开热环境、降温并补水。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260723T0313-e5a4a7e69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260723T031300
 DTEND;TZID=Asia/Shanghai:20260723T031400
 SUMMARY;LANGUAGE=zh_CN:大暑 · 03:13交节
@@ -1046,9 +2052,38 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-07-25-e4b8ade4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260725
+DTEND;VALUE=DATE:20260726
+SUMMARY;LANGUAGE=zh_CN:时令 · 中伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:中伏从2026年07月25日起，共20天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2026-08-07-e7ab8be7a78bc2b7e9ab98e6b8a9e998b2e68aa4e5
+ 88abe694bee69dbe@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260808
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立秋·高温防护别放松
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:节气转换不代表高温结束，继续根据高温预警调
+ 整出行时段并做好补水遮阳。 节气和时令仅作季节参考
+ ，请以当地天气预报、气象预警及自身情况调整安排；
+ 出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260807T1943-e7ab8be7a78b@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260807T194300
 DTEND;TZID=Asia/Shanghai:20260807T194400
 SUMMARY;LANGUAGE=zh_CN:立秋 · 19:43交节
@@ -1062,9 +2097,38 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-08-14-e69cabe4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY;LANGUAGE=zh_CN:时令 · 末伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:末伏从2026年08月14日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2026-08-23-e5a484e69a91c2b7e585bce9a1bee69a91e783ade4
+ b88ee6b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 处暑·兼顾暑热与温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:白天仍热时继续防暑，早晚转凉则按实际气温增
+ 减衣物。 节气和时令仅作季节参考，请以当地天气预报
+ 、气象预警及自身情况调整安排；出现明显不适请及时
+ 就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260823T1019-e5a484e69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260823T101900
 DTEND;TZID=Asia/Shanghai:20260823T102000
 SUMMARY;LANGUAGE=zh_CN:处暑 · 10:19交节
@@ -1078,9 +2142,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-08-24-e587bae4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY;LANGUAGE=zh_CN:时令 · 出伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:末伏于2026年08月23日结束，今日出伏。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2026-08-27-e4b8ade58583e88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260827
 DTEND;VALUE=DATE:20260828
 SUMMARY;LANGUAGE=zh_CN:中元节
@@ -1092,7 +2168,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-09-03-e4b8ade59bbde4babae6b091e68a97e697a5e6
  8898e4ba89e8839ce588a9e7baaae5bfb5e697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260903
 DTEND;VALUE=DATE:20260904
 SUMMARY;LANGUAGE=zh_CN:中国人民抗日战争胜利纪念日
@@ -1100,9 +2176,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-09-07-e799bde99cb2c2b7e79599e6848fe698bce5a49ce6
+ b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 白露·留意昼夜温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:早晚出行前查看体感温度，使用便于增减的衣物
+ 应对昼夜温差。 节气和时令仅作季节参考，请以当地天
+ 气预报、气象预警及自身情况调整安排；出现明显不适
+ 请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260907T2241-e799bde99cb2@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260907T224100
 DTEND;TZID=Asia/Shanghai:20260907T224200
 SUMMARY;LANGUAGE=zh_CN:白露 · 22:41交节
@@ -1118,7 +2209,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-09-10-e69599e5b888e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260910
 DTEND;VALUE=DATE:20260911
 SUMMARY;LANGUAGE=zh_CN:教师节
@@ -1128,7 +2219,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-09-18-e4b99de4b880e585abe4ba8be58f98e7baaae5
  bfb5e697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
 SUMMARY;LANGUAGE=zh_CN:九一八事变纪念日
@@ -1136,9 +2227,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-09-23-e7a78be58886c2b7e5b9b2e787a5e5a4a9e6b094e8
+ a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 秋分·干燥天气补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:空气干燥时规律饮水，室内避免过度干燥；户外
+ 同时留意紫外线。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20260923T0805-e7a78be58886@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20260923T080500
 DTEND;TZID=Asia/Shanghai:20260923T080600
 SUMMARY;LANGUAGE=zh_CN:秋分 · 08:05交节
@@ -1154,7 +2260,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-09-30-e78388e5a3abe7baaae5bfb5e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY;LANGUAGE=zh_CN:烈士纪念日
@@ -1162,9 +2268,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-10-08-e5af92e99cb2c2b7e9998de6b8a9e58f8ae697b6e6
+ b7bbe8a1a3@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 寒露·降温及时添衣
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:冷空气活动增多时关注最低气温和大风预警，重
+ 点做好头颈与四肢保暖。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20261008T1429-e5af92e99cb2@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20261008T142900
 DTEND;TZID=Asia/Shanghai:20261008T143000
 SUMMARY;LANGUAGE=zh_CN:寒露 · 14:29交节
@@ -1178,9 +2299,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-10-23-e99c9ce9998dc2b7e998b2e5af92e4b88ee998b2e8
+ b78ce58092@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 霜降·防寒与防跌倒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:低温和湿滑天气出行放慢速度，老年人及慢性病
+ 患者更要留意气温骤降。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20261023T1738-e99c9ce9998d@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20261023T173800
 DTEND;TZID=Asia/Shanghai:20261023T173900
 SUMMARY;LANGUAGE=zh_CN:霜降 · 17:38交节
@@ -1194,9 +2330,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-11-07-e7ab8be586acc2b7e5819ae5a5bde5af92e6bdaee5
+ 8786e5a487@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立冬·做好寒潮准备
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:提前检查保暖衣物和取暖设备，寒潮来临时减少
+ 长时间户外暴露。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20261107T1752-e7ab8be586ac@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20261107T175200
 DTEND;TZID=Asia/Shanghai:20261107T175300
 SUMMARY;LANGUAGE=zh_CN:立冬 · 17:52交节
@@ -1210,9 +2361,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2026.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-11-22-e5b08fe99baac2b7e99ba8e99baae5a4a9e998b2e6
+ bb91@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小雪·雨雪天防滑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:雨雪天气选择防滑鞋，避开结冰路面；驾车和骑
+ 行时预留更长制动距离。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20261122T1523-e5b08fe99baa@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20261122T152300
 DTEND;TZID=Asia/Shanghai:20261122T152400
 SUMMARY;LANGUAGE=zh_CN:小雪 · 15:23交节
@@ -1228,7 +2394,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-11-26-e6849fe681a9e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY;LANGUAGE=zh_CN:感恩节
@@ -1238,7 +2404,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-12-04-e59bbde5aeb6e5aeaae6b395e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY;LANGUAGE=zh_CN:国家宪法日
@@ -1246,9 +2412,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-12-07-e5a4a7e99baac2b7e4bd8ee6b8a9e998b2e586bbe4
+ bca4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大雪·低温防冻伤
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:长时间户外活动注意手、脚、耳等暴露部位保暖
+ ，衣物潮湿后及时更换。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20261207T1053-e5a4a7e99baa@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20261207T105300
 DTEND;TZID=Asia/Shanghai:20261207T105400
 SUMMARY;LANGUAGE=zh_CN:大雪 · 10:53交节
@@ -1264,7 +2445,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-12-13-e58d97e4baace5a4a7e5b1a0e69d80e6adbbe9
  9abee88085e59bbde5aeb6e585ace7a5ade697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY;LANGUAGE=zh_CN:南京大屠杀死难者国家公祭日
@@ -1272,9 +2453,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2026-12-22-e586ace887b3c2b7e695b0e4b99de998b2e5af92@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 冬至·数九防寒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:进入数九后持续关注寒潮预警，分层保暖并避免
+ 在低温环境中久留。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2026-12-22-e4b880e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY;LANGUAGE=zh_CN:时令 · 一九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:一九从2026年12月22日至2026年12月30日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20261222T0450-e586ace887b3@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20261222T045000
 DTEND;TZID=Asia/Shanghai:20261222T045100
 SUMMARY;LANGUAGE=zh_CN:冬至 · 04:50交节
@@ -1290,7 +2498,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-12-24-e5b9b3e5ae89e5a49c@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
 SUMMARY;LANGUAGE=zh_CN:平安夜
@@ -1300,7 +2508,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2026-12-25-e59ca3e8af9ee88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
 SUMMARY;LANGUAGE=zh_CN:圣诞节
@@ -1308,9 +2516,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2026-12-31-e4ba8ce4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY;LANGUAGE=zh_CN:时令 · 二九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:二九从2026年12月31日至2027年01月08日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2027-01-05-e5b08fe5af92c2b7e998b2e5af92e998b2e6bb91@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小寒·防寒防滑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:关注降温和道路结冰信息，外出注意头颈、手脚
+ 保暖并选择防滑鞋。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270105T2210-e5b08fe5af92@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270105T221000
 DTEND;TZID=Asia/Shanghai:20270105T221100
 SUMMARY;LANGUAGE=zh_CN:小寒 · 22:10交节
@@ -1324,9 +2559,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-01-09-e4b889e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY;LANGUAGE=zh_CN:时令 · 三九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:三九从2027年01月09日至2027年01月17日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2027-01-10-e4b8ade59bbde4babae6b091e8ada6e5af9fe8
  8a82@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY;LANGUAGE=zh_CN:中国人民警察节
@@ -1336,7 +2583,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2027-01-15-e8858ae585abe88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY;LANGUAGE=zh_CN:腊八节
@@ -1346,9 +2593,36 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2027c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-01-18-e59b9be4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY;LANGUAGE=zh_CN:时令 · 四九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:四九从2027年01月18日至2027年01月26日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2027-01-20-e5a4a7e5af92c2b7e4bd8ee6b8a9e4b88ee58f96e6
+ 9a96e5ae89e585a8@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270121
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大寒·低温与取暖安全
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:根据气温及时增添衣物；使用燃气或燃煤设备时
+ 保持通风，防范一氧化碳中毒。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270120T1530-e5a4a7e5af92@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270120T153000
 DTEND;TZID=Asia/Shanghai:20270120T153100
 SUMMARY;LANGUAGE=zh_CN:大寒 · 15:30交节
@@ -1362,9 +2636,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-01-27-e4ba94e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270127
+DTEND;VALUE=DATE:20270128
+SUMMARY;LANGUAGE=zh_CN:时令 · 五九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:五九从2027年01月27日至2027年02月04日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2027-01-30-e58c97e696b9e5b08fe5b9b4@china-calend
  ar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270130
 DTEND;VALUE=DATE:20270131
 SUMMARY;LANGUAGE=zh_CN:北方小年
@@ -1374,9 +2660,24 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2027c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-02-04-e7ab8be698a5c2b7e998b2e6b094e6b8a9e9aaa4e5
+ 8f98@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立春·防气温骤变
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:早春冷暖波动较大，出门前查看逐小时预报，按
+ 温度变化分层穿衣。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270204T0946-e7ab8be698a5@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270204T094600
 DTEND;TZID=Asia/Shanghai:20270204T094700
 SUMMARY;LANGUAGE=zh_CN:立春 · 09:46交节
@@ -1390,9 +2691,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-02-05-e585ade4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270206
+SUMMARY;LANGUAGE=zh_CN:时令 · 六九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:六九从2027年02月05日至2027年02月13日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2027-02-14-e68385e4babae88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270214
 DTEND;VALUE=DATE:20270215
 SUMMARY;LANGUAGE=zh_CN:情人节
@@ -1400,9 +2713,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-02-14-e4b883e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270214
+DTEND;VALUE=DATE:20270215
+SUMMARY;LANGUAGE=zh_CN:时令 · 七九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:七九从2027年02月14日至2027年02月22日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2027-02-19-e99ba8e6b0b4c2b7e99ba8e5a4a9e998b2e6bb91e9
+ 98b2e6bdae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270220
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 雨水·雨天防滑防潮
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:雨天放慢步速并避开积水路面，居室潮湿时适度
+ 通风或除湿。 节气和时令仅作季节参考，请以当地天气
+ 预报、气象预警及自身情况调整安排；出现明显不适请
+ 及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270219T0533-e99ba8e6b0b4@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270219T053300
 DTEND;TZID=Asia/Shanghai:20270219T053400
 SUMMARY;LANGUAGE=zh_CN:雨水 · 05:33交节
@@ -1416,9 +2756,33 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-02-23-e585abe4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270224
+SUMMARY;LANGUAGE=zh_CN:时令 · 八九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:八九从2027年02月23日至2027年03月03日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2027-03-04-e4b99de4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270304
+DTEND;VALUE=DATE:20270305
+SUMMARY;LANGUAGE=zh_CN:时令 · 九九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九从2027年03月04日至2027年03月12日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2027-03-05-e5ada6e99bb7e9948be7baaae5bfb5e697a5@c
  hina-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270305
 DTEND;VALUE=DATE:20270306
 SUMMARY;LANGUAGE=zh_CN:学雷锋纪念日
@@ -1426,9 +2790,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-03-06-e6838ae89bb0c2b7e79599e6848fe99bb7e99ba8e9
+ a284e8ada6@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 惊蛰·留意雷雨预警
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:出现雷电预警时减少户外停留，远离孤立高物、
+ 大树、水边和空旷地带。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270306T0340-e6838ae89bb0@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270306T034000
 DTEND;TZID=Asia/Shanghai:20270306T034100
 SUMMARY;LANGUAGE=zh_CN:惊蛰 · 03:40交节
@@ -1444,7 +2823,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2027-03-09-e9be99e68aace5a4b4@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270309
 DTEND;VALUE=DATE:20270310
 SUMMARY;LANGUAGE=zh_CN:龙抬头
@@ -1456,7 +2835,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-03-12-e6a48de6a091e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270313
 SUMMARY;LANGUAGE=zh_CN:植树节
@@ -1464,9 +2843,20 @@ TRANSP:TRANSPARENT
 CATEGORIES:法定纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-03-13-e587bae4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY;LANGUAGE=zh_CN:时令 · 出九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九八十一天结束，今日出九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2027-03-15-e59bbde99985e6b688e8b4b9e88085e69d83e7
  9b8ae697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY;LANGUAGE=zh_CN:国际消费者权益日
@@ -1474,9 +2864,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-03-21-e698a5e58886c2b7e585b3e6b3a8e88ab1e7b289e4
+ b88ee6b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 春分·关注花粉与温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:过敏人群外出前留意花粉和风力信息，回家后及
+ 时清洁暴露部位；早晚注意温差。 节气和时令仅作季节
+ 参考，请以当地天气预报、气象预警及自身情况调整安
+ 排；出现明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270321T0425-e698a5e58886@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270321T042500
 DTEND;TZID=Asia/Shanghai:20270321T042600
 SUMMARY;LANGUAGE=zh_CN:春分 · 04:25交节
@@ -1492,7 +2897,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-04-01-e6849ae4babae88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY;LANGUAGE=zh_CN:愚人节
@@ -1500,9 +2905,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-04-05-e6b885e6988ec2b7e688b7e5a496e998b2e69992e8
+ a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270405
+DTEND;VALUE=DATE:20270406
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 清明·户外防晒补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:户外活动前查看紫外线指数，合理使用遮阳用品
+ 并随身带水。 节气和时令仅作季节参考，请以当地天气
+ 预报、气象预警及自身情况调整安排；出现明显不适请
+ 及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270405T0817-e6b885e6988e@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270405T081700
 DTEND;TZID=Asia/Shanghai:20270405T081800
 SUMMARY;LANGUAGE=zh_CN:清明 · 08:17交节
@@ -1518,7 +2938,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2027-04-09-e4b88ae5b7b3e88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270409
 DTEND;VALUE=DATE:20270410
 SUMMARY;LANGUAGE=zh_CN:上巳节
@@ -1528,9 +2948,25 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2027c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-04-20-e8b0b7e99ba8c2b7e6bdaee6b9bfe5a4a9e6b094e9
+ 98b2e99c89@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270420
+DTEND;VALUE=DATE:20270421
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 谷雨·潮湿天气防霉
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:连续阴雨时加强通风或除湿，衣物充分晾干，霉
+ 变食品不要继续食用。 节气和时令仅作季节参考，请以
+ 当地天气预报、气象预警及自身情况调整安排；出现明
+ 显不适请及时就医。
+URL:https://www.shanghai.gov.cn/nw17239/20260626/43894ac4f7534261ad7028fe99
+ 5bc62d.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270420T1518-e8b0b7e99ba8@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270420T151800
 DTEND;TZID=Asia/Shanghai:20270420T151900
 SUMMARY;LANGUAGE=zh_CN:谷雨 · 15:18交节
@@ -1546,7 +2982,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-04-22-e4b896e7958ce59cb0e79083e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270422
 DTEND;VALUE=DATE:20270423
 SUMMARY;LANGUAGE=zh_CN:世界地球日
@@ -1554,9 +2990,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-05-06-e7ab8be5a48fc2b7e68f90e5898de58786e5a487e9
+ 98b2e69a91@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立夏·提前准备防暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:气温上升后逐步调整户外活动时段，外出备好饮
+ 水和遮阳用品。 节气和时令仅作季节参考，请以当地天
+ 气预报、气象预警及自身情况调整安排；出现明显不适
+ 请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270506T0125-e7ab8be5a48f@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270506T012500
 DTEND;TZID=Asia/Shanghai:20270506T012600
 SUMMARY;LANGUAGE=zh_CN:立夏 · 01:25交节
@@ -1572,7 +3023,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-05-09-e6af8de4bab2e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270509
 DTEND;VALUE=DATE:20270510
 SUMMARY;LANGUAGE=zh_CN:母亲节
@@ -1582,7 +3033,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-05-12-e59bbde99985e68aa4e5a3abe88a82@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270512
 DTEND;VALUE=DATE:20270513
 SUMMARY;LANGUAGE=zh_CN:国际护士节
@@ -1591,7 +3042,7 @@ CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-05-20-520@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270520
 DTEND;VALUE=DATE:20270521
 SUMMARY;LANGUAGE=zh_CN:520
@@ -1599,9 +3050,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-05-21-e5b08fe6bba1c2b7e997b7e783ade5a4a9e6b094e4
+ b8bbe58aa8e8a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270521
+DTEND;VALUE=DATE:20270522
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小满·闷热天气主动补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:闷热环境中不要等口渴才喝水，少量多次补充；
+ 大量出汗后注意休息。 节气和时令仅作季节参考，请以
+ 当地天气预报、气象预警及自身情况调整安排；出现明
+ 显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270521T1418-e5b08fe6bba1@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270521T141800
 DTEND;TZID=Asia/Shanghai:20270521T141900
 SUMMARY;LANGUAGE=zh_CN:小满 · 14:18交节
@@ -1615,9 +3081,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-06-06-e88a92e7a78dc2b7e998b2e99bb7e99ba8e4b88ee9
+ ab98e6b8a9@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270606
+DTEND;VALUE=DATE:20270607
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 芒种·防雷雨与高温
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:安排户外活动前同时查看高温、暴雨和雷电预警
+ ，遇强对流及时进入安全建筑。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270606T0526-e88a92e7a78d@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270606T052600
 DTEND;TZID=Asia/Shanghai:20270606T052700
 SUMMARY;LANGUAGE=zh_CN:芒种 · 05:26交节
@@ -1633,7 +3114,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-06-20-e788b6e4bab2e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270620
 DTEND;VALUE=DATE:20270621
 SUMMARY;LANGUAGE=zh_CN:父亲节
@@ -1641,9 +3122,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-06-21-e5a48fe887b3c2b7e981bfe5bc80e58d88e5908ee6
+ 9ab4e69992@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270621
+DTEND;VALUE=DATE:20270622
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 夏至·避开午后暴晒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温日尽量避开正午至午后长时间户外活动，使
+ 用遮阳用品并及时补水。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270621T2211-e5a48fe887b3@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270621T221100
 DTEND;TZID=Asia/Shanghai:20270621T221200
 SUMMARY;LANGUAGE=zh_CN:夏至 · 22:11交节
@@ -1657,9 +3153,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-07-07-e5b08fe69a91c2b7e998b2e88c83e4b8ade69a91@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270707
+DTEND;VALUE=DATE:20270708
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小暑·防范中暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温高湿时缩短连续户外活动时间，主动补水并
+ 安排阴凉处休息。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270707T1537-e5b08fe69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270707T153700
 DTEND;TZID=Asia/Shanghai:20270707T153800
 SUMMARY;LANGUAGE=zh_CN:小暑 · 15:37交节
@@ -1673,9 +3184,53 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-07-20-e585a5e4bc8fe998b2e69a91@china-calendar.lu
+ ke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270720
+DTEND;VALUE=DATE:20270721
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 入伏防暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温高湿时减少午后长时间户外活动，主动少量
+ 多次补水，关注头晕、恶心、乏力等中暑信号。 节气和
+ 时令仅作季节参考，请以当地天气预报、气象预警及自
+ 身情况调整安排；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2027-07-20-e5889de4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270720
+DTEND;VALUE=DATE:20270721
+SUMMARY;LANGUAGE=zh_CN:时令 · 初伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:初伏从2027年07月20日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2027-07-23-e5a4a7e69a91c2b7e8af86e588abe4b8ade69a91e4
+ bfa1e58fb7@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270723
+DTEND;VALUE=DATE:20270724
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大暑·识别中暑信号
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温环境中出现头晕、恶心、乏力或大量出汗时
+ 立即离开热环境、降温并补水。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270723T0905-e5a4a7e69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270723T090500
 DTEND;TZID=Asia/Shanghai:20270723T090600
 SUMMARY;LANGUAGE=zh_CN:大暑 · 09:05交节
@@ -1689,9 +3244,38 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-07-30-e4b8ade4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270730
+DTEND;VALUE=DATE:20270731
+SUMMARY;LANGUAGE=zh_CN:时令 · 中伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:中伏从2027年07月30日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2027-08-08-e7ab8be7a78bc2b7e9ab98e6b8a9e998b2e68aa4e5
+ 88abe694bee69dbe@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270808
+DTEND;VALUE=DATE:20270809
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立秋·高温防护别放松
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:节气转换不代表高温结束，继续根据高温预警调
+ 整出行时段并做好补水遮阳。 节气和时令仅作季节参考
+ ，请以当地天气预报、气象预警及自身情况调整安排；
+ 出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270808T0127-e7ab8be7a78b@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270808T012700
 DTEND;TZID=Asia/Shanghai:20270808T012800
 SUMMARY;LANGUAGE=zh_CN:立秋 · 01:27交节
@@ -1705,9 +3289,23 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-08-09-e69cabe4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270809
+DTEND;VALUE=DATE:20270810
+SUMMARY;LANGUAGE=zh_CN:时令 · 末伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:末伏从2027年08月09日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2027-08-16-e4b8ade58583e88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270816
 DTEND;VALUE=DATE:20270817
 SUMMARY;LANGUAGE=zh_CN:中元节
@@ -1717,9 +3315,36 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2027c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-08-19-e587bae4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270819
+DTEND;VALUE=DATE:20270820
+SUMMARY;LANGUAGE=zh_CN:时令 · 出伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:末伏于2027年08月18日结束，今日出伏。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2027-08-23-e5a484e69a91c2b7e585bce9a1bee69a91e783ade4
+ b88ee6b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270823
+DTEND;VALUE=DATE:20270824
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 处暑·兼顾暑热与温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:白天仍热时继续防暑，早晚转凉则按实际气温增
+ 减衣物。 节气和时令仅作季节参考，请以当地天气预报
+ 、气象预警及自身情况调整安排；出现明显不适请及时
+ 就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270823T1614-e5a484e69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270823T161400
 DTEND;TZID=Asia/Shanghai:20270823T161500
 SUMMARY;LANGUAGE=zh_CN:处暑 · 16:14交节
@@ -1735,7 +3360,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-09-03-e4b8ade59bbde4babae6b091e68a97e697a5e6
  8898e4ba89e8839ce588a9e7baaae5bfb5e697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270903
 DTEND;VALUE=DATE:20270904
 SUMMARY;LANGUAGE=zh_CN:中国人民抗日战争胜利纪念日
@@ -1743,9 +3368,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-09-08-e799bde99cb2c2b7e79599e6848fe698bce5a49ce6
+ b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270908
+DTEND;VALUE=DATE:20270909
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 白露·留意昼夜温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:早晚出行前查看体感温度，使用便于增减的衣物
+ 应对昼夜温差。 节气和时令仅作季节参考，请以当地天
+ 气预报、气象预警及自身情况调整安排；出现明显不适
+ 请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270908T0428-e799bde99cb2@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270908T042800
 DTEND;TZID=Asia/Shanghai:20270908T042900
 SUMMARY;LANGUAGE=zh_CN:白露 · 04:28交节
@@ -1761,7 +3401,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-09-10-e69599e5b888e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270910
 DTEND;VALUE=DATE:20270911
 SUMMARY;LANGUAGE=zh_CN:教师节
@@ -1771,7 +3411,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-09-18-e4b99de4b880e585abe4ba8be58f98e7baaae5
  bfb5e697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270918
 DTEND;VALUE=DATE:20270919
 SUMMARY;LANGUAGE=zh_CN:九一八事变纪念日
@@ -1779,9 +3419,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-09-23-e7a78be58886c2b7e5b9b2e787a5e5a4a9e6b094e8
+ a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20270923
+DTEND;VALUE=DATE:20270924
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 秋分·干燥天气补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:空气干燥时规律饮水，室内避免过度干燥；户外
+ 同时留意紫外线。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20270923T1402-e7a78be58886@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20270923T140200
 DTEND;TZID=Asia/Shanghai:20270923T140300
 SUMMARY;LANGUAGE=zh_CN:秋分 · 14:02交节
@@ -1797,7 +3452,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-09-30-e78388e5a3abe7baaae5bfb5e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
 SUMMARY;LANGUAGE=zh_CN:烈士纪念日
@@ -1805,9 +3460,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-10-08-e5af92e99cb2c2b7e9998de6b8a9e58f8ae697b6e6
+ b7bbe8a1a3@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20271008
+DTEND;VALUE=DATE:20271009
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 寒露·降温及时添衣
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:冷空气活动增多时关注最低气温和大风预警，重
+ 点做好头颈与四肢保暖。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20271008T2017-e5af92e99cb2@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20271008T201700
 DTEND;TZID=Asia/Shanghai:20271008T201800
 SUMMARY;LANGUAGE=zh_CN:寒露 · 20:17交节
@@ -1821,9 +3491,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-10-23-e99c9ce9998dc2b7e998b2e5af92e4b88ee998b2e8
+ b78ce58092@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20271023
+DTEND;VALUE=DATE:20271024
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 霜降·防寒与防跌倒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:低温和湿滑天气出行放慢速度，老年人及慢性病
+ 患者更要留意气温骤降。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20271023T2333-e99c9ce9998d@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20271023T233300
 DTEND;TZID=Asia/Shanghai:20271023T233400
 SUMMARY;LANGUAGE=zh_CN:霜降 · 23:33交节
@@ -1837,9 +3522,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-11-07-e7ab8be586acc2b7e5819ae5a5bde5af92e6bdaee5
+ 8786e5a487@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20271107
+DTEND;VALUE=DATE:20271108
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立冬·做好寒潮准备
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:提前检查保暖衣物和取暖设备，寒潮来临时减少
+ 长时间户外暴露。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20271107T2339-e7ab8be586ac@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20271107T233900
 DTEND;TZID=Asia/Shanghai:20271107T234000
 SUMMARY;LANGUAGE=zh_CN:立冬 · 23:39交节
@@ -1853,9 +3553,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2027.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-11-22-e5b08fe99baac2b7e99ba8e99baae5a4a9e998b2e6
+ bb91@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20271122
+DTEND;VALUE=DATE:20271123
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小雪·雨雪天防滑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:雨雪天气选择防滑鞋，避开结冰路面；驾车和骑
+ 行时预留更长制动距离。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20271122T2116-e5b08fe99baa@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20271122T211600
 DTEND;TZID=Asia/Shanghai:20271122T211700
 SUMMARY;LANGUAGE=zh_CN:小雪 · 21:16交节
@@ -1871,7 +3586,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-11-25-e6849fe681a9e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20271125
 DTEND;VALUE=DATE:20271126
 SUMMARY;LANGUAGE=zh_CN:感恩节
@@ -1881,7 +3596,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-12-04-e59bbde5aeb6e5aeaae6b395e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20271204
 DTEND;VALUE=DATE:20271205
 SUMMARY;LANGUAGE=zh_CN:国家宪法日
@@ -1889,9 +3604,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-12-07-e5a4a7e99baac2b7e4bd8ee6b8a9e998b2e586bbe4
+ bca4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20271207
+DTEND;VALUE=DATE:20271208
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大雪·低温防冻伤
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:长时间户外活动注意手、脚、耳等暴露部位保暖
+ ，衣物潮湿后及时更换。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20271207T1638-e5a4a7e99baa@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20271207T163800
 DTEND;TZID=Asia/Shanghai:20271207T163900
 SUMMARY;LANGUAGE=zh_CN:大雪 · 16:38交节
@@ -1907,7 +3637,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-12-13-e58d97e4baace5a4a7e5b1a0e69d80e6adbbe9
  9abee88085e59bbde5aeb6e585ace7a5ade697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20271213
 DTEND;VALUE=DATE:20271214
 SUMMARY;LANGUAGE=zh_CN:南京大屠杀死难者国家公祭日
@@ -1915,9 +3645,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2027-12-22-e586ace887b3c2b7e695b0e4b99de998b2e5af92@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20271222
+DTEND;VALUE=DATE:20271223
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 冬至·数九防寒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:进入数九后持续关注寒潮预警，分层保暖并避免
+ 在低温环境中久留。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2027-12-22-e4b880e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20271222
+DTEND;VALUE=DATE:20271223
+SUMMARY;LANGUAGE=zh_CN:时令 · 一九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:一九从2027年12月22日至2027年12月30日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20271222T1042-e586ace887b3@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20271222T104200
 DTEND;TZID=Asia/Shanghai:20271222T104300
 SUMMARY;LANGUAGE=zh_CN:冬至 · 10:42交节
@@ -1933,7 +3690,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-12-24-e5b9b3e5ae89e5a49c@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20271224
 DTEND;VALUE=DATE:20271225
 SUMMARY;LANGUAGE=zh_CN:平安夜
@@ -1943,7 +3700,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2027-12-25-e59ca3e8af9ee88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20271225
 DTEND;VALUE=DATE:20271226
 SUMMARY;LANGUAGE=zh_CN:圣诞节
@@ -1951,9 +3708,21 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2027-12-31-e4ba8ce4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20271231
+DTEND;VALUE=DATE:20280101
+SUMMARY;LANGUAGE=zh_CN:时令 · 二九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:二九从2027年12月31日至2028年01月08日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2028-01-04-e8858ae585abe88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280104
 DTEND;VALUE=DATE:20280105
 SUMMARY;LANGUAGE=zh_CN:腊八节
@@ -1963,9 +3732,24 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-01-06-e5b08fe5af92c2b7e998b2e5af92e998b2e6bb91@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280106
+DTEND;VALUE=DATE:20280107
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小寒·防寒防滑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:关注降温和道路结冰信息，外出注意头颈、手脚
+ 保暖并选择防滑鞋。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280106T0355-e5b08fe5af92@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280106T035500
 DTEND;TZID=Asia/Shanghai:20280106T035600
 SUMMARY;LANGUAGE=zh_CN:小寒 · 03:55交节
@@ -1979,9 +3763,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-01-09-e4b889e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280109
+DTEND;VALUE=DATE:20280110
+SUMMARY;LANGUAGE=zh_CN:时令 · 三九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:三九从2028年01月09日至2028年01月17日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2028-01-10-e4b8ade59bbde4babae6b091e8ada6e5af9fe8
  8a82@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280110
 DTEND;VALUE=DATE:20280111
 SUMMARY;LANGUAGE=zh_CN:中国人民警察节
@@ -1989,9 +3785,21 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-01-18-e59b9be4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280118
+DTEND;VALUE=DATE:20280119
+SUMMARY;LANGUAGE=zh_CN:时令 · 四九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:四九从2028年01月18日至2028年01月26日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2028-01-19-e58c97e696b9e5b08fe5b9b4@china-calend
  ar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280119
 DTEND;VALUE=DATE:20280120
 SUMMARY;LANGUAGE=zh_CN:北方小年
@@ -2001,9 +3809,24 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-01-20-e5a4a7e5af92c2b7e4bd8ee6b8a9e4b88ee58f96e6
+ 9a96e5ae89e585a8@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280120
+DTEND;VALUE=DATE:20280121
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大寒·低温与取暖安全
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:根据气温及时增添衣物；使用燃气或燃煤设备时
+ 保持通风，防范一氧化碳中毒。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280120T2122-e5a4a7e5af92@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280120T212200
 DTEND;TZID=Asia/Shanghai:20280120T212300
 SUMMARY;LANGUAGE=zh_CN:大寒 · 21:22交节
@@ -2017,9 +3840,36 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-01-27-e4ba94e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280127
+DTEND;VALUE=DATE:20280128
+SUMMARY;LANGUAGE=zh_CN:时令 · 五九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:五九从2028年01月27日至2028年02月04日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2028-02-04-e7ab8be698a5c2b7e998b2e6b094e6b8a9e9aaa4e5
+ 8f98@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280204
+DTEND;VALUE=DATE:20280205
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立春·防气温骤变
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:早春冷暖波动较大，出门前查看逐小时预报，按
+ 温度变化分层穿衣。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280204T1531-e7ab8be698a5@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280204T153100
 DTEND;TZID=Asia/Shanghai:20280204T153200
 SUMMARY;LANGUAGE=zh_CN:立春 · 15:31交节
@@ -2033,9 +3883,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-02-05-e585ade4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280205
+DTEND;VALUE=DATE:20280206
+SUMMARY;LANGUAGE=zh_CN:时令 · 六九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:六九从2028年02月05日至2028年02月13日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2028-02-14-e68385e4babae88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280214
 DTEND;VALUE=DATE:20280215
 SUMMARY;LANGUAGE=zh_CN:情人节
@@ -2043,9 +3905,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-02-14-e4b883e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280214
+DTEND;VALUE=DATE:20280215
+SUMMARY;LANGUAGE=zh_CN:时令 · 七九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:七九从2028年02月14日至2028年02月22日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2028-02-19-e99ba8e6b0b4c2b7e99ba8e5a4a9e998b2e6bb91e9
+ 98b2e6bdae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280219
+DTEND;VALUE=DATE:20280220
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 雨水·雨天防滑防潮
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:雨天放慢步速并避开积水路面，居室潮湿时适度
+ 通风或除湿。 节气和时令仅作季节参考，请以当地天气
+ 预报、气象预警及自身情况调整安排；出现明显不适请
+ 及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280219T1126-e99ba8e6b0b4@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280219T112600
 DTEND;TZID=Asia/Shanghai:20280219T112700
 SUMMARY;LANGUAGE=zh_CN:雨水 · 11:26交节
@@ -2059,9 +3948,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-02-23-e585abe4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280223
+DTEND;VALUE=DATE:20280224
+SUMMARY;LANGUAGE=zh_CN:时令 · 八九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:八九从2028年02月23日至2028年03月02日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2028-02-26-e9be99e68aace5a4b4@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280226
 DTEND;VALUE=DATE:20280227
 SUMMARY;LANGUAGE=zh_CN:龙抬头
@@ -2071,9 +3972,36 @@ DESCRIPTION:按中国农历日期标注。
 URL:https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-03-03-e4b99de4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280303
+DTEND;VALUE=DATE:20280304
+SUMMARY;LANGUAGE=zh_CN:时令 · 九九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九从2028年03月03日至2028年03月11日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2028-03-05-e6838ae89bb0c2b7e79599e6848fe99bb7e99ba8e9
+ a284e8ada6@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280305
+DTEND;VALUE=DATE:20280306
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 惊蛰·留意雷雨预警
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:出现雷电预警时减少户外停留，远离孤立高物、
+ 大树、水边和空旷地带。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2028-03-05-e5ada6e99bb7e9948be7baaae5bfb5e697a5@c
  hina-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280305
 DTEND;VALUE=DATE:20280306
 SUMMARY;LANGUAGE=zh_CN:学雷锋纪念日
@@ -2083,7 +4011,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-solar-term-20280305T0925-e6838ae89bb0@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280305T092500
 DTEND;TZID=Asia/Shanghai:20280305T092600
 SUMMARY;LANGUAGE=zh_CN:惊蛰 · 09:25交节
@@ -2097,9 +4025,20 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-03-12-e587bae4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280312
+DTEND;VALUE=DATE:20280313
+SUMMARY;LANGUAGE=zh_CN:时令 · 出九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九八十一天结束，今日出九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-observance-2028-03-12-e6a48de6a091e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280312
 DTEND;VALUE=DATE:20280313
 SUMMARY;LANGUAGE=zh_CN:植树节
@@ -2109,7 +4048,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-03-15-e59bbde99985e6b688e8b4b9e88085e69d83e7
  9b8ae697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280315
 DTEND;VALUE=DATE:20280316
 SUMMARY;LANGUAGE=zh_CN:国际消费者权益日
@@ -2117,9 +4056,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-03-20-e698a5e58886c2b7e585b3e6b3a8e88ab1e7b289e4
+ b88ee6b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280320
+DTEND;VALUE=DATE:20280321
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 春分·关注花粉与温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:过敏人群外出前留意花粉和风力信息，回家后及
+ 时清洁暴露部位；早晚注意温差。 节气和时令仅作季节
+ 参考，请以当地天气预报、气象预警及自身情况调整安
+ 排；出现明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280320T1017-e698a5e58886@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280320T101700
 DTEND;TZID=Asia/Shanghai:20280320T101800
 SUMMARY;LANGUAGE=zh_CN:春分 · 10:17交节
@@ -2135,7 +4089,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-traditional-2028-03-28-e4b88ae5b7b3e88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280328
 DTEND;VALUE=DATE:20280329
 SUMMARY;LANGUAGE=zh_CN:上巳节
@@ -2147,7 +4101,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-04-01-e6849ae4babae88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280401
 DTEND;VALUE=DATE:20280402
 SUMMARY;LANGUAGE=zh_CN:愚人节
@@ -2155,9 +4109,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-04-04-e6b885e6988ec2b7e688b7e5a496e998b2e69992e8
+ a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280404
+DTEND;VALUE=DATE:20280405
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 清明·户外防晒补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:户外活动前查看紫外线指数，合理使用遮阳用品
+ 并随身带水。 节气和时令仅作季节参考，请以当地天气
+ 预报、气象预警及自身情况调整安排；出现明显不适请
+ 及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280404T1403-e6b885e6988e@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280404T140300
 DTEND;TZID=Asia/Shanghai:20280404T140400
 SUMMARY;LANGUAGE=zh_CN:清明 · 14:03交节
@@ -2171,9 +4140,25 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-04-19-e8b0b7e99ba8c2b7e6bdaee6b9bfe5a4a9e6b094e9
+ 98b2e99c89@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280419
+DTEND;VALUE=DATE:20280420
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 谷雨·潮湿天气防霉
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:连续阴雨时加强通风或除湿，衣物充分晾干，霉
+ 变食品不要继续食用。 节气和时令仅作季节参考，请以
+ 当地天气预报、气象预警及自身情况调整安排；出现明
+ 显不适请及时就医。
+URL:https://www.shanghai.gov.cn/nw17239/20260626/43894ac4f7534261ad7028fe99
+ 5bc62d.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280419T2109-e8b0b7e99ba8@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280419T210900
 DTEND;TZID=Asia/Shanghai:20280419T211000
 SUMMARY;LANGUAGE=zh_CN:谷雨 · 21:09交节
@@ -2189,7 +4174,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-04-22-e4b896e7958ce59cb0e79083e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280422
 DTEND;VALUE=DATE:20280423
 SUMMARY;LANGUAGE=zh_CN:世界地球日
@@ -2197,9 +4182,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国际纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-05-05-e7ab8be5a48fc2b7e68f90e5898de58786e5a487e9
+ 98b2e69a91@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280505
+DTEND;VALUE=DATE:20280506
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立夏·提前准备防暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:气温上升后逐步调整户外活动时段，外出备好饮
+ 水和遮阳用品。 节气和时令仅作季节参考，请以当地天
+ 气预报、气象预警及自身情况调整安排；出现明显不适
+ 请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280505T0712-e7ab8be5a48f@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280505T071200
 DTEND;TZID=Asia/Shanghai:20280505T071300
 SUMMARY;LANGUAGE=zh_CN:立夏 · 07:12交节
@@ -2215,7 +4215,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-05-12-e59bbde99985e68aa4e5a3abe88a82@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280512
 DTEND;VALUE=DATE:20280513
 SUMMARY;LANGUAGE=zh_CN:国际护士节
@@ -2225,7 +4225,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-05-14-e6af8de4bab2e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280514
 DTEND;VALUE=DATE:20280515
 SUMMARY;LANGUAGE=zh_CN:母亲节
@@ -2234,7 +4234,7 @@ CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-05-20-520@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280520
 DTEND;VALUE=DATE:20280521
 SUMMARY;LANGUAGE=zh_CN:520
@@ -2242,9 +4242,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-05-20-e5b08fe6bba1c2b7e997b7e783ade5a4a9e6b094e4
+ b8bbe58aa8e8a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280520
+DTEND;VALUE=DATE:20280521
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小满·闷热天气主动补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:闷热环境中不要等口渴才喝水，少量多次补充；
+ 大量出汗后注意休息。 节气和时令仅作季节参考，请以
+ 当地天气预报、气象预警及自身情况调整安排；出现明
+ 显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280520T2010-e5b08fe6bba1@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280520T201000
 DTEND;TZID=Asia/Shanghai:20280520T201100
 SUMMARY;LANGUAGE=zh_CN:小满 · 20:10交节
@@ -2258,9 +4273,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-06-05-e88a92e7a78dc2b7e998b2e99bb7e99ba8e4b88ee9
+ ab98e6b8a9@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280605
+DTEND;VALUE=DATE:20280606
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 芒种·防雷雨与高温
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:安排户外活动前同时查看高温、暴雨和雷电预警
+ ，遇强对流及时进入安全建筑。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280605T1116-e88a92e7a78d@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280605T111600
 DTEND;TZID=Asia/Shanghai:20280605T111700
 SUMMARY;LANGUAGE=zh_CN:芒种 · 11:16交节
@@ -2276,7 +4306,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-06-18-e788b6e4bab2e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280618
 DTEND;VALUE=DATE:20280619
 SUMMARY;LANGUAGE=zh_CN:父亲节
@@ -2284,9 +4314,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:社会节日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-06-21-e5a48fe887b3c2b7e981bfe5bc80e58d88e5908ee6
+ 9ab4e69992@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280621
+DTEND;VALUE=DATE:20280622
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 夏至·避开午后暴晒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温日尽量避开正午至午后长时间户外活动，使
+ 用遮阳用品并及时补水。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280621T0402-e5a48fe887b3@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280621T040200
 DTEND;TZID=Asia/Shanghai:20280621T040300
 SUMMARY;LANGUAGE=zh_CN:夏至 · 04:02交节
@@ -2300,9 +4345,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-07-06-e5b08fe69a91c2b7e998b2e88c83e4b8ade69a91@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280706
+DTEND;VALUE=DATE:20280707
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小暑·防范中暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温高湿时缩短连续户外活动时间，主动补水并
+ 安排阴凉处休息。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280706T2130-e5b08fe69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280706T213000
 DTEND;TZID=Asia/Shanghai:20280706T213100
 SUMMARY;LANGUAGE=zh_CN:小暑 · 21:30交节
@@ -2316,9 +4376,53 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-07-14-e585a5e4bc8fe998b2e69a91@china-calendar.lu
+ ke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280714
+DTEND;VALUE=DATE:20280715
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 入伏防暑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温高湿时减少午后长时间户外活动，主动少量
+ 多次补水，关注头晕、恶心、乏力等中暑信号。 节气和
+ 时令仅作季节参考，请以当地天气预报、气象预警及自
+ 身情况调整安排；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2028-07-14-e5889de4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280714
+DTEND;VALUE=DATE:20280715
+SUMMARY;LANGUAGE=zh_CN:时令 · 初伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:初伏从2028年07月14日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2028-07-22-e5a4a7e69a91c2b7e8af86e588abe4b8ade69a91e4
+ bfa1e58fb7@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280722
+DTEND;VALUE=DATE:20280723
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大暑·识别中暑信号
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:高温环境中出现头晕、恶心、乏力或大量出汗时
+ 立即离开热环境、降温并补水。 节气和时令仅作季节参
+ 考，请以当地天气预报、气象预警及自身情况调整安排
+ ；出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280722T1454-e5a4a7e69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280722T145400
 DTEND;TZID=Asia/Shanghai:20280722T145500
 SUMMARY;LANGUAGE=zh_CN:大暑 · 14:54交节
@@ -2332,9 +4436,38 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-07-24-e4b8ade4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280724
+DTEND;VALUE=DATE:20280725
+SUMMARY;LANGUAGE=zh_CN:时令 · 中伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:中伏从2028年07月24日起，共20天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2028-08-07-e7ab8be7a78bc2b7e9ab98e6b8a9e998b2e68aa4e5
+ 88abe694bee69dbe@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280807
+DTEND;VALUE=DATE:20280808
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立秋·高温防护别放松
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:节气转换不代表高温结束，继续根据高温预警调
+ 整出行时段并做好补水遮阳。 节气和时令仅作季节参考
+ ，请以当地天气预报、气象预警及自身情况调整安排；
+ 出现明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkkp/hjjk/qhbh/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280807T0721-e7ab8be7a78b@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280807T072100
 DTEND;TZID=Asia/Shanghai:20280807T072200
 SUMMARY;LANGUAGE=zh_CN:立秋 · 07:21交节
@@ -2348,9 +4481,38 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-08-13-e69cabe4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280813
+DTEND;VALUE=DATE:20280814
+SUMMARY;LANGUAGE=zh_CN:时令 · 末伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:末伏从2028年08月13日起，共10天；按干支纪日推
+ 算，初伏为夏至后第三个庚日，中伏为第四个庚日，末
+ 伏为立秋后第一个庚日。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-health-2028-08-22-e5a484e69a91c2b7e585bce9a1bee69a91e783ade4
+ b88ee6b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280822
+DTEND;VALUE=DATE:20280823
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 处暑·兼顾暑热与温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:白天仍热时继续防暑，早晚转凉则按实际气温增
+ 减衣物。 节气和时令仅作季节参考，请以当地天气预报
+ 、气象预警及自身情况调整安排；出现明显不适请及时
+ 就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280822T2201-e5a484e69a91@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280822T220100
 DTEND;TZID=Asia/Shanghai:20280822T220200
 SUMMARY;LANGUAGE=zh_CN:处暑 · 22:01交节
@@ -2364,9 +4526,21 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-seasonal-2028-08-23-e587bae4bc8f@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280823
+DTEND;VALUE=DATE:20280824
+SUMMARY;LANGUAGE=zh_CN:时令 · 出伏
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,三伏
+DESCRIPTION:末伏于2028年08月22日结束，今日出伏。
+URL:https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.
+ html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-traditional-2028-09-03-e4b8ade58583e88a82@china-calendar.luk
  e-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280903
 DTEND;VALUE=DATE:20280904
 SUMMARY;LANGUAGE=zh_CN:中元节
@@ -2378,7 +4552,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-09-03-e4b8ade59bbde4babae6b091e68a97e697a5e6
  8898e4ba89e8839ce588a9e7baaae5bfb5e697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280903
 DTEND;VALUE=DATE:20280904
 SUMMARY;LANGUAGE=zh_CN:中国人民抗日战争胜利纪念日
@@ -2386,9 +4560,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-09-07-e799bde99cb2c2b7e79599e6848fe698bce5a49ce6
+ b8a9e5b7ae@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280907
+DTEND;VALUE=DATE:20280908
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 白露·留意昼夜温差
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:早晚出行前查看体感温度，使用便于增减的衣物
+ 应对昼夜温差。 节气和时令仅作季节参考，请以当地天
+ 气预报、气象预警及自身情况调整安排；出现明显不适
+ 请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280907T1022-e799bde99cb2@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280907T102200
 DTEND;TZID=Asia/Shanghai:20280907T102300
 SUMMARY;LANGUAGE=zh_CN:白露 · 10:22交节
@@ -2404,7 +4593,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-09-10-e69599e5b888e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280910
 DTEND;VALUE=DATE:20280911
 SUMMARY;LANGUAGE=zh_CN:教师节
@@ -2414,7 +4603,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-09-18-e4b99de4b880e585abe4ba8be58f98e7baaae5
  bfb5e697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280918
 DTEND;VALUE=DATE:20280919
 SUMMARY;LANGUAGE=zh_CN:九一八事变纪念日
@@ -2422,9 +4611,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-09-22-e7a78be58886c2b7e5b9b2e787a5e5a4a9e6b094e8
+ a1a5e6b0b4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20280922
+DTEND;VALUE=DATE:20280923
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 秋分·干燥天气补水
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:空气干燥时规律饮水，室内避免过度干燥；户外
+ 同时留意紫外线。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20280922T1945-e7a78be58886@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20280922T194500
 DTEND;TZID=Asia/Shanghai:20280922T194600
 SUMMARY;LANGUAGE=zh_CN:秋分 · 19:45交节
@@ -2440,7 +4644,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-09-30-e78388e5a3abe7baaae5bfb5e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20280930
 DTEND;VALUE=DATE:20281001
 SUMMARY;LANGUAGE=zh_CN:烈士纪念日
@@ -2448,9 +4652,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-10-08-e5af92e99cb2c2b7e9998de6b8a9e58f8ae697b6e6
+ b7bbe8a1a3@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20281008
+DTEND;VALUE=DATE:20281009
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 寒露·降温及时添衣
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:冷空气活动增多时关注最低气温和大风预警，重
+ 点做好头颈与四肢保暖。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20281008T0209-e5af92e99cb2@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20281008T020900
 DTEND;TZID=Asia/Shanghai:20281008T021000
 SUMMARY;LANGUAGE=zh_CN:寒露 · 02:09交节
@@ -2464,9 +4683,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-10-23-e99c9ce9998dc2b7e998b2e5af92e4b88ee998b2e8
+ b78ce58092@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20281023
+DTEND;VALUE=DATE:20281024
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 霜降·防寒与防跌倒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:低温和湿滑天气出行放慢速度，老年人及慢性病
+ 患者更要留意气温骤降。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20281023T0513-e99c9ce9998d@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20281023T051300
 DTEND;TZID=Asia/Shanghai:20281023T051400
 SUMMARY;LANGUAGE=zh_CN:霜降 · 05:13交节
@@ -2480,9 +4714,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-11-07-e7ab8be586acc2b7e5819ae5a5bde5af92e6bdaee5
+ 8786e5a487@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20281107
+DTEND;VALUE=DATE:20281108
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 立冬·做好寒潮准备
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:提前检查保暖衣物和取暖设备，寒潮来临时减少
+ 长时间户外暴露。 节气和时令仅作季节参考，请以当地
+ 天气预报、气象预警及自身情况调整安排；出现明显不
+ 适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20281107T0527-e7ab8be586ac@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20281107T052700
 DTEND;TZID=Asia/Shanghai:20281107T052800
 SUMMARY;LANGUAGE=zh_CN:立冬 · 05:27交节
@@ -2496,9 +4745,24 @@ URL:https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2028.xm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-11-22-e5b08fe99baac2b7e99ba8e99baae5a4a9e998b2e6
+ bb91@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20281122
+DTEND;VALUE=DATE:20281123
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小雪·雨雪天防滑
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:雨雪天气选择防滑鞋，避开结冰路面；驾车和骑
+ 行时预留更长制动距离。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20281122T0254-e5b08fe99baa@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20281122T025400
 DTEND;TZID=Asia/Shanghai:20281122T025500
 SUMMARY;LANGUAGE=zh_CN:小雪 · 02:54交节
@@ -2514,7 +4778,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-11-23-e6849fe681a9e88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20281123
 DTEND;VALUE=DATE:20281124
 SUMMARY;LANGUAGE=zh_CN:感恩节
@@ -2524,7 +4788,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-12-04-e59bbde5aeb6e5aeaae6b395e697a5@china-c
  alendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20281204
 DTEND;VALUE=DATE:20281205
 SUMMARY;LANGUAGE=zh_CN:国家宪法日
@@ -2532,9 +4796,24 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-12-06-e5a4a7e99baac2b7e4bd8ee6b8a9e998b2e586bbe4
+ bca4@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20281206
+DTEND;VALUE=DATE:20281207
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 大雪·低温防冻伤
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:长时间户外活动注意手、脚、耳等暴露部位保暖
+ ，衣物潮湿后及时更换。 节气和时令仅作季节参考，请
+ 以当地天气预报、气象预警及自身情况调整安排；出现
+ 明显不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20281206T2225-e5a4a7e99baa@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20281206T222500
 DTEND;TZID=Asia/Shanghai:20281206T222600
 SUMMARY;LANGUAGE=zh_CN:大雪 · 22:25交节
@@ -2550,7 +4829,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-12-13-e58d97e4baace5a4a7e5b1a0e69d80e6adbbe9
  9abee88085e59bbde5aeb6e585ace7a5ade697a5@china-calendar.luke-lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20281213
 DTEND;VALUE=DATE:20281214
 SUMMARY;LANGUAGE=zh_CN:南京大屠杀死难者国家公祭日
@@ -2558,9 +4837,36 @@ TRANSP:TRANSPARENT
 CATEGORIES:国家纪念日
 END:VEVENT
 BEGIN:VEVENT
+UID:supplement-health-2028-12-21-e586ace887b3c2b7e695b0e4b99de998b2e5af92@c
+ hina-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20281221
+DTEND;VALUE=DATE:20281222
+SUMMARY;LANGUAGE=zh_CN:健康提醒 · 冬至·数九防寒
+TRANSP:TRANSPARENT
+CATEGORIES:季节健康提醒,天气健康
+DESCRIPTION:进入数九后持续关注寒潮预警，分层保暖并避免
+ 在低温环境中久留。 节气和时令仅作季节参考，请以当
+ 地天气预报、气象预警及自身情况调整安排；出现明显
+ 不适请及时就医。
+URL:https://www.chinacdc.cn/jkyj/hjyjk/
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2028-12-21-e4b880e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20281221
+DTEND;VALUE=DATE:20281222
+SUMMARY;LANGUAGE=zh_CN:时令 · 一九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:一九从2028年12月21日至2028年12月29日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
 UID:supplement-solar-term-20281221T1620-e586ace887b3@china-calendar.luke-la
  b666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;TZID=Asia/Shanghai:20281221T162000
 DTEND;TZID=Asia/Shanghai:20281221T162100
 SUMMARY;LANGUAGE=zh_CN:冬至 · 16:20交节
@@ -2576,7 +4882,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-12-24-e5b9b3e5ae89e5a49c@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20281224
 DTEND;VALUE=DATE:20281225
 SUMMARY;LANGUAGE=zh_CN:平安夜
@@ -2586,11 +4892,118 @@ END:VEVENT
 BEGIN:VEVENT
 UID:supplement-observance-2028-12-25-e59ca3e8af9ee88a82@china-calendar.luke
  -lab666
-DTSTAMP:20260822T022103Z
+DTSTAMP:20260825T160750Z
 DTSTART;VALUE=DATE:20281225
 DTEND;VALUE=DATE:20281226
 SUMMARY;LANGUAGE=zh_CN:圣诞节
 TRANSP:TRANSPARENT
 CATEGORIES:社会节日
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2028-12-30-e4ba8ce4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20281230
+DTEND;VALUE=DATE:20281231
+SUMMARY;LANGUAGE=zh_CN:时令 · 二九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:二九从2028年12月30日至2029年01月07日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2029-01-08-e4b889e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20290108
+DTEND;VALUE=DATE:20290109
+SUMMARY;LANGUAGE=zh_CN:时令 · 三九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:三九从2029年01月08日至2029年01月16日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2029-01-17-e59b9be4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20290117
+DTEND;VALUE=DATE:20290118
+SUMMARY;LANGUAGE=zh_CN:时令 · 四九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:四九从2029年01月17日至2029年01月25日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2029-01-26-e4ba94e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20290126
+DTEND;VALUE=DATE:20290127
+SUMMARY;LANGUAGE=zh_CN:时令 · 五九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:五九从2029年01月26日至2029年02月03日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2029-02-04-e585ade4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20290204
+DTEND;VALUE=DATE:20290205
+SUMMARY;LANGUAGE=zh_CN:时令 · 六九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:六九从2029年02月04日至2029年02月12日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2029-02-13-e4b883e4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20290213
+DTEND;VALUE=DATE:20290214
+SUMMARY;LANGUAGE=zh_CN:时令 · 七九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:七九从2029年02月13日至2029年02月21日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2029-02-22-e585abe4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20290222
+DTEND;VALUE=DATE:20290223
+SUMMARY;LANGUAGE=zh_CN:时令 · 八九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:八九从2029年02月22日至2029年03月02日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2029-03-03-e4b99de4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20290303
+DTEND;VALUE=DATE:20290304
+SUMMARY;LANGUAGE=zh_CN:时令 · 九九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九从2029年03月03日至2029年03月11日。数九从冬
+ 至当天起，每九天为一九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:supplement-seasonal-2029-03-12-e587bae4b99d@china-calendar.luke-lab666
+DTSTAMP:20260825T160750Z
+DTSTART;VALUE=DATE:20290312
+DTEND;VALUE=DATE:20290313
+SUMMARY;LANGUAGE=zh_CN:时令 · 出九
+TRANSP:TRANSPARENT
+CATEGORIES:传统时令,数九
+DESCRIPTION:九九八十一天结束，今日出九。
+URL:https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm
 END:VEVENT
 END:VCALENDAR

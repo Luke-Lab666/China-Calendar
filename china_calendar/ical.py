@@ -8,11 +8,12 @@ from .models import Event
 
 
 CALENDAR_NAMES = {
-    "calendar": "中国节假日・纪念日・二十四节气",
+    "calendar": "中国节假日・纪念日・节气与时令",
     "holidays": "中国大陆节假日与调休",
     "solar-terms": "二十四节气（北京时间）",
     "observances": "中国传统节日与纪念日",
-    "supplement": "中国日历补充・精确交节与纪念日",
+    "seasonal": "传统时令与季节健康提醒",
+    "supplement": "中国日历补充・精确交节、时令与健康提醒",
 }
 
 SHANGHAI = ZoneInfo("Asia/Shanghai")

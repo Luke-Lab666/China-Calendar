@@ -1,0 +1,34 @@
+{
+  "sources": {
+    "general": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html",
+    "heat": "https://www.chinacdc.cn/jkkp/hjjk/qhbh/",
+    "cold": "https://www.chinacdc.cn/jkyj/hjyjk/",
+    "meiyu": "https://www.shanghai.gov.cn/nw17239/20260626/43894ac4f7534261ad7028fe995bc62d.html"
+  },
+  "solar_terms": [
+    {"term": "小寒", "title": "防寒防滑", "description": "关注降温和道路结冰信息，外出注意头颈、手脚保暖并选择防滑鞋。", "url": "https://www.chinacdc.cn/jkyj/hjyjk/"},
+    {"term": "大寒", "title": "低温与取暖安全", "description": "根据气温及时增添衣物；使用燃气或燃煤设备时保持通风，防范一氧化碳中毒。", "url": "https://www.chinacdc.cn/jkyj/hjyjk/"},
+    {"term": "立春", "title": "防气温骤变", "description": "早春冷暖波动较大，出门前查看逐小时预报，按温度变化分层穿衣。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "雨水", "title": "雨天防滑防潮", "description": "雨天放慢步速并避开积水路面，居室潮湿时适度通风或除湿。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "惊蛰", "title": "留意雷雨预警", "description": "出现雷电预警时减少户外停留，远离孤立高物、大树、水边和空旷地带。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "春分", "title": "关注花粉与温差", "description": "过敏人群外出前留意花粉和风力信息，回家后及时清洁暴露部位；早晚注意温差。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "清明", "title": "户外防晒补水", "description": "户外活动前查看紫外线指数，合理使用遮阳用品并随身带水。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "谷雨", "title": "潮湿天气防霉", "description": "连续阴雨时加强通风或除湿，衣物充分晾干，霉变食品不要继续食用。", "url": "https://www.shanghai.gov.cn/nw17239/20260626/43894ac4f7534261ad7028fe995bc62d.html"},
+    {"term": "立夏", "title": "提前准备防暑", "description": "气温上升后逐步调整户外活动时段，外出备好饮水和遮阳用品。", "url": "https://www.chinacdc.cn/jkkp/hjjk/qhbh/"},
+    {"term": "小满", "title": "闷热天气主动补水", "description": "闷热环境中不要等口渴才喝水，少量多次补充；大量出汗后注意休息。", "url": "https://www.chinacdc.cn/jkkp/hjjk/qhbh/"},
+    {"term": "芒种", "title": "防雷雨与高温", "description": "安排户外活动前同时查看高温、暴雨和雷电预警，遇强对流及时进入安全建筑。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "夏至", "title": "避开午后暴晒", "description": "高温日尽量避开正午至午后长时间户外活动，使用遮阳用品并及时补水。", "url": "https://www.chinacdc.cn/jkkp/hjjk/qhbh/"},
+    {"term": "小暑", "title": "防范中暑", "description": "高温高湿时缩短连续户外活动时间，主动补水并安排阴凉处休息。", "url": "https://www.chinacdc.cn/jkkp/hjjk/qhbh/"},
+    {"term": "大暑", "title": "识别中暑信号", "description": "高温环境中出现头晕、恶心、乏力或大量出汗时立即离开热环境、降温并补水。", "url": "https://www.chinacdc.cn/jkkp/hjjk/qhbh/"},
+    {"term": "立秋", "title": "高温防护别放松", "description": "节气转换不代表高温结束，继续根据高温预警调整出行时段并做好补水遮阳。", "url": "https://www.chinacdc.cn/jkkp/hjjk/qhbh/"},
+    {"term": "处暑", "title": "兼顾暑热与温差", "description": "白天仍热时继续防暑，早晚转凉则按实际气温增减衣物。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "白露", "title": "留意昼夜温差", "description": "早晚出行前查看体感温度，使用便于增减的衣物应对昼夜温差。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "秋分", "title": "干燥天气补水", "description": "空气干燥时规律饮水，室内避免过度干燥；户外同时留意紫外线。", "url": "https://iehs.chinacdc.cn/fgbz/jscl/202501/t20250117_303909.html"},
+    {"term": "寒露", "title": "降温及时添衣", "description": "冷空气活动增多时关注最低气温和大风预警，重点做好头颈与四肢保暖。", "url": "https://www.chinacdc.cn/jkyj/hjyjk/"},
+    {"term": "霜降", "title": "防寒与防跌倒", "description": "低温和湿滑天气出行放慢速度，老年人及慢性病患者更要留意气温骤降。", "url": "https://www.chinacdc.cn/jkyj/hjyjk/"},
+    {"term": "立冬", "title": "做好寒潮准备", "description": "提前检查保暖衣物和取暖设备，寒潮来临时减少长时间户外暴露。", "url": "https://www.chinacdc.cn/jkyj/hjyjk/"},
+    {"term": "小雪", "title": "雨雪天防滑", "description": "雨雪天气选择防滑鞋，避开结冰路面；驾车和骑行时预留更长制动距离。", "url": "https://www.chinacdc.cn/jkyj/hjyjk/"},
+    {"term": "大雪", "title": "低温防冻伤", "description": "长时间户外活动注意手、脚、耳等暴露部位保暖，衣物潮湿后及时更换。", "url": "https://www.chinacdc.cn/jkyj/hjyjk/"},
+    {"term": "冬至", "title": "数九防寒", "description": "进入数九后持续关注寒潮预警，分层保暖并避免在低温环境中久留。", "url": "https://www.chinacdc.cn/jkyj/hjyjk/"}
+  ]
+}
