@@ -4,8 +4,9 @@ import calendar
 import json
 import uuid
 from dataclasses import replace
-from datetime import date, datetime, time, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
+from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 from .models import Event
@@ -38,6 +39,9 @@ APPLE_OBSERVANCE_NAMES = {
     "中国共产党成立纪念日",
     "中国人民解放军建军节",
 }
+
+SEASONAL_SOURCE = "https://paper.people.com.cn/rmrb/pc/content/202506/02/content_30076651.html"
+SHUJIU_SOURCE = "https://www.xiongan.gov.cn/2019-12/20/c_1210404541.htm"
 
 
 def _load_json(path: Path) -> dict:
@@ -147,6 +151,254 @@ def solar_term_events(root: Path) -> list[Event]:
     return result
 
 
+def _solar_terms_by_year(root: Path) -> dict[int, dict[str, datetime]]:
+    result: dict[int, dict[str, datetime]] = {}
+    for path in sorted((root / "data" / "solar-terms").glob("*.json")):
+        payload = _load_json(path)
+        result[int(payload["year"])] = {
+            item["name"]: datetime.fromisoformat(item["datetime"])
+            for item in payload["terms"]
+        }
+    return result
+
+
+def _is_geng_day(day: date) -> bool:
+    """Return whether a Gregorian date is a 庚 day in the sexagenary cycle."""
+    julian_day_number = day.toordinal() + 1_721_425
+    return (julian_day_number + 9) % 10 == 6
+
+
+def _geng_days_on_or_after(start: date, count: int) -> list[date]:
+    result: list[date] = []
+    candidate = start
+    while len(result) < count:
+        if _is_geng_day(candidate):
+            result.append(candidate)
+        candidate += timedelta(days=1)
+    return result
+
+
+def _seasonal_event(
+    event_date: date,
+    name: str,
+    description: str,
+    url: str,
+    *categories: str,
+) -> Event:
+    return Event(
+        uid=_uid("seasonal", event_date.isoformat(), name),
+        summary=f"时令 · {name}",
+        kind="seasonal",
+        start=event_date,
+        end=event_date + timedelta(days=1),
+        description=description,
+        url=url,
+        categories=("传统时令", *categories),
+    )
+
+
+def dog_days_events(root: Path) -> list[Event]:
+    result: list[Event] = []
+    for year, terms in _solar_terms_by_year(root).items():
+        if year < 2025 or "夏至" not in terms or "立秋" not in terms:
+            continue
+        summer_geng = _geng_days_on_or_after(terms["夏至"].date(), 4)
+        autumn_geng = _geng_days_on_or_after(terms["立秋"].date(), 2)
+        initial, middle = summer_geng[2], summer_geng[3]
+        final, after = autumn_geng[0], autumn_geng[1]
+        periods = (
+            (initial, "初伏", initial, middle),
+            (middle, "中伏", middle, final),
+            (final, "末伏", final, after),
+        )
+        for event_date, name, start, end in periods:
+            days = (end - start).days
+            result.append(
+                _seasonal_event(
+                    event_date,
+                    name,
+                    f"{name}从{start:%Y年%m月%d日}起，共{days}天；"
+                    "按干支纪日推算，初伏为夏至后第三个庚日，"
+                    "中伏为第四个庚日，"
+                    "末伏为立秋后第一个庚日。",
+                    SEASONAL_SOURCE,
+                    "三伏",
+                )
+            )
+        result.append(
+            _seasonal_event(
+                after,
+                "出伏",
+                f"末伏于{after - timedelta(days=1):%Y年%m月%d日}结束，今日出伏。",
+                SEASONAL_SOURCE,
+                "三伏",
+            )
+        )
+    return result
+
+
+def nine_nines_events(root: Path) -> list[Event]:
+    result: list[Event] = []
+    labels = "一二三四五六七八九"
+    for terms in _solar_terms_by_year(root).values():
+        if "冬至" not in terms:
+            continue
+        winter_solstice = terms["冬至"].date()
+        for index, label in enumerate(labels):
+            event_date = winter_solstice + timedelta(days=index * 9)
+            if event_date.year < 2025:
+                continue
+            period_end = event_date + timedelta(days=8)
+            result.append(
+                _seasonal_event(
+                    event_date,
+                    f"{label}九",
+                    f"{label}九从{event_date:%Y年%m月%d日}至{period_end:%Y年%m月%d日}。"
+                    "数九从冬至当天起，每九天为一九。",
+                    SHUJIU_SOURCE,
+                    "数九",
+                )
+            )
+        out_date = winter_solstice + timedelta(days=81)
+        if out_date.year >= 2025:
+            result.append(
+                _seasonal_event(
+                    out_date,
+                    "出九",
+                    "九九八十一天结束，今日出九。",
+                    SHUJIU_SOURCE,
+                    "数九",
+                )
+            )
+    return result
+
+
+def shanghai_meiyu_events(root: Path) -> list[Event]:
+    config = _load_json(root / "config" / "shanghai-meiyu.json")
+    result: list[Event] = []
+    for item in config["years"]:
+        if item.get("status") != "published":
+            continue
+        start = date.fromisoformat(item["start"])
+        end = date.fromisoformat(item["end"])
+        expected_year = int(item["year"])
+        if start.year != expected_year or end.year != expected_year or end <= start:
+            raise ValueError(f"Invalid Shanghai meiyu period for {expected_year}")
+        for key in ("start_source", "end_source"):
+            parsed = urlparse(item[key])
+            if parsed.scheme != "https" or parsed.hostname != "www.shanghai.gov.cn":
+                raise ValueError(f"Non-official Shanghai meiyu source: {item[key]}")
+        result.extend(
+            [
+                _seasonal_event(
+                    start,
+                    "上海入梅",
+                    "上海气象部门正式公布今日入梅；"
+                    f"本年梅雨期至{end:%m月%d日}。"
+                    "日期仅在官方公布后收录，不按常年平均日期预测。",
+                    item["start_source"],
+                    "上海梅雨",
+                ),
+                _seasonal_event(
+                    end,
+                    "上海出梅",
+                    "上海气象部门正式公布今日出梅；"
+                    f"本年梅雨期始于{start:%m月%d日}。"
+                    "日期仅在官方公布后收录，不按常年平均日期预测。",
+                    item["end_source"],
+                    "上海梅雨",
+                ),
+            ]
+        )
+    return result
+
+
+def _health_event(event_date: date, name: str, description: str, url: str) -> Event:
+    return Event(
+        uid=_uid("health", event_date.isoformat(), name),
+        summary=f"健康提醒 · {name}",
+        kind="health",
+        start=event_date,
+        end=event_date + timedelta(days=1),
+        description=(
+            f"{description} 节气和时令仅作季节参考，"
+            "请以当地天气预报、气象预警及"
+            "自身情况调整安排；出现明显不适请及时就医。"
+        ),
+        url=url,
+        categories=("季节健康提醒", "天气健康"),
+    )
+
+
+def health_events(root: Path) -> list[Event]:
+    config = _load_json(root / "config" / "seasonal-health.json")
+    reminders = {item["term"]: item for item in config["solar_terms"]}
+    result: list[Event] = []
+    terms_by_year = _solar_terms_by_year(root)
+    for year, terms in terms_by_year.items():
+        if year < 2025:
+            continue
+        for term, start in terms.items():
+            item = reminders[term]
+            result.append(
+                _health_event(
+                    start.date(),
+                    f"{term}·{item['title']}",
+                    item["description"],
+                    item["url"],
+                )
+            )
+
+    dog_days = dog_days_events(root)
+    for event in dog_days:
+        if event.summary == "时令 · 初伏":
+            result.append(
+                _health_event(
+                    event.start,  # type: ignore[arg-type]
+                    "入伏防暑",
+                    "高温高湿时减少午后长时间户外活动，主动少量多次补水，"
+                    "关注头晕、恶心、乏力等中暑信号。",
+                    config["sources"]["heat"],
+                )
+            )
+
+    meiyu = shanghai_meiyu_events(root)
+    for event in meiyu:
+        if event.summary == "时令 · 上海入梅":
+            result.append(
+                _health_event(
+                    event.start,  # type: ignore[arg-type]
+                    "上海梅雨防潮防霉",
+                    "及时通风或除湿，湿衣尽快洗净晾干；"
+                    "食品密封、按需冷藏，"
+                    "发现霉变食品直接丢弃。",
+                    config["sources"]["meiyu"],
+                )
+            )
+        elif event.summary == "时令 · 上海出梅":
+            result.append(
+                _health_event(
+                    event.start,  # type: ignore[arg-type]
+                    "上海出梅防高温",
+                    "出梅后常转入晴热天气，提前关注高温预警，"
+                    "安排好遮阳、补水和"
+                    "室内降温。",
+                    config["sources"]["heat"],
+                )
+            )
+    return result
+
+
+def seasonal_events(root: Path) -> list[Event]:
+    return sorted(
+        dog_days_events(root)
+        + nine_nines_events(root)
+        + shanghai_meiyu_events(root)
+        + health_events(root),
+        key=lambda event: (event.start.isoformat(), event.summary),
+    )
+
+
 def traditional_events(root: Path) -> list[Event]:
     result: list[Event] = []
     lunar_by_date: dict[date, dict] = {}
@@ -232,7 +484,10 @@ def _observance_event(event_date: date, item: dict) -> Event:
 
 
 def supplement_events(
-    solar_terms: list[Event], traditional: list[Event], observances: list[Event]
+    solar_terms: list[Event],
+    traditional: list[Event],
+    observances: list[Event],
+    seasonal: list[Event],
 ) -> list[Event]:
     """Events intended to accompany Apple's official mainland holiday calendar."""
     result: list[Event] = []
@@ -257,6 +512,8 @@ def supplement_events(
             result.append(
                 replace(event, uid=f"supplement-{event.uid}", summary=name)
             )
+    for event in seasonal:
+        result.append(replace(event, uid=f"supplement-{event.uid}"))
     return sorted(result, key=lambda event: (event.start.isoformat(), event.summary))
 
 
@@ -264,14 +521,18 @@ def collect_events(root: Path, today: date, future_holidays_only: bool) -> dict[
     solar_terms = solar_term_events(root)
     traditional = traditional_events(root)
     observances = observance_events(root)
+    seasonal = seasonal_events(root)
     groups = {
         "holidays": holiday_events(root, today, future_holidays_only),
         "solar-terms": solar_terms,
         "observances": traditional + observances,
+        "seasonal": seasonal,
     }
     groups["calendar"] = sorted(
         (event for events in groups.values() for event in events),
         key=lambda event: (event.start.isoformat(), event.summary),
     )
-    groups["supplement"] = supplement_events(solar_terms, traditional, observances)
+    groups["supplement"] = supplement_events(
+        solar_terms, traditional, observances, seasonal
+    )
     return groups

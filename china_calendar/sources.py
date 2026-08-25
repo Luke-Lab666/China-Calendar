@@ -283,6 +283,9 @@ def fetch_all(root: Path, today: date, client: HttpClient | None = None) -> str:
     client = client or HttpClient()
     current_year = today.year
     years = range(max(2025, current_year - 1), current_year + 3)
+    # Keep the preceding winter solstice so that the early-January "数九"
+    # markers are complete for the first published calendar year.
+    solar_years = range(max(2024, current_year - 2), current_year + 3)
     changed = False
 
     for year in years:
@@ -298,16 +301,17 @@ def fetch_all(root: Path, today: date, client: HttpClient | None = None) -> str:
             holiday_payload,
         )
 
-        solar_raw = client.get(HKO_SOLAR_URL.format(year=year)).body
-        changed |= write_json_if_changed(
-            root / "data" / "solar-terms" / f"{year}.json",
-            parse_solar_terms(solar_raw, year),
-        )
-
         lunar_raw = client.get(HKO_LUNAR_URL.format(year=year)).body
         changed |= write_json_if_changed(
             root / "data" / "lunar" / f"{year}.json",
             parse_lunar_calendar(lunar_raw, year),
+        )
+
+    for year in solar_years:
+        solar_raw = client.get(HKO_SOLAR_URL.format(year=year)).body
+        changed |= write_json_if_changed(
+            root / "data" / "solar-terms" / f"{year}.json",
+            parse_solar_terms(solar_raw, year),
         )
 
     return update_source_state(root, changed)

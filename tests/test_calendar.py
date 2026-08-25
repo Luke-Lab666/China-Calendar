@@ -92,6 +92,73 @@ class GeneratedCalendarTests(unittest.TestCase):
         )
         self.assertEqual(event.start.isoformat(), "2026-10-08T14:29:00+08:00")
 
+    def test_known_2026_dog_days(self) -> None:
+        expected = {
+            "时令 · 初伏": date(2026, 7, 15),
+            "时令 · 中伏": date(2026, 7, 25),
+            "时令 · 末伏": date(2026, 8, 14),
+            "时令 · 出伏": date(2026, 8, 24),
+        }
+        actual = {
+            event.summary: event.start
+            for event in self.groups["seasonal"]
+            if event.summary in expected and event.start.year == 2026
+        }
+        self.assertEqual(actual, expected)
+        middle = next(
+            event
+            for event in self.groups["seasonal"]
+            if event.summary == "时令 · 中伏" and event.start == date(2026, 7, 25)
+        )
+        self.assertIn("共20天", middle.description)
+
+    def test_number_nines_begin_on_winter_solstice(self) -> None:
+        events = {
+            event.summary: event.start
+            for event in self.groups["seasonal"]
+            if date(2026, 12, 1) <= event.start <= date(2027, 4, 1)
+            and event.kind == "seasonal"
+        }
+        self.assertEqual(events["时令 · 一九"], date(2026, 12, 22))
+        self.assertEqual(events["时令 · 二九"], date(2026, 12, 31))
+        self.assertEqual(events["时令 · 九九"], date(2027, 3, 4))
+        self.assertEqual(events["时令 · 出九"], date(2027, 3, 13))
+
+    def test_shanghai_meiyu_uses_only_published_years(self) -> None:
+        meiyu = [
+            event
+            for event in self.groups["seasonal"]
+            if event.kind == "seasonal"
+            and ("上海入梅" in event.summary or "上海出梅" in event.summary)
+        ]
+        self.assertEqual(
+            [(event.start, event.summary) for event in meiyu],
+            [
+                (date(2025, 6, 7), "时令 · 上海入梅"),
+                (date(2025, 6, 29), "时令 · 上海出梅"),
+                (date(2026, 6, 18), "时令 · 上海入梅"),
+                (date(2026, 7, 8), "时令 · 上海出梅"),
+            ],
+        )
+        self.assertTrue(all(event.start.year != 2027 for event in meiyu))
+
+    def test_health_reminders_are_separate_events_without_alarms(self) -> None:
+        health_2026 = [
+            event
+            for event in self.groups["seasonal"]
+            if event.kind == "health" and event.start.year == 2026
+        ]
+        self.assertEqual(len(health_2026), 27)
+        self.assertTrue(all(event.summary.startswith("健康提醒 · ") for event in health_2026))
+        self.assertTrue(
+            any(
+                event.summary == "健康提醒 · 上海梅雨防潮防霉"
+                for event in health_2026
+            )
+        )
+        content = render_calendar("seasonal", health_2026, self.generated_at).decode("utf-8")
+        self.assertNotIn("BEGIN:VALARM", content)
+
     def test_unannounced_year_does_not_invent_holidays(self) -> None:
         holidays = [event for event in self.groups["holidays"] if event.start.year == 2027]
         self.assertEqual(holidays, [])
@@ -118,8 +185,13 @@ class GeneratedCalendarTests(unittest.TestCase):
         content = render_calendar(
             "supplement", self.groups["supplement"], self.generated_at
         ).decode("utf-8")
-        self.assertIn("X-WR-CALNAME:中国日历补充・精确交节与纪念日", content)
+        self.assertIn(
+            "X-WR-CALNAME:中国日历补充・精确交节、时令与健康提醒",
+            content,
+        )
         self.assertNotIn("X-APPLE-SPECIAL-DAY:", content)
+        self.assertIn("SUMMARY;LANGUAGE=zh_CN:时令 · 初伏", content)
+        self.assertIn("SUMMARY;LANGUAGE=zh_CN:健康提醒 · 小暑·防范中暑", content)
 
     def test_future_only_filters_only_official_arrangements(self) -> None:
         groups = collect_events(ROOT, date(2026, 8, 22), future_holidays_only=True)

@@ -1,0 +1,20 @@
+{
+  "years": [
+    {
+      "year": 2025,
+      "status": "published",
+      "start": "2025-06-07",
+      "end": "2025-06-29",
+      "start_source": "https://www.shanghai.gov.cn/nw4411/20250616/3219037fa2f94b09bfe0b1606df95bb3.html",
+      "end_source": "https://www.shanghai.gov.cn/nw4411/20250628/7082f6d0ee8d4a018c32dc3559b31b06.html"
+    },
+    {
+      "year": 2026,
+      "status": "published",
+      "start": "2026-06-18",
+      "end": "2026-07-08",
+      "start_source": "https://www.shanghai.gov.cn/nw17239/20260618/a1a27757b48d4337865deb880397f67d.html",
+      "end_source": "https://www.shanghai.gov.cn/nw17239/20260708/27b2b409d0e445849ea0d79c53b51ac2.html"
+    }
+  ]
+}
