@@ -26,6 +26,8 @@ jobs:
         run: python -m china_calendar.cli
       - name: Test feeds
         run: python -m unittest discover -s tests -v
+      - name: Verify reproducible feeds
+        run: python -m china_calendar.cli --check
       - name: Commit changed data
         run: |
           if git diff --quiet; then

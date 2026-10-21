@@ -1,0 +1,2 @@
+# RFC 5545 feeds must retain CRLF, including on Linux and Windows checkouts.
+*.ics -text whitespace=cr-at-eol

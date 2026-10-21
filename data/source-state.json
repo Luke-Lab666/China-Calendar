@@ -1,4 +1,9 @@
 {
-  "generated_at": "2026-08-25T16:07:50+00:00",
-  "source_digest": "bfb5b35d7e63ea7b0407d3d32951c3335b16a0b68807199a228c77a4de4b2ec1"
+  "build_options": {
+    "end_year": 2028,
+    "future_holidays_from": null,
+    "start_year": 2025
+  },
+  "generated_at": "2026-10-21T08:17:12+00:00",
+  "source_digest": "f8897ff007be95c8bb08f0628c42b419eea97f6769962ba78cec0ab3c64eedf8"
 }
