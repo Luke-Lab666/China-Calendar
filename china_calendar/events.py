@@ -68,26 +68,33 @@ def _holiday_name(name: str) -> str:
 
 def holiday_events(root: Path, today: date, future_only: bool) -> list[Event]:
     result: list[Event] = []
+    # Adjacent annual notices can both include the same cross-year dates.
+    # Prefer the newer notice, then form whole holiday spans before filtering.
+    by_date: dict[date, tuple[bool, str, str]] = {}
     for path in sorted((root / "data" / "holidays").glob("*.json")):
         payload = _load_json(path)
         if not payload["papers"]:
             continue
         source_url = payload["papers"][0]
-        days = []
         for item in payload["days"]:
             event_date = date.fromisoformat(item["date"])
-            if event_date.year >= 2025 and not (future_only and event_date < today):
-                days.append((event_date, bool(item["is_off_day"]), _holiday_name(item["name"])))
+            if event_date.year >= 2025:
+                by_date[event_date] = (
+                    bool(item["is_off_day"]), _holiday_name(item["name"]), source_url
+                )
 
-        off_days = sorted((day, name) for day, is_off, name in days if is_off)
-        index = 0
-        while index < len(off_days):
-            start, name = off_days[index]
-            end = start + timedelta(days=1)
+    off_days = sorted(
+        (day, name, source) for day, (is_off, name, source) in by_date.items() if is_off
+    )
+    index = 0
+    while index < len(off_days):
+        start, name, source_url = off_days[index]
+        end = start + timedelta(days=1)
+        index += 1
+        while index < len(off_days) and off_days[index][:2] == (end, name):
+            end += timedelta(days=1)
             index += 1
-            while index < len(off_days) and off_days[index] == (end, name):
-                end += timedelta(days=1)
-                index += 1
+        if not future_only or end > today:
             result.append(
                 Event(
                     uid=_uid("holiday", f"{start.isoformat()}-{end.isoformat()}", name),
@@ -103,23 +110,23 @@ def holiday_events(root: Path, today: date, future_only: bool) -> list[Event]:
                 )
             )
 
-        for event_date, is_off, name in days:
-            if is_off:
-                continue
-            result.append(
-                Event(
-                    uid=_uid("workday", event_date.isoformat(), name),
-                    summary=f"{name}（班）",
-                    kind="workday",
-                    start=event_date,
-                    end=event_date + timedelta(days=1),
-                    description="国务院办公厅正式调休补班安排。",
-                    url=source_url,
-                    categories=("中国大陆", "调休补班"),
-                    apple_special_day="ALTERNATE-WORKDAY",
-                    apple_universal_id=_apple_id("holiday", name),
-                )
+    for event_date, (is_off, name, source_url) in sorted(by_date.items()):
+        if is_off or (future_only and event_date < today):
+            continue
+        result.append(
+            Event(
+                uid=_uid("workday", event_date.isoformat(), name),
+                summary=f"{name}（班）",
+                kind="workday",
+                start=event_date,
+                end=event_date + timedelta(days=1),
+                description="国务院办公厅正式调休补班安排。",
+                url=source_url,
+                categories=("中国大陆", "调休补班"),
+                apple_special_day="ALTERNATE-WORKDAY",
+                apple_universal_id=_apple_id("holiday", name),
             )
+        )
     return result
 
 
@@ -535,4 +542,24 @@ def collect_events(root: Path, today: date, future_holidays_only: bool) -> dict[
     groups["supplement"] = supplement_events(
         solar_terms, traditional, observances, seasonal
     )
-    return groups
+    # Existing subscription URLs retain their contents. New feeds allow quieter use.
+    groups["essential"] = groups["holidays"] + solar_terms + traditional
+    groups["traditional"] = traditional
+    groups["health"] = [event for event in seasonal if event.kind == "health"]
+    start = date(max(2025, today.year - 1), 1, 1)
+    end = date(today.year + 3, 1, 1)
+    return {
+        name: sorted(
+            (event for event in events if overlaps(event, start, end)),
+            key=lambda event: (event.start.isoformat(), event.summary, event.uid),
+        )
+        for name, events in groups.items()
+    }
+
+
+def overlaps(event: Event, start: date, end: date) -> bool:
+    if isinstance(event.start, datetime):
+        lower = datetime.combine(start, datetime.min.time(), SHANGHAI)
+        upper = datetime.combine(end, datetime.min.time(), SHANGHAI)
+        return event.start < upper and event.end > lower
+    return event.start < end and event.end > start

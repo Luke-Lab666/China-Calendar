@@ -5,6 +5,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from .models import Event
+from .storage import write_if_changed
 
 
 CALENDAR_NAMES = {
@@ -14,6 +15,9 @@ CALENDAR_NAMES = {
     "observances": "中国传统节日与纪念日",
     "seasonal": "传统时令与季节健康提醒",
     "supplement": "中国日历补充・精确交节、时令与健康提醒",
+    "essential": "中国日历・精简版",
+    "traditional": "中国传统节日",
+    "health": "季节健康提醒",
 }
 
 SHANGHAI = ZoneInfo("Asia/Shanghai")
@@ -24,7 +28,8 @@ def _escape(value: str) -> str:
         value.replace("\\", "\\\\")
         .replace(";", "\\;")
         .replace(",", "\\,")
-        .replace("\r\n", "\\n")
+        .replace("\r\n", "\n")
+        .replace("\r", "\n")
         .replace("\n", "\\n")
     )
 
@@ -47,6 +52,14 @@ def _fold(line: str) -> list[str]:
 
 
 def _event_lines(event: Event, dtstamp: str) -> list[str]:
+    if type(event.start) is not type(event.end) or event.end <= event.start:
+        raise ValueError(f"Invalid event interval: {event.uid}")
+    if isinstance(event.start, datetime) and (
+        event.start.utcoffset() is None or event.end.utcoffset() is None
+    ):
+        raise ValueError(f"Event requires an explicit timezone: {event.uid}")
+    if "\r" in event.url or "\n" in event.url:
+        raise ValueError(f"Invalid event URL: {event.uid}")
     lines = ["BEGIN:VEVENT", f"UID:{_escape(event.uid)}", f"DTSTAMP:{dtstamp}"]
     if isinstance(event.start, datetime):
         start = event.start.astimezone(SHANGHAI).replace(tzinfo=None)
@@ -84,7 +97,12 @@ def _event_lines(event: Event, dtstamp: str) -> list[str]:
 
 
 def render_calendar(name: str, events: list[Event], generated_at: str) -> bytes:
-    dt = datetime.fromisoformat(generated_at).astimezone(timezone.utc)
+    dt = datetime.fromisoformat(generated_at)
+    if dt.utcoffset() is None:
+        raise ValueError("generated_at requires an explicit timezone")
+    dt = dt.astimezone(timezone.utc)
+    if len({event.uid for event in events}) != len(events):
+        raise ValueError(f"Duplicate event UID in {name}")
     dtstamp = dt.strftime("%Y%m%dT%H%M%SZ")
     lines = [
         "BEGIN:VCALENDAR",
@@ -120,11 +138,11 @@ def render_calendar(name: str, events: list[Event], generated_at: str) -> bytes:
     return ("\r\n".join(folded) + "\r\n").encode("utf-8")
 
 
-def write_calendars(root: Path, groups: dict[str, list[Event]], generated_at: str) -> None:
-    output = root / "calendars"
+def write_calendars(
+    root: Path, groups: dict[str, list[Event]], generated_at: str, output: Path | None = None
+) -> None:
+    output = output or root / "calendars"
     output.mkdir(parents=True, exist_ok=True)
-    for name, events in groups.items():
-        content = render_calendar(name, events, generated_at)
-        path = output / f"{name}.ics"
-        if not path.exists() or path.read_bytes() != content:
-            path.write_bytes(content)
+    rendered = {name: render_calendar(name, events, generated_at) for name, events in groups.items()}
+    for name, content in rendered.items():
+        write_if_changed(output / f"{name}.ics", content)
