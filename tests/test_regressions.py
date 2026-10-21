@@ -133,7 +133,10 @@ class FakeClient:
         year = int(url.rsplit("/", 1)[1].removesuffix(".json"))
         if year == self.missing_year:
             return None
-        payload = json.loads((ROOT / "data" / "holidays" / f"{year}.json").read_text())
+        path = ROOT / "data" / "holidays" / f"{year}.json"
+        if not path.exists():
+            return None
+        payload = json.loads(path.read_text())
         for day in payload["days"]:
             day["isOffDay"] = day.pop("is_off_day")
         return FetchResult(json.dumps(payload).encode(), url)
@@ -175,12 +178,16 @@ class SourceUpdateTests(unittest.TestCase):
                 fetch_all(root, date(2026, 10, 21), client)
             self.assertEqual(path.read_bytes(), before)
 
-    def test_successful_update_keeps_unannounced_year_empty(self):
+    def test_successful_update_does_not_create_empty_future_placeholders(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
+            old_placeholder = root / "data/holidays/2027.json"
+            old_placeholder.parent.mkdir(parents=True)
+            old_placeholder.write_text('{"year":2027,"papers":[],"days":[]}')
             fetch_all(root, date(2026, 10, 21), FakeClient())
-            self.assertEqual(len(list(root.rglob("*.json"))), 13)
-            self.assertEqual(json.loads((root / "data/holidays/2027.json").read_text())["days"], [])
+            self.assertEqual(len(list(root.rglob("*.json"))), 11)
+            self.assertFalse((root / "data/holidays/2027.json").exists())
+            self.assertFalse((root / "data/holidays/2028.json").exists())
 
     def test_config_and_generator_changes_invalidate_state_without_daily_churn(self):
         with tempfile.TemporaryDirectory() as temporary:

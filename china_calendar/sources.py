@@ -292,7 +292,7 @@ def write_json_if_changed(path: Path, payload: dict) -> bool:
 
 
 def update_source_state(
-    root: Path, changed: bool = False, build_options: dict | None = None,
+    root: Path, build_options: dict | None = None,
     *, state_path: Path | None = None, persist: bool = True,
 ) -> str:
     canonical_state = root / "data" / "source-state.json"
@@ -311,16 +311,15 @@ def update_source_state(
         digest.update(path.relative_to(root).as_posix().encode())
         digest.update(path.read_bytes())
     source_digest = digest.hexdigest()
-    if not changed and previous.get("source_digest") == source_digest:
+    if previous.get("source_digest") == source_digest:
         return str(previous["generated_at"])
     if not persist:
         raise SourceError("生成状态已过期，请运行 --offline 重新生成订阅")
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    if persist:
-        write_json_if_changed(
-            state_path,
-            {"generated_at": generated_at, "source_digest": source_digest, "build_options": build_options or {}},
-        )
+    write_json_if_changed(
+        state_path,
+        {"generated_at": generated_at, "source_digest": source_digest, "build_options": build_options or {}},
+    )
     return generated_at
 
 
@@ -333,7 +332,7 @@ def fetch_all(root: Path, today: date, client: HttpClient | None = None) -> None
     solar_years = range(max(2024, current_year - 2), current_year + 3)
     # Stage every response in memory. A broken final source must not leave a
     # mix of old and new source files behind.
-    pending: dict[Path, dict] = {}
+    pending: dict[Path, dict | None] = {}
 
     for year in years:
         holiday_result = client.get_optional(HOLIDAY_URL.format(year=year))
@@ -349,7 +348,7 @@ def fetch_all(root: Path, today: date, client: HttpClient | None = None) -> None
                 raise SourceError(f"Empty current or historical holiday data for {year}")
             if holiday_path.exists() and json.loads(holiday_path.read_text(encoding="utf-8"))["days"]:
                 raise SourceError(f"Refusing to erase published holiday data for {year}")
-        pending[holiday_path] = holiday_payload
+        pending[holiday_path] = holiday_payload if holiday_payload["days"] else None
 
         lunar_raw = client.get(HKO_LUNAR_URL.format(year=year)).body
         pending[root / "data" / "lunar" / f"{year}.json"] = parse_lunar_calendar(lunar_raw, year)
@@ -359,4 +358,7 @@ def fetch_all(root: Path, today: date, client: HttpClient | None = None) -> None
         pending[root / "data" / "solar-terms" / f"{year}.json"] = parse_solar_terms(solar_raw, year)
 
     for path, payload in pending.items():
-        write_json_if_changed(path, payload)
+        if payload is None:
+            path.unlink(missing_ok=True)
+        else:
+            write_json_if_changed(path, payload)

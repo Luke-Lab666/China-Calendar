@@ -26,4 +26,14 @@ jobs:
           python -m china_calendar.cli --check
           git diff --check
           git diff --exit-code
+      - uses: actions/setup-node@v4
+        if: matrix.python-version == '3.12'
+        with:
+          node-version: "22"
+      - name: Test and build Pages
+        if: matrix.python-version == '3.12'
+        run: |
+          node --check web/app.js
+          node --test tests/test_web.mjs
+          python -m china_calendar.site
 
