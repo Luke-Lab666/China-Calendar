@@ -25,17 +25,17 @@
 | 日历 | 内容 | 订阅 |
 | --- | --- | --- |
 | **精简版** | 放假、补班、传统节日、精确节气 | [essential.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/essential.ics) |
-| 苹果日历补充 | 精确交节、部分传统与纪念日、时令和健康提醒 | [supplement.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/supplement.ics) |
+| 苹果日历补充 | 精确交节、部分传统与纪念日、传统时令 | [supplement.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/supplement.ics) |
 | 完整版 | 全部内容 | [calendar.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/calendar.ics) |
 | 放假与调休 | 仅正式放假、补班 | [holidays.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/holidays.ics) |
 | 二十四节气 | 精确到分钟的交节事件 | [solar-terms.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/solar-terms.ics) |
 | 传统节日 | 按农历标注的节日 | [traditional.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/traditional.ics) |
 | 传统节日与纪念日 | 含常见社会日期 | [observances.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/observances.ics) |
-| 时令与健康提醒 | 三伏、数九、上海梅雨与季节提醒 | [seasonal.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/seasonal.ics) |
-| 健康提醒 | 仅一般季节健康参考 | [health.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/health.ics) |
+| 传统时令 | 按规则自动计算的三伏与数九 | [seasonal.ics](https://raw.githubusercontent.com/Luke-Lab666/China-Calendar/main/calendars/seasonal.ics) |
 
 请在日历 App 中选择“添加订阅日历”并粘贴地址，**不要下载后一次性导入**。
-仓库原有的 raw 地址继续有效，网页也提供相同内容的订阅。
+表中列出的 raw 订阅地址保持可用，网页也提供相同内容的订阅。
+已下线的独立订阅请在日历 App 中手动移除，以清除客户端保留的缓存。
 
 事件标题使用“（休）/（班）”标明正式安排；原生角标由客户端决定，普通 ICS 无法保证显示。
 若使用苹果官方日历搭配补充版，官方的全天节气名称与补充版的精确交节事件可能同时出现。
@@ -46,8 +46,6 @@
 - **正式假期与补班**：结构化数据来自 [NateScarlet/holiday-cn](https://github.com/NateScarlet/holiday-cn)，仅接受附国务院 `gov.cn` 正式文件的安排。
 - **交节时刻与农历**：来自[香港天文台天文资料](https://www.hko.gov.hk/sc/gts/astronomy/Solar_Term.htm)和[公历农历对照表](https://www.hko.gov.hk/sc/gts/time/conversion.htm)，交节按 UTC+8 精确到分钟。
 - **三伏与数九**：按“夏至三庚、立秋后一庚”和“冬至起数九”规则计算。
-- **上海梅雨**：仅收录上海气象部门正式公布的入梅、出梅日期，出处保存在 `config/shanghai-meiyu.json`。
-- **健康提醒**：参考中国疾控及上海健康促进资料。仅为一般季节信息，实际安排请以当地天气、预警和自身情况为准。
 
 ## 更新与发布
 

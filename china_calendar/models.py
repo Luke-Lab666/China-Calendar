@@ -12,7 +12,6 @@ EventKind = Literal[
     "observance",
     "traditional",
     "seasonal",
-    "health",
 ]
 AppleSpecialDay = Literal["WORK-HOLIDAY", "ALTERNATE-WORKDAY"]
 

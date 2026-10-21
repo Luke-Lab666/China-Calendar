@@ -11,14 +11,13 @@ let toastTimer;
 
 const feedInfo = {
   essential: ["中国日历 · 精简版", "保留最常用的日子，把日历的留白还给你。", "精简版与完整版选一个即可，避免重复显示。"],
-  supplement: ["苹果日历补充", "和苹果官方节假日日历搭配，补上精确交节、传统时令与季节提醒。", "已使用苹果官方节假日日历时选择；交节事件会与官方全天节气同时显示。"],
-  calendar: ["中国日历 · 完整版", "假期、补班、传统节日、纪念日、节气、时令和健康提示，一份收齐。", "完整版本已包含所有分项内容，无需重复订阅其他分项。"],
+  supplement: ["苹果日历补充", "和苹果官方节假日日历搭配，补上精确交节和传统时令。", "已使用苹果官方节假日日历时选择；交节事件会与官方全天节气同时显示。"],
+  calendar: ["中国日历 · 完整版", "假期、补班、传统节日、纪念日、节气和传统时令，一份收齐。", "完整版本已包含所有分项内容，无需重复订阅其他分项。"],
   holidays: ["法定节假日与调休", "只保留正式放假与调休补班安排，给工作和休息一个清楚的边界。", "只收录正式安排，尚未收录的年份不会预测放假。"],
   "solar-terms": ["二十四节气", "看看季节行至何处；交节时刻以北京时间精确到分钟。", "节气事件持续一分钟，没有强制通知。"],
   traditional: ["中国传统节日", "春节、元宵、端午、中秋，以及那些值得记得的传统日子。", "节日按农历日期标记，节日当天不一定属于正式放假。"],
   observances: ["传统节日与纪念日", "传统节日、官方纪念日和常见社会日期。", "纪念日和社会日期不代表正式放假。"],
-  seasonal: ["传统时令与健康提醒", "三伏、数九、已公布的上海梅雨，加上季节健康小提醒。", "季节内容仅作一般参考，请以当地天气和自身情况为准。"],
-  health: ["季节健康提醒", "跟随节气与时令，留意防暑、防寒、防潮等季节变化。", "一般性季节参考，非天气预报或医疗建议；不含强制提醒。"],
+  seasonal: ["传统时令", "三伏、数九，跟着节气读懂一年的时序。", "日期根据节气与干支规则自动计算；传统时令不是天气预报。"],
 };
 
 function node(tag, className, text) {
@@ -173,7 +172,7 @@ function chooseFeed(id) {
 function renderMoreFeeds() {
   const list = $("#more-feeds");
   list.replaceChildren();
-  for (const id of ["holidays", "solar-terms", "traditional", "observances", "seasonal", "health"]) {
+  for (const id of ["holidays", "solar-terms", "traditional", "observances", "seasonal"]) {
     const row = node("div", "more-feed");
     const title = node("span", "", feedInfo[id][0]);
     const feed = data?.feeds.find(item => item.id === id);

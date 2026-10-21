@@ -245,7 +245,6 @@ class FeedRegressionTests(unittest.TestCase):
     def test_new_feeds_have_expected_scope_and_existing_full_feed_has_no_duplicates(self):
         groups = collect_events(ROOT, date(2026, 10, 21), False)
         self.assertEqual({e.kind for e in groups["essential"]}, {"holiday", "workday", "solar_term", "traditional"})
-        self.assertEqual({e.kind for e in groups["health"]}, {"health"})
         self.assertEqual({e.kind for e in groups["traditional"]}, {"traditional"})
         self.assertEqual(len(groups["calendar"]), len({e.uid for e in groups["calendar"]}))
 
@@ -328,7 +327,7 @@ class DateQueryTests(unittest.TestCase):
             with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
                 self.assertEqual(main(["--root", str(root), "--offline", "--today", "2026-10-21"]), 0)
             self.assertEqual(first, {p.name: p.read_bytes() for p in (root / "calendars").glob("*.ics")})
-            self.assertEqual(len(first), 9)
+            self.assertEqual(len(first), 8)
 
     def test_check_detects_stale_feeds_without_modifying_files(self):
         with tempfile.TemporaryDirectory() as temporary:

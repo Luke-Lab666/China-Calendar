@@ -54,6 +54,11 @@ def build_site(root: Path, output: Path, today: date) -> None:
             write_if_changed(target, path.read_bytes())
     for name, events in groups.items():
         write_if_changed(output / "calendars" / f"{name}.ics", render_calendar(name, events, state["generated_at"]))
+    # This directory contains build-owned feeds only. Reusing a build directory
+    # must not accidentally republish a subscription removed from the project.
+    for path in (output / "calendars").glob("*.ics"):
+        if path.stem not in groups:
+            path.unlink()
     content = json.dumps(site_data(root, today), ensure_ascii=False, separators=(",", ":")) + "\n"
     write_if_changed(output / "data.json", content.encode("utf-8"))
     write_if_changed(output / ".nojekyll", b"")

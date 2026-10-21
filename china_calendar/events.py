@@ -6,7 +6,6 @@ import uuid
 from dataclasses import replace
 from datetime import date, datetime, timedelta
 from pathlib import Path
-from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 from .models import Event
@@ -280,128 +279,9 @@ def nine_nines_events(root: Path) -> list[Event]:
     return result
 
 
-def shanghai_meiyu_events(root: Path) -> list[Event]:
-    config = _load_json(root / "config" / "shanghai-meiyu.json")
-    result: list[Event] = []
-    for item in config["years"]:
-        if item.get("status") != "published":
-            continue
-        start = date.fromisoformat(item["start"])
-        end = date.fromisoformat(item["end"])
-        expected_year = int(item["year"])
-        if start.year != expected_year or end.year != expected_year or end <= start:
-            raise ValueError(f"Invalid Shanghai meiyu period for {expected_year}")
-        for key in ("start_source", "end_source"):
-            parsed = urlparse(item[key])
-            if parsed.scheme != "https" or parsed.hostname != "www.shanghai.gov.cn":
-                raise ValueError(f"Non-official Shanghai meiyu source: {item[key]}")
-        result.extend(
-            [
-                _seasonal_event(
-                    start,
-                    "上海入梅",
-                    "上海气象部门正式公布今日入梅；"
-                    f"本年梅雨期至{end:%m月%d日}。"
-                    "日期仅在官方公布后收录，不按常年平均日期预测。",
-                    item["start_source"],
-                    "上海梅雨",
-                ),
-                _seasonal_event(
-                    end,
-                    "上海出梅",
-                    "上海气象部门正式公布今日出梅；"
-                    f"本年梅雨期始于{start:%m月%d日}。"
-                    "日期仅在官方公布后收录，不按常年平均日期预测。",
-                    item["end_source"],
-                    "上海梅雨",
-                ),
-            ]
-        )
-    return result
-
-
-def _health_event(event_date: date, name: str, description: str, url: str) -> Event:
-    return Event(
-        uid=_uid("health", event_date.isoformat(), name),
-        summary=f"健康提醒 · {name}",
-        kind="health",
-        start=event_date,
-        end=event_date + timedelta(days=1),
-        description=(
-            f"{description} 节气和时令仅作季节参考，"
-            "请以当地天气预报、气象预警及"
-            "自身情况调整安排；出现明显不适请及时就医。"
-        ),
-        url=url,
-        categories=("季节健康提醒", "天气健康"),
-    )
-
-
-def health_events(root: Path) -> list[Event]:
-    config = _load_json(root / "config" / "seasonal-health.json")
-    reminders = {item["term"]: item for item in config["solar_terms"]}
-    result: list[Event] = []
-    terms_by_year = _solar_terms_by_year(root)
-    for year, terms in terms_by_year.items():
-        if year < 2025:
-            continue
-        for term, start in terms.items():
-            item = reminders[term]
-            result.append(
-                _health_event(
-                    start.date(),
-                    f"{term}·{item['title']}",
-                    item["description"],
-                    item["url"],
-                )
-            )
-
-    dog_days = dog_days_events(root)
-    for event in dog_days:
-        if event.summary == "时令 · 初伏":
-            result.append(
-                _health_event(
-                    event.start,  # type: ignore[arg-type]
-                    "入伏防暑",
-                    "高温高湿时减少午后长时间户外活动，主动少量多次补水，"
-                    "关注头晕、恶心、乏力等中暑信号。",
-                    config["sources"]["heat"],
-                )
-            )
-
-    meiyu = shanghai_meiyu_events(root)
-    for event in meiyu:
-        if event.summary == "时令 · 上海入梅":
-            result.append(
-                _health_event(
-                    event.start,  # type: ignore[arg-type]
-                    "上海梅雨防潮防霉",
-                    "及时通风或除湿，湿衣尽快洗净晾干；"
-                    "食品密封、按需冷藏，"
-                    "发现霉变食品直接丢弃。",
-                    config["sources"]["meiyu"],
-                )
-            )
-        elif event.summary == "时令 · 上海出梅":
-            result.append(
-                _health_event(
-                    event.start,  # type: ignore[arg-type]
-                    "上海出梅防高温",
-                    "出梅后常转入晴热天气，提前关注高温预警，"
-                    "安排好遮阳、补水和"
-                    "室内降温。",
-                    config["sources"]["heat"],
-                )
-            )
-    return result
-
-
 def seasonal_events(root: Path) -> list[Event]:
     return sorted(
-        dog_days_events(root)
-        + nine_nines_events(root)
-        + shanghai_meiyu_events(root)
-        + health_events(root),
+        dog_days_events(root) + nine_nines_events(root),
         key=lambda event: (event.start.isoformat(), event.summary),
     )
 
@@ -545,7 +425,6 @@ def collect_events(root: Path, today: date, future_holidays_only: bool) -> dict[
     # Existing subscription URLs retain their contents. New feeds allow quieter use.
     groups["essential"] = groups["holidays"] + solar_terms + traditional
     groups["traditional"] = traditional
-    groups["health"] = [event for event in seasonal if event.kind == "health"]
     start = date(max(2025, today.year - 1), 1, 1)
     end = date(today.year + 3, 1, 1)
     return {
