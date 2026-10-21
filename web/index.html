@@ -58,7 +58,7 @@
           <h3 id="selected-title">日历正在展开</h3><p class="day-lunar" id="selected-lunar"></p>
           <div id="day-events" class="day-events" aria-live="polite"></div>
           <div class="day-note" id="day-note">点击左侧日期，看看当天的安排。</div>
-          <a class="day-source" href="https://github.com/Luke-Lab666/China-Calendar#数据来源与准确性" target="_blank" rel="noopener noreferrer">每个日子，都有出处 <span aria-hidden="true">↗</span></a>
+          <a class="day-source" href="https://github.com/Luke-Lab666/China-Calendar#数据来源" target="_blank" rel="noopener noreferrer">每个日子，都有出处 <span aria-hidden="true">↗</span></a>
         </aside>
       </div>
       <p class="coverage-note" id="coverage-note"></p>
@@ -71,7 +71,7 @@
           <div class="feed-options" role="group" aria-label="选择订阅方案">
             <button class="feed-option selected" type="button" data-feed="essential" aria-pressed="true"><span class="feed-index">01</span><span><strong>精简日历 <em>推荐</em></strong><small>放假与补班、传统节日、二十四节气</small></span><span class="option-arrow" aria-hidden="true">↗</span></button>
             <button class="feed-option" type="button" data-feed="supplement" aria-pressed="false"><span class="feed-index">02</span><span><strong>苹果日历补充</strong><small>已有苹果节假日日历，补上交节与时令</small></span><span class="option-arrow" aria-hidden="true">↗</span></button>
-            <button class="feed-option" type="button" data-feed="calendar" aria-pressed="false"><span class="feed-index">03</span><span><strong>完整日历</strong><small>假期、节日、节气、时令与健康提醒</small></span><span class="option-arrow" aria-hidden="true">↗</span></button>
+            <button class="feed-option" type="button" data-feed="calendar" aria-pressed="false"><span class="feed-index">03</span><span><strong>完整日历</strong><small>假期、节日、节气与传统时令</small></span><span class="option-arrow" aria-hidden="true">↗</span></button>
           </div>
           <article class="subscription-card">
             <div class="subscription-top"><span class="eyebrow">YOUR CALENDAR</span><span class="mini-seal" aria-hidden="true">订</span></div>
@@ -82,16 +82,16 @@
             <p class="subscription-tip" id="feed-tip">精简版与完整版选一个即可，避免重复显示。</p>
           </article>
         </div>
-        <details class="more-feeds"><summary>想再细分一点？看看其他 6 个独立订阅 <span aria-hidden="true">＋</span></summary><div class="more-feed-list" id="more-feeds"></div></details>
+        <details class="more-feeds"><summary>想再细分一点？看看其他 5 个独立订阅 <span aria-hidden="true">＋</span></summary><div class="more-feed-list" id="more-feeds"></div></details>
         <div class="subscribe-help"><span class="step-number">?</span><p><strong>订阅，不是导入。</strong> 在日历 App 中选择“添加订阅日历”，粘贴地址。后续更新由你的日历 App 定期同步，具体刷新频率由系统决定。普通 ICS 的原生“休 / 班”角标显示因客户端而异。</p></div>
       </div>
     </section>
 
     <section class="about-section wrap section-space" id="about" aria-labelledby="about-title">
       <div class="about-intro"><p class="eyebrow">A LITTLE MORE THOUGHT</p><h2 id="about-title">小日历，<br>认真对待每一天。</h2><p>不预测尚未公布的假期，<br>也不把季节，当作天气预报。</p><a class="text-link" href="https://github.com/Luke-Lab666/China-Calendar" target="_blank" rel="noopener noreferrer">在 GitHub 查看项目 <span aria-hidden="true">↗</span></a></div>
-      <div class="principles"><article><span>有据可查</span><h3>假期来自正式安排。</h3><p>只收录带国务院正式文件的放假与调休数据。未收录的年份会明确提示，不会凭周末或节日名称推测放假。</p></article><article><span>顺应时节</span><h3>节气精确，时令有度。</h3><p>交节时刻取自香港天文台，使用北京时间。三伏、数九按传统规则计算；上海梅雨仅在官方公布后加入。</p></article><article><span>安静陪伴</span><h3>不催促，也不打扰。</h3><p>订阅不包含强制通知。健康内容只提供一般季节参考；页面不使用追踪脚本，也不需要注册账户。</p></article></div>
+      <div class="principles"><article><span>有据可查</span><h3>假期来自正式安排。</h3><p>只收录带国务院正式文件的放假与调休数据。未收录的年份会明确提示，不会凭周末或节日名称推测放假。</p></article><article><span>顺应时节</span><h3>节气精确，时令有度。</h3><p>交节时刻取自香港天文台，使用北京时间。三伏、数九根据节气与干支规则自动计算，随年份滚动更新。</p></article><article><span>安静陪伴</span><h3>不催促，也不打扰。</h3><p>订阅不包含强制通知。页面不使用追踪脚本，也不需要注册账户。</p></article></div>
     </section>
-    <section class="faq wrap" aria-labelledby="faq-title"><h2 id="faq-title">也许你想知道</h2><details><summary>已经订阅了旧地址，需要换吗？</summary><p>不用。仓库原有的日历地址继续更新；本站也提供相同内容的订阅。更换时删除旧订阅、添加新订阅，避免重复。</p></details><details><summary>为什么未来年份没有放假标记？</summary><p>正式安排尚未收录时，页面只展示已有的农历和节气，不将周末判断为确定的休息日。联网更新后，已收录的安排会进入订阅。</p></details><details><summary>为什么同一天会出现多个事件？</summary><p>多日放假、传统节日和交节时刻表达的内容不同。如果想减少事件，请选精简版；已有苹果官方节假日日历时，选择补充版。</p></details></section>
+    <section class="faq wrap" aria-labelledby="faq-title"><h2 id="faq-title">也许你想知道</h2><details><summary>已经订阅了旧地址，需要换吗？</summary><p>本站仍列出的订阅地址继续更新。已下线的独立订阅请在日历 App 中手动移除，以清除客户端缓存。更换订阅时先删除旧订阅，避免重复。</p></details><details><summary>为什么未来年份没有放假标记？</summary><p>正式安排尚未收录时，页面只展示已有的农历和节气，不将周末判断为确定的休息日。联网更新后，已收录的安排会进入订阅。</p></details><details><summary>为什么同一天会出现多个事件？</summary><p>多日放假、传统节日和交节时刻表达的内容不同。如果想减少事件，请选精简版；已有苹果官方节假日日历时，选择补充版。</p></details></section>
   </main>
   <footer class="site-footer wrap"><a class="footer-brand" href="#">中国日历 <span>CHINA CALENDAR</span></a><p id="data-updated">数据来自项目公开源文件</p><a href="https://github.com/Luke-Lab666/China-Calendar/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">开源 MIT <span aria-hidden="true">↗</span></a></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>

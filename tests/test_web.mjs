@@ -49,8 +49,8 @@ test("lunar labels preserve leap-month information and absent data", () => {
   assert.equal(lunarLabel(null, true), "农历数据未收录");
 });
 
-test("essential preview excludes health and social observances", () => {
-  const events = [holiday, work, { kind: "health" }, { kind: "observance" }, { kind: "solar_term" }];
+test("essential preview excludes social observances", () => {
+  const events = [holiday, work, { kind: "observance" }, { kind: "solar_term" }];
   assert.equal(filterEvents(events, "essential").length, 3);
   assert.equal(filterEvents(events, "solar-terms").length, 1);
 });

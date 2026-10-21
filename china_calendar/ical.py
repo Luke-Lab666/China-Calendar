@@ -13,11 +13,10 @@ CALENDAR_NAMES = {
     "holidays": "中国大陆节假日与调休",
     "solar-terms": "二十四节气（北京时间）",
     "observances": "中国传统节日与纪念日",
-    "seasonal": "传统时令与季节健康提醒",
-    "supplement": "中国日历补充・精确交节、时令与健康提醒",
+    "seasonal": "传统时令（三伏与数九）",
+    "supplement": "中国日历补充・精确交节与传统时令",
     "essential": "中国日历・精简版",
     "traditional": "中国传统节日",
-    "health": "季节健康提醒",
 }
 
 SHANGHAI = ZoneInfo("Asia/Shanghai")

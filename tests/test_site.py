@@ -40,7 +40,7 @@ class SiteTests(unittest.TestCase):
             self.assertTrue((output / "calendar.mjs").is_file())
             self.assertTrue((output / ".nojekyll").exists())
             data = json.loads((output / "data.json").read_text())
-            self.assertEqual(len(data["feeds"]), 9)
+            self.assertEqual(len(data["feeds"]), 8)
             for feed in data["feeds"]:
                 path = output / "calendars" / f"{feed['id']}.ics"
                 self.assertEqual(path.read_bytes(), (ROOT / "calendars" / path.name).read_bytes())
@@ -49,6 +49,17 @@ class SiteTests(unittest.TestCase):
         for folder in (".", "web", "data", "calendars", "china_calendar"):
             with self.subTest(folder=folder), self.assertRaises(ValueError):
                 build_site(ROOT, ROOT / folder, date(2026, 10, 21))
+
+    def test_rebuilding_removes_retired_feeds_from_publish_directory(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary)
+            feeds = output / "calendars"
+            feeds.mkdir()
+            retired = feeds / "retired.ics"
+            retired.write_text("obsolete cached feed")
+            build_site(ROOT, output, date(2026, 10, 21))
+            self.assertFalse(retired.exists())
+            self.assertEqual(len(list(feeds.glob("*.ics"))), 8)
 
 
 if __name__ == "__main__":
