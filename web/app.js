@@ -1,4 +1,4 @@
-import { isoDate, addDays, shiftMonth, monthCells, eventsOnDay, filterEvents, holidayState, lunarLabel, timeLabel } from "./calendar.mjs";
+import { isoDate, addDays, shiftMonth, monthCells, eventsOnDay, filterEvents, holidayState, lunarLabel, timeLabel, isValidDay, nextHoliday, holidayCountdown, weekBounds } from "./calendar.mjs";
 
 const $ = selector => document.querySelector(selector);
 const today = isoDate();
@@ -55,6 +55,26 @@ function renderToday() {
   $("#today-lunar").textContent = lunarLabel(data.lunar[today], true);
   const next = data.events.find(event => event.kind === "solar_term" && Date.parse(event.start) > Date.now());
   $("#next-term").textContent = next ? `${next.summary} · ${dateText(isoDate(new Date(next.start)))}` : "待下一季更新";
+  const holiday = nextHoliday(data.events, today);
+  const holidayText = $("#next-holiday");
+  holidayText.textContent = holidayCountdown(holiday);
+  holidayText.title = holiday
+    ? `${dateText(holiday.start)}—${dateText(addDays(holiday.end, -1))}，共 ${holiday.length} 天`
+    : "下一份正式放假安排尚未收录，不预测假期";
+}
+
+function linkedDay() {
+  const day = new URLSearchParams(location.search).get("d");
+  return isValidDay(day) ? day : null;
+}
+
+// Keep the selected date in the address bar so a day can be shared or bookmarked.
+function rememberDay(day) {
+  try {
+    const url = new URL(location.href);
+    if (day === today) url.searchParams.delete("d"); else url.searchParams.set("d", day);
+    if (url.href !== location.href) history.replaceState(history.state, "", url);
+  } catch { /* Some embedded browsers forbid history updates; selection still works. */ }
 }
 
 function renderMonth() {
@@ -141,7 +161,7 @@ function selectDay(day) {
   if (!inRange(day)) return;
   const hadGridFocus = $("#month-grid").contains(document.activeElement);
   selected = day; view = day;
-  renderMonth(); renderDay();
+  renderMonth(); renderDay(); rememberDay(day);
   if (hadGridFocus) document.querySelector(`[data-date="${day}"]`)?.focus({ preventScroll: true });
 }
 
@@ -194,14 +214,17 @@ async function load() {
   $("#load-error").hidden = true;
   $("#month-grid").setAttribute("aria-busy", "true");
   try {
-    const response = await fetch("./data.json");
+    const response = await fetch("./data.json", { cache: "no-cache" });
     if (!response.ok) throw new Error("Calendar data unavailable");
     const payload = await response.json();
     if (payload.schema !== 1 || !Array.isArray(payload.events) || !payload.lunar || !payload.range) throw new Error("Unsupported data");
     data = payload;
+    const linked = linkedDay();
+    if (linked && inRange(linked)) selected = linked;
     if (!inRange(selected)) selected = `${data.range.start_year}-01-01`;
     view = selected;
     renderToday(); renderMonth(); renderDay(); chooseFeed(chosenFeed); renderMoreFeeds();
+    if (linked && selected === linked && !location.hash) $("#calendar").scrollIntoView({ block: "start" });
     const generated = new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(data.generated_at));
     $("#data-updated").textContent = `数据生成于 ${generated} · 北京时间`;
   } catch (error) {
@@ -213,6 +236,7 @@ async function load() {
     $("#today-number").textContent = Number(today.slice(8));
     $("#today-lunar").textContent = "农历数据暂不可用";
     $("#next-term").textContent = "待数据恢复";
+    $("#next-holiday").textContent = "待数据恢复";
   }
 }
 
@@ -239,14 +263,36 @@ $("#copy-url").addEventListener("click", async () => {
   }
 });
 $("#month-grid").addEventListener("keydown", event => {
+  if (!data) return;
   const offset = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 }[event.key];
-  if (!offset || !data) return;
+  const [weekStart, weekEnd] = weekBounds(selected);
+  const next = offset ? addDays(selected, offset)
+    : event.key === "PageUp" ? shiftMonth(selected, event.shiftKey ? -12 : -1)
+    : event.key === "PageDown" ? shiftMonth(selected, event.shiftKey ? 12 : 1)
+    : event.key === "Home" ? weekStart
+    : event.key === "End" ? weekEnd
+    : null;
+  if (!next) return;
   event.preventDefault();
-  const next = addDays(selected, offset);
   if (!inRange(next)) return;
   selectDay(next);
   document.querySelector(`[data-date="${next}"]`)?.focus();
 });
+
+// Horizontal swipes on touch screens move between months.
+let touchStart;
+$("#month-grid").addEventListener("touchstart", event => {
+  touchStart = event.touches.length === 1 ? [event.touches[0].clientX, event.touches[0].clientY] : null;
+}, { passive: true });
+$("#month-grid").addEventListener("touchend", event => {
+  if (!touchStart || !data) return;
+  const dx = event.changedTouches[0].clientX - touchStart[0];
+  const dy = event.changedTouches[0].clientY - touchStart[1];
+  touchStart = null;
+  if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+  const target = shiftMonth(view, dx < 0 ? 1 : -1);
+  if (inRange(target)) selectDay(target);
+}, { passive: true });
 
 chooseFeed(chosenFeed);
 renderMoreFeeds();

@@ -23,17 +23,26 @@ def event_record(event: Event) -> dict:
     }
 
 
-def day_record(root: Path, day: date, groups: dict[str, list[Event]], feed: str) -> dict:
+def _load_optional(path: Path, cache: dict[Path, dict] | None) -> dict:
+    if cache is not None and path in cache:
+        return cache[path]
+    payload = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    if cache is not None:
+        cache[path] = payload
+    return payload
+
+
+def day_record(
+    root: Path, day: date, groups: dict[str, list[Event]], feed: str,
+    cache: dict[Path, dict] | None = None,
+) -> dict:
+    """Describe one day. Pass a shared ``cache`` when querying many days."""
     tomorrow = day + timedelta(days=1)
-    lunar = None
-    lunar_path = root / "data" / "lunar" / f"{day.year}.json"
-    if lunar_path.exists():
-        lunar = next(
-            (row for row in json.loads(lunar_path.read_text(encoding="utf-8"))["days"]
-             if row["date"] == day.isoformat()), None
-        )
-    holiday_path = root / "data" / "holidays" / f"{day.year}.json"
-    notice = json.loads(holiday_path.read_text(encoding="utf-8")) if holiday_path.exists() else {}
+    lunar_payload = _load_optional(root / "data" / "lunar" / f"{day.year}.json", cache)
+    lunar = next(
+        (row for row in lunar_payload.get("days", []) if row["date"] == day.isoformat()), None
+    )
+    notice = _load_optional(root / "data" / "holidays" / f"{day.year}.json", cache)
     published = bool(notice.get("papers") and notice.get("days"))
     arrangement = next(
         (event for event in groups["holidays"] if overlaps(event, day, tomorrow)), None
@@ -74,3 +83,37 @@ def format_day(record: dict) -> str:
     if not record["events"]:
         lines.append("  所选订阅当天无事件")
     return "\n".join(lines)
+
+
+def next_holiday(groups: dict[str, list[Event]], today: date) -> dict | None:
+    """The nearest published holiday that has not ended; never a prediction."""
+    holiday = next(
+        (event for event in sorted(groups["holidays"], key=lambda item: item.start)
+         if event.kind == "holiday" and event.end > today),
+        None,
+    )
+    if holiday is None:
+        return None
+    assert isinstance(holiday.start, date) and isinstance(holiday.end, date)
+    ongoing = holiday.start <= today
+    return {
+        "name": holiday.summary.removesuffix("（休）"),
+        "start": holiday.start.isoformat(),
+        "end": holiday.end.isoformat(),
+        "length": (holiday.end - holiday.start).days,
+        "ongoing": ongoing,
+        "days": (holiday.end - today).days if ongoing else (holiday.start - today).days,
+        "url": holiday.url,
+    }
+
+
+def format_next_holiday(record: dict | None) -> str:
+    if record is None:
+        return "暂无已收录的后续放假安排；下一份正式通知收录前不预测假期。"
+    last = date.fromisoformat(record["end"]) - timedelta(days=1)
+    span = f"{record['start']} 至 {last.isoformat()}，共 {record['length']} 天"
+    if record["ongoing"]:
+        remaining = "今天是假期最后一天" if record["days"] == 1 else f"假期还剩 {record['days']} 天（含今天）"
+        return f"正在放假：{record['name']}（{span}），{remaining}。"
+    countdown = "明天放假" if record["days"] == 1 else f"还有 {record['days']} 天"
+    return f"下一个假期：{record['name']}（{span}），{countdown}。"

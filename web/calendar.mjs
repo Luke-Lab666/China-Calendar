@@ -72,3 +72,42 @@ export function timeLabel(stamp) {
     timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", hour12: false,
   }).format(new Date(stamp));
 }
+
+export function daysBetween(from, to) {
+  return Math.round((Date.parse(`${to}T12:00:00Z`) - Date.parse(`${from}T12:00:00Z`)) / 86_400_000);
+}
+
+export function isValidDay(value) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const parsed = new Date(`${value}T12:00:00Z`);
+  return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
+}
+
+// Only published arrangements are considered; an absent result means the next
+// official schedule has not been collected yet, never that there is no holiday.
+export function nextHoliday(events, today) {
+  const holiday = events
+    .filter(event => event.kind === "holiday" && event.all_day && event.end > today)
+    .sort((a, b) => a.start.localeCompare(b.start))[0];
+  if (!holiday) return null;
+  const ongoing = holiday.start <= today;
+  return {
+    name: holiday.summary.replace(/（休）$/, ""),
+    start: holiday.start,
+    end: holiday.end,
+    length: daysBetween(holiday.start, holiday.end),
+    ongoing,
+    days: ongoing ? daysBetween(today, holiday.end) : daysBetween(today, holiday.start),
+  };
+}
+
+export function holidayCountdown(info) {
+  if (!info) return "待正式公布";
+  if (info.ongoing) return info.days === 1 ? `${info.name} · 假期最后一天` : `${info.name} · 假期还剩 ${info.days} 天`;
+  return info.days === 1 ? `${info.name} · 明天放假` : `${info.name} · 还有 ${info.days} 天`;
+}
+
+export function weekBounds(day) {
+  const offset = (new Date(`${day}T12:00:00Z`).getUTCDay() + 6) % 7;
+  return [addDays(day, -offset), addDays(day, 6 - offset)];
+}
