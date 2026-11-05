@@ -356,6 +356,14 @@ button,a {
   color:var(--muted);
   font-size:10px
 }
+.today-bottom.next-holiday {
+  margin-top:-10px;
+  padding-top:0;
+  border-top:0
+}
+#next-holiday {
+  text-align:right
+}
 .art-note {
   position:absolute;
   bottom:-10px;

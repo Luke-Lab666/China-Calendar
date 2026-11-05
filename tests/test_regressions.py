@@ -16,7 +16,7 @@ from china_calendar.cli import main
 from china_calendar.events import collect_events, holiday_events, overlaps
 from china_calendar.ical import render_calendar, write_calendars
 from china_calendar.models import Event
-from china_calendar.query import day_record
+from china_calendar.query import day_record, next_holiday
 from china_calendar.sources import (
     DAY_NUMBERS, MONTHS, FetchResult, HttpClient, SourceError, fetch_all,
     parse_holidays, parse_lunar_calendar, parse_solar_terms, update_source_state,
@@ -309,6 +309,26 @@ class DateQueryTests(unittest.TestCase):
         with contextlib.redirect_stdout(io.StringIO()) as output:
             self.assertEqual(main(["--root", str(ROOT), "--today", "2026-12-31", "--upcoming", "3", "--json"]), 0)
         self.assertEqual([r["date"] for r in json.loads(output.getvalue())], ["2026-12-31", "2027-01-01", "2027-01-02"])
+
+    def test_next_holiday_counts_down_and_reports_ongoing_holidays(self):
+        upcoming = next_holiday(self.groups, date(2026, 9, 20))
+        self.assertEqual((upcoming["name"], upcoming["days"], upcoming["ongoing"]), ("中秋节", 5, False))
+        ongoing = next_holiday(self.groups, date(2026, 10, 5))
+        self.assertEqual((ongoing["name"], ongoing["days"], ongoing["length"]), ("国庆节", 3, 7))
+        self.assertTrue(ongoing["ongoing"])
+
+    def test_next_holiday_is_not_predicted_after_published_schedules(self):
+        self.assertIsNone(next_holiday(self.groups, date(2026, 10, 21)))
+        with patch("china_calendar.cli.fetch_all") as fetch, contextlib.redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(main(["--root", str(ROOT), "--today", "2026-10-21", "--next-holiday"]), 0)
+        self.assertIn("不预测假期", output.getvalue())
+        fetch.assert_not_called()
+
+    def test_next_holiday_json_from_cli(self):
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(main(["--root", str(ROOT), "--today", "2025-12-31", "--next-holiday", "--json"]), 0)
+        record = json.loads(output.getvalue())
+        self.assertEqual((record["name"], record["start"], record["days"]), ("元旦", "2026-01-01", 1))
 
     def test_missing_data_is_clear_and_returns_nonzero(self):
         with contextlib.redirect_stderr(io.StringIO()) as output:

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { isoDate, addDays, shiftMonth, monthCells, eventsOnDay, holidayState, lunarLabel, filterEvents } from "../web/calendar.mjs";
+import { isoDate, addDays, shiftMonth, monthCells, eventsOnDay, holidayState, lunarLabel, filterEvents, nextHoliday, holidayCountdown, isValidDay, weekBounds, daysBetween } from "../web/calendar.mjs";
 
 test("today uses Shanghai even when UTC is still the previous day", () => {
   assert.equal(isoDate(new Date("2026-10-20T17:00:00Z")), "2026-10-21");
@@ -53,4 +53,38 @@ test("essential preview excludes social observances", () => {
   const events = [holiday, work, { kind: "observance" }, { kind: "solar_term" }];
   assert.equal(filterEvents(events, "essential").length, 3);
   assert.equal(filterEvents(events, "solar-terms").length, 1);
+});
+
+const national = { kind: "holiday", summary: "国庆节（休）", start: "2026-10-01", end: "2026-10-08", all_day: true };
+const spring = { kind: "holiday", summary: "春节（休）", start: "2026-02-15", end: "2026-02-24", all_day: true };
+
+test("next holiday counts down to the nearest published holiday only", () => {
+  const before = nextHoliday([national, spring, work], "2026-09-28");
+  assert.deepEqual([before.name, before.ongoing, before.days, before.length], ["国庆节", false, 3, 7]);
+  assert.equal(holidayCountdown(before), "国庆节 · 还有 3 天");
+  assert.equal(holidayCountdown(nextHoliday([national], "2026-09-30")), "国庆节 · 明天放假");
+  assert.equal(nextHoliday([spring, national], "2026-01-01").name, "春节");
+});
+
+test("an ongoing holiday reports the remaining days, inclusive of today", () => {
+  assert.equal(holidayCountdown(nextHoliday([national], "2026-10-05")), "国庆节 · 假期还剩 3 天");
+  assert.equal(holidayCountdown(nextHoliday([national], "2026-10-07")), "国庆节 · 假期最后一天");
+});
+
+test("no countdown is invented once published holidays run out", () => {
+  assert.equal(nextHoliday([national, work], "2026-10-08"), null);
+  assert.equal(holidayCountdown(null), "待正式公布");
+});
+
+test("shared date links accept only real calendar dates", () => {
+  assert.ok(isValidDay("2028-02-29"));
+  for (const value of ["2026-02-30", "2026-2-1", "2026-13-01", "", null, "2026-10-01x"]) {
+    assert.equal(isValidDay(value), false, String(value));
+  }
+});
+
+test("week bounds follow the Monday-first grid", () => {
+  assert.deepEqual(weekBounds("2026-10-21"), ["2026-10-19", "2026-10-25"]);
+  assert.deepEqual(weekBounds("2026-10-25"), ["2026-10-19", "2026-10-25"]);
+  assert.equal(daysBetween("2026-12-31", "2027-01-01"), 1);
 });

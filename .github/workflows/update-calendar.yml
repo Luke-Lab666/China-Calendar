@@ -2,12 +2,14 @@ name: Update calendar
 
 on:
   schedule:
-    # 21:00 Asia/Shanghai (UTC+8), every day.
-    - cron: "0 13 * * *"
+    # 21:23 Asia/Shanghai (UTC+8), every day. An off-the-hour minute avoids the
+    # top-of-hour queue that previously delayed runs by several hours.
+    - cron: "23 13 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: update-calendar
@@ -18,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Fetch official data and rebuild feeds
@@ -39,4 +41,14 @@ jobs:
           git add data calendars
           git commit -m "chore(data): update calendar feeds"
           git push
-
+      - name: Keep the daily schedule enabled
+        # GitHub disables scheduled workflows in public repositories after 60
+        # days without repository activity. The bot only commits when official
+        # data changes, so quiet months could otherwise stop updates silently.
+        # Calling the enable endpoint on the active workflow serves as a keepalive;
+        # a failure here must not block the Pages deployment that follows.
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT "repos/${{ github.repository }}/actions/workflows/update-calendar.yml/enable"

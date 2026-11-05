@@ -1,6 +1,6 @@
 [project]
 name = "china-calendar"
-version = "1.0.0"
+version = "1.1.0"
 description = "中国大陆节假日、纪念日、二十四节气与传统时令 iCalendar 订阅"
 requires-python = ">=3.11"
 license = { text = "MIT" }

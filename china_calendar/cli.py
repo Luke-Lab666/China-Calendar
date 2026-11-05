@@ -8,7 +8,7 @@ from pathlib import Path
 
 from .events import SHANGHAI, collect_events
 from .ical import CALENDAR_NAMES, render_calendar, write_calendars
-from .query import day_record, format_day
+from .query import day_record, format_day, format_next_holiday, next_holiday
 from .sources import SourceError, fetch_all, update_source_state
 
 
@@ -33,6 +33,7 @@ def build_parser() -> argparse.ArgumentParser:
     query = parser.add_mutually_exclusive_group()
     query.add_argument("--date", type=date.fromisoformat, help="查询指定日期（仅使用本地数据）")
     query.add_argument("--upcoming", type=_days, metavar="DAYS", help="查询从今天起的 N 天（离线）")
+    query.add_argument("--next-holiday", action="store_true", help="查询下一个已公布的假期及倒计时（离线）")
     parser.add_argument("--feed", choices=tuple(CALENDAR_NAMES), default="essential", help="查询的订阅，默认精简版")
     parser.add_argument("--json", action="store_true", help="以 JSON 输出日期查询结果")
     return parser
@@ -42,9 +43,9 @@ def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
     root = args.root.resolve()
-    querying = args.date is not None or args.upcoming is not None
+    querying = args.date is not None or args.upcoming is not None or args.next_holiday
     if args.json and not querying:
-        parser.error("--json 需要配合 --date 或 --upcoming")
+        parser.error("--json 需要配合 --date、--upcoming 或 --next-holiday")
     if querying and (args.output or args.future_holidays_only or args.check):
         parser.error("日期查询不能使用 --output、--check 或 --future-holidays-only")
     try:
@@ -56,7 +57,15 @@ def main(argv: list[str] | None = None) -> int:
             if not 2025 <= start.year <= 9996:
                 raise ValueError("日期查询支持 2025 至 9996 年")
             groups = collect_events(root, start, False)
-            records = [day_record(root, start + timedelta(days=i), groups, args.feed) for i in range(days)]
+            if args.next_holiday:
+                found = next_holiday(groups, start)
+                print(json.dumps(found, ensure_ascii=False, indent=2) if args.json else format_next_holiday(found))
+                return 0
+            cache: dict[Path, dict] = {}
+            records = [
+                day_record(root, start + timedelta(days=i), groups, args.feed, cache)
+                for i in range(days)
+            ]
             if args.json:
                 print(json.dumps(records[0] if args.date else records, ensure_ascii=False, indent=2))
             else:
