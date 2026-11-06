@@ -9,12 +9,15 @@ from pathlib import Path
 
 from china_calendar.site import build_site, site_data
 
+from support import snapshot_root
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class SiteTests(unittest.TestCase):
     def test_export_matches_real_dates_and_never_marks_unpublished_year_as_off(self):
-        data = site_data(ROOT, date(2026, 10, 21))
+        with snapshot_root(published_through=2026) as root:
+            data = site_data(root, date(2026, 10, 21))
         self.assertEqual(data["lunar"]["2026-02-14"], [12, 27, False])
         self.assertEqual(data["holidays_published"], [2025, 2026])
         self.assertTrue(any(e["kind"] == "workday" and e["start"] == "2026-02-14" for e in data["events"]))

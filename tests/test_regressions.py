@@ -17,6 +17,7 @@ from china_calendar.events import collect_events, holiday_events, overlaps
 from china_calendar.ical import render_calendar, write_calendars
 from china_calendar.models import Event
 from china_calendar.query import day_record, next_holiday
+from support import snapshot_root
 from china_calendar.sources import (
     DAY_NUMBERS, MONTHS, FetchResult, HttpClient, SourceError, fetch_all,
     parse_holidays, parse_lunar_calendar, parse_solar_terms, update_source_state,
@@ -128,10 +129,12 @@ class StrictSourceTests(unittest.TestCase):
 class FakeClient:
     fail_on = ""
     missing_year = 0
+    # Serve the 2026-10-21 snapshot so newly published live data cannot change results.
+    published_through = 2026
 
     def get_optional(self, url):
         year = int(url.rsplit("/", 1)[1].removesuffix(".json"))
-        if year == self.missing_year:
+        if year == self.missing_year or year > self.published_through:
             return None
         path = ROOT / "data" / "holidays" / f"{year}.json"
         if not path.exists():
@@ -277,9 +280,17 @@ class FeedRegressionTests(unittest.TestCase):
 
 
 class DateQueryTests(unittest.TestCase):
+    # Status checks for 2027 assume its schedule is unpublished, as it was on
+    # 2026-10-21; run them against that snapshot rather than the live data.
     @classmethod
     def setUpClass(cls):
-        cls.groups = collect_events(ROOT, date(2026, 10, 21), False)
+        cls._snapshot = contextlib.ExitStack()
+        cls.root = cls._snapshot.enter_context(snapshot_root(published_through=2026))
+        cls.groups = collect_events(cls.root, date(2026, 10, 21), False)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls._snapshot.close()
 
     def test_day_status_distinguishes_weekends_workdays_and_overrides(self):
         examples = {
@@ -289,7 +300,7 @@ class DateQueryTests(unittest.TestCase):
         }
         for day, status in examples.items():
             with self.subTest(day=day):
-                record = day_record(ROOT, day, self.groups, "essential")
+                record = day_record(self.root, day, self.groups, "essential")
                 self.assertEqual(record["day_type"], status)
 
     def test_query_includes_solar_term_time_and_lunar_date(self):
@@ -320,7 +331,7 @@ class DateQueryTests(unittest.TestCase):
     def test_next_holiday_is_not_predicted_after_published_schedules(self):
         self.assertIsNone(next_holiday(self.groups, date(2026, 10, 21)))
         with patch("china_calendar.cli.fetch_all") as fetch, contextlib.redirect_stdout(io.StringIO()) as output:
-            self.assertEqual(main(["--root", str(ROOT), "--today", "2026-10-21", "--next-holiday"]), 0)
+            self.assertEqual(main(["--root", str(self.root), "--today", "2026-10-21", "--next-holiday"]), 0)
         self.assertIn("不预测假期", output.getvalue())
         fetch.assert_not_called()
 
