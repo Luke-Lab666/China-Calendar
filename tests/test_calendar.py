@@ -11,6 +11,8 @@ from china_calendar.events import collect_events
 from china_calendar.ical import render_calendar
 from china_calendar.sources import SourceError, parse_holidays, parse_solar_terms
 
+from support import snapshot_root
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -132,8 +134,10 @@ class GeneratedCalendarTests(unittest.TestCase):
         self.assertEqual(len(events), 56)
 
     def test_unannounced_year_does_not_invent_holidays(self) -> None:
-        holidays = [event for event in self.groups["holidays"] if event.start.year == 2027]
-        self.assertEqual(holidays, [])
+        with snapshot_root(published_through=2026) as root:
+            groups = collect_events(root, date(2026, 10, 21), False)
+        self.assertTrue(any(event.start.year == 2026 for event in groups["holidays"]))
+        self.assertEqual([event for event in groups["holidays"] if event.start.year == 2027], [])
 
     def test_no_event_before_2025(self) -> None:
         self.assertTrue(all(event.start.year >= 2025 for event in self.groups["calendar"]))
