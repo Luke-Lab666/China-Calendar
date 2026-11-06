@@ -1,0 +1,178 @@
+{
+  "days": [
+    {
+      "date": "2027-01-01",
+      "is_off_day": true,
+      "name": "元旦"
+    },
+    {
+      "date": "2027-01-02",
+      "is_off_day": true,
+      "name": "元旦"
+    },
+    {
+      "date": "2027-01-03",
+      "is_off_day": true,
+      "name": "元旦"
+    },
+    {
+      "date": "2027-01-31",
+      "is_off_day": false,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-05",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-06",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-07",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-08",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-09",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-10",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-11",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-12",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-13",
+      "is_off_day": true,
+      "name": "春节"
+    },
+    {
+      "date": "2027-02-14",
+      "is_off_day": false,
+      "name": "春节"
+    },
+    {
+      "date": "2027-04-03",
+      "is_off_day": true,
+      "name": "清明节"
+    },
+    {
+      "date": "2027-04-04",
+      "is_off_day": true,
+      "name": "清明节"
+    },
+    {
+      "date": "2027-04-05",
+      "is_off_day": true,
+      "name": "清明节"
+    },
+    {
+      "date": "2027-05-01",
+      "is_off_day": true,
+      "name": "劳动节"
+    },
+    {
+      "date": "2027-05-02",
+      "is_off_day": true,
+      "name": "劳动节"
+    },
+    {
+      "date": "2027-05-03",
+      "is_off_day": true,
+      "name": "劳动节"
+    },
+    {
+      "date": "2027-05-04",
+      "is_off_day": true,
+      "name": "劳动节"
+    },
+    {
+      "date": "2027-05-05",
+      "is_off_day": true,
+      "name": "劳动节"
+    },
+    {
+      "date": "2027-05-08",
+      "is_off_day": false,
+      "name": "劳动节"
+    },
+    {
+      "date": "2027-06-09",
+      "is_off_day": true,
+      "name": "端午节"
+    },
+    {
+      "date": "2027-09-15",
+      "is_off_day": true,
+      "name": "中秋节"
+    },
+    {
+      "date": "2027-09-26",
+      "is_off_day": false,
+      "name": "国庆节"
+    },
+    {
+      "date": "2027-10-01",
+      "is_off_day": true,
+      "name": "国庆节"
+    },
+    {
+      "date": "2027-10-02",
+      "is_off_day": true,
+      "name": "国庆节"
+    },
+    {
+      "date": "2027-10-03",
+      "is_off_day": true,
+      "name": "国庆节"
+    },
+    {
+      "date": "2027-10-04",
+      "is_off_day": true,
+      "name": "国庆节"
+    },
+    {
+      "date": "2027-10-05",
+      "is_off_day": true,
+      "name": "国庆节"
+    },
+    {
+      "date": "2027-10-06",
+      "is_off_day": true,
+      "name": "国庆节"
+    },
+    {
+      "date": "2027-10-07",
+      "is_off_day": true,
+      "name": "国庆节"
+    },
+    {
+      "date": "2027-10-09",
+      "is_off_day": false,
+      "name": "国庆节"
+    }
+  ],
+  "papers": [
+    "https://www.gov.cn/zhengce/zhengceku/202611/content_7085102.htm"
+  ],
+  "year": 2027
+}
